@@ -1,0 +1,35 @@
+<!--{template common/header}-->
+<div class="nav deanbbstopnav" style="border-bottom:0;">
+    <a href="javascript:history.back()" class="z deanback"></a>
+    <span class="category">
+        搜索页
+    </span>
+</div>
+<form id="searchform" class="searchform" method="post" autocomplete="off" action="search.php?mod=forum&mobile=2">
+			<input type="hidden" name="formhash" value="{FORMHASH}" />
+
+			<!--{subtemplate search/pubsearch}-->
+
+			<!--{eval $policymsgs = $p = '';}-->
+			<!--{loop $_G['setting']['creditspolicy']['search'] $id $policy}-->
+			<!--{block policymsg}--><!--{if $_G['setting']['extcredits'][$id][img]}-->$_G['setting']['extcredits'][$id][img] <!--{/if}-->$_G['setting']['extcredits'][$id][title] $policy $_G['setting']['extcredits'][$id][unit]<!--{/block}-->
+			<!--{eval $policymsgs .= $p.$policymsg;$p = ', ';}-->
+			<!--{/loop}-->
+			<!--{if $policymsgs}--><p>{lang search_credit_msg}</p><!--{/if}-->
+</form>
+
+<!--{if !empty($searchid) && submitcheck('searchsubmit', 1)}-->
+	<!--{subtemplate search/thread_list}-->
+<!--{/if}-->
+<div class="deanbottomnavs">
+	<a class="deanmenhu" href="portal.php">门户</a>
+    <a class="deanhuati" href="forum.php?mod=guide&view=hot&mobile=2">热门帖</a>
+    <a class="deanbankuainav" href="forum.php">
+    	<span><div class="deanbtBg"></div></span>
+        
+    </a>
+    <a class="deanfatie" href="forum.php?mod=misc&action=nav">发帖</a>
+    <a class="deanmine" href="<!--{if $_G[uid]}-->home.php?mod=space&uid=$_G[uid]&do=profile&mycenter=1<!--{else}-->member.php?mod=logging&action=login<!--{/if}-->">我的</a>
+    <div class="clear"></div>
+</div>
+<!--{template common/footer}-->

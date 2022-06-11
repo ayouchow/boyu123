@@ -1,0 +1,201 @@
+<!--{template common/header}-->
+<!-- header start -->
+
+    <div class="nav deanbbstopnav" style="border-bottom:0; width:100%; position:fixed; top:0;left:0; z-index:11111;">
+		<div class="y deanpostbbsbtn"><a href="forum.php?mod=post&action=newthread&fid=$_G[fid]" title="{lang send_threads}"><span class="none">{lang send_threads}</span></a></div>
+        <a href="forum.php?forumlist=1" class="z deanback"></a>
+		<span class="category">
+			<!--{if $subexists && $_G['page'] == 1}-->
+			<span class="display name vm" href="#subname_list">
+				<h2 class="tit"><!--{eval echo strip_tags($_G['forum']['name']) ? strip_tags($_G['forum']['name']) : $_G['forum']['name'];}--></h2>
+			</span>
+			<!--{else}-->
+            <span class="category"><!--{eval echo strip_tags($_G['forum']['name']) ? strip_tags($_G['forum']['name']) : $_G['forum']['name'];}--></span>
+            <!--{/if}-->
+		</span>
+    </div>
+
+<!-- header end -->
+<div class="deanbbsbox">
+    <div class="dean_bbslist_icon"><!--{if $_G[forum][banner] && !$subforumonly}--><img src="$_G[forum][banner]" alt="$_G['forum'][name]" /><!--{/if}--></div>
+    <div class="dean_bbslist_infos">
+        <h3>$_G['forum'][name]</h3>
+        <p>
+            <span>{lang index_today}: $_G[forum][todayposts]</span>
+            <span>{lang index_threads}: $_G[forum][threads]</span>
+            <!--{if $_G[forum][rank]}-->
+            <span>{lang rank}: $_G[forum][rank]</span>
+            <!--{/if}-->
+        </p>
+        <a href="home.php?mod=spacecp&ac=favorite&type=forum&id=$_G[fid]&handlekey=favoriteforum" id="a_favorite" class="deansc" onclick="showWindow(this.id, this.href, 'get', 0);">关注 <span class="xi1" id="number_favorite" {if !$_G[forum][favtimes]} {/if}>(<span id="number_favorite_num">$_G[forum][favtimes]</span>)</span></a>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--{if $subexists && $_G['page'] == 1}-->
+<div class="deansub_bk">
+	<h5>子版块</h5>
+	<ul>
+        <!--{loop $sublist $sub}-->
+        <li>
+            <a href="forum.php?mod=forumdisplay&fid={$sub[fid]}">{$sub['name']}</a>
+        </li>
+        <!--{/loop}-->
+        <div class="clear"></div>
+    </ul>
+</div>
+<!--{/if}-->
+<div class="deanbbs_top_select">
+	<ul>
+		<li>
+			<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter={if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="{if $_GET['filter'] == ''}on{/if}">全部</a>
+		</li>
+		<li>
+			<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=lastpost&orderby=lastpost$forumdisplayadd[lastpost]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="{if $_GET['filter'] == 'lastpost'}on{/if}">{lang latest}</a>
+		</li>
+		<li>
+			<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=heat&orderby=heats$forumdisplayadd[heat]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="{if $_GET['filter'] == 'heat'}on{/if}">{lang order_heats}</a>
+		</li>
+		<li>
+			<a href="forum.php?mod=forumdisplay&fid=$_G[fid]&filter=digest&digest=1$forumdisplayadd[digest]{if $_GET['archiveid']}&archiveid={$_GET['archiveid']}{/if}" class="{if $_GET['filter'] == 'digest'}on{/if}">{lang digest_posts}</a>
+		</li>
+        <div class="clear"></div>
+	</ul>
+</div>
+<!--{template common/bottomnav}-->
+<!--{hook/forumdisplay_top_mobile}-->
+<!-- main threadlist start -->
+<!--{if !$subforumonly}-->
+<!--{eval $picstyle = DB::result(DB::query("SELECT picstyle FROM ".DB::table('forum_forumfield')." WHERE fid = '$_G[fid]'"));}-->
+<!--{if $picstyle == '1'}-->
+<div class="threadlist deanthreadlistpics" id="deanwaters">
+			<ul>
+			<!--{if $_G['forum_threadcount']}-->
+				<!--{loop $_G['forum_threadlist'] $key $thread}-->
+					<!--{if !$_G['setting']['mobile']['mobiledisplayorder3'] && $thread['displayorder'] > 0}-->
+						{eval continue;}
+					<!--{/if}-->
+                	<!--{if $thread['displayorder'] > 0 && !$displayorder_thread}-->
+                		{eval $displayorder_thread = 1;}
+                    <!--{/if}-->
+					<!--{if $thread['moved']}-->
+						<!--{eval $thread[tid]=$thread[closed];}-->
+					<!--{/if}-->
+					<li>
+                        <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" $thread[highlight] >	
+                            <!--{hook/forumdisplay_thread_mobile $key}-->
+                            <div class="deanwaterfallpic">
+                                    <!--{eval $tupian = DB::result(DB::query("SELECT attachment FROM ".DB::table('forum_threadimage')." WHERE tid = '$thread[tid]' "));}-->
+                            <!--{if $tupian}--><img src="data/attachment/forum/$tupian" style="width:100%;"><!--{/if}-->
+                            </div>
+                            <h5 class="threadSubject">
+                                <!--{if $thread['special'] == 1}-->
+                                    <span class="threadType">{lang thread_poll}</span>
+                                <!--{elseif $thread['special'] == 2}-->
+                                    <span class="threadType">{lang thread_trade}</span>
+                                <!--{elseif $thread['special'] == 3}-->
+                                    <span class="threadType">{lang thread_reward}</span>
+                                <!--{elseif $thread['special'] == 4}-->
+                                    <span class="threadType">{lang thread_activity}</span>
+                                <!--{elseif $thread['special'] == 5}-->
+                                    <span class="threadType">{lang thread_debate}</span>
+                                <!--{elseif in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+                                    <span class="threadAttr">$_G[setting][threadsticky][3-$thread[displayorder]]</span>
+                                <!--{elseif $thread['digest'] > 0}-->
+                                    <span class="threadAttrjh">精华</span>
+                                <!--{/if}-->
+                                <span  $thread[highlight]>{$thread[subject]}</span>
+                            </h5>
+                            <div class="deanwfinfosd">
+                                <div class="deanforumavat <!--{if $thread[folder] == 'lock' || $thread['special'] || $thread[displayorder]}-->s_lnoavatar<!--{/if}-->"> 
+                                	<div class="deanbbszza">
+                                    	<!--{avatar($thread[authorid],large)}--> 
+                                    </div>
+                                    <span>$thread[author]</span>
+                                    <span class="deandatelines">$thread[dateline]</span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="deanwfir">
+                                	<span class="dean_view"><!--{if $thread['isgroup'] != 1}-->$thread[views]<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></span>
+                                    <span class="dean_reply">$thread[allreplies]</span>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                         </a>
+					</li>
+                <!--{/loop}-->
+            <!--{else}-->
+			<li>{lang forum_nothreads}</li>
+			<!--{/if}-->
+            <div class="clear"></div>
+		</ul>
+</div>
+<!--{else}-->
+<div class="threadlist deanthreadlisttxt">
+	<ul>
+	<!--{if $_G['forum_threadcount']}-->
+		<!--{loop $_G['forum_threadlist'] $key $thread}-->
+			<!--{if !$_G['setting']['mobile']['mobiledisplayorder3'] && $thread['displayorder'] > 0}-->
+				{eval continue;}
+			<!--{/if}-->
+			<!--{if $thread['displayorder'] > 0 && !$displayorder_thread}-->
+				{eval $displayorder_thread = 1;}
+			<!--{/if}-->
+			<!--{if $thread['moved']}-->
+				<!--{eval $thread[tid]=$thread[closed];}-->
+			<!--{/if}-->
+			<li>
+            	<a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra">
+                    <h3 class="threadSubject">
+                            <!--{if $thread['special'] == 1}-->
+                                <span class="threadType">{lang thread_poll}</span>
+                            <!--{elseif $thread['special'] == 2}-->
+                                <span class="threadType">{lang thread_trade}</span>
+                            <!--{elseif $thread['special'] == 3}-->
+                                <span class="threadType">{lang thread_reward}</span>
+                            <!--{elseif $thread['special'] == 4}-->
+                                <span class="threadType">{lang thread_activity}</span>
+                            <!--{elseif $thread['special'] == 5}-->
+                                <span class="threadType">{lang thread_debate}</span>
+                            <!--{elseif in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
+                                <span class="threadAttr">$_G[setting][threadsticky][3-$thread[displayorder]]</span>
+                            <!--{elseif $thread['digest'] > 0}-->
+                                <span class="threadAttrjh">精华</span>
+                            <!--{/if}-->
+                            <span  $thread[highlight]>{$thread[subject]}</span>
+                        </h3>
+                        <div class="deantlpics">
+                            <!--{eval $biaoid_7 = substr($thread[tid], -1); $jzshpic = DB::fetch_all("SELECT * FROM ".DB::table('forum_attachment_'.$biaoid_7.'')." WHERE tid = '$thread[tid]' AND isimage = '1' ORDER BY `aid` ASC LIMIT 3");}-->
+                            <!--{loop $jzshpic $jzshsub}-->
+                            <div class="deantzpics">
+                                <img src="data/attachment/forum/$jzshsub[attachment]" />
+                            </div>
+                            <!--{/loop}-->
+                            <div class="clear"></div>
+                        </div>
+                        <div class="threadListTit">
+                            <div class="deanbbs_avatar"><!--{avatar($thread[authorid],small)}--></div>
+                            <h4>
+                                <div class="deancount y">
+                                    <span class="views icon"><!--{if $thread['isgroup'] != 1}-->$thread[views]<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></span>
+                                    <span class="replies icon">{$thread[replies]}</span>
+                                </div>
+                                $thread[author]
+                            </h4>
+                            <p>发布于 $thread[dateline]</p>
+                        </div>
+				</a>
+			</li>
+		<!--{/loop}-->
+	<!--{else}-->
+		<li class="noData">{lang forum_nothreads}</li>
+	<!--{/if}-->
+	</ul>
+</div>
+<!--{/if}-->
+$multipage
+<!--{/if}-->
+<!-- main threadlist end -->
+<!--{hook/forumdisplay_bottom_mobile}-->
+<div class="pullrefresh" style="display:none;"></div>
+<!--{template common/footer}-->

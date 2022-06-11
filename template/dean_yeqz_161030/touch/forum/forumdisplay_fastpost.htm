@@ -1,0 +1,167 @@
+<div id="post_new"></div>
+<div class="dean_fr_reply">
+	<form method="post" autocomplete="off" id="fastpostform" action="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&extra=$_GET[extra]&replysubmit=yes&mobile=2">
+	<input type="hidden" name="formhash" value="{FORMHASH}" />
+	<ul class="fastpost">
+		<!--{if $_G[forum_thread][special] == 5 && empty($firststand)}-->
+		<li>
+		<select id="stand" name="stand" >
+			<option value="">{lang debate_viewpoint}</option>
+			<option value="0">{lang debate_neutral}</option>
+			<option value="1">{lang debate_square}</option>
+			<option value="2">{lang debate_opponent}</option>
+		</select>
+		</li>
+		<!--{/if}-->
+		<li><textarea class="textarea input" tabindex="3" id="fastpostmessage" name="message" autocomplete="off" cols="80" rows="2" placeholder="{lang send_reply_fast_tip}" ></textarea></li>
+		<li id="fastpostsubmitline">
+		<!--{if $secqaacheck || $seccodecheck}-->
+			<!--{subtemplate common/seccheck}-->
+		<!--{/if}-->
+		</li>
+		<li>
+			<div class="d_replyfunction z">
+				<a class="deanohers_Page" href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&reppost=$_G[forum_firstpid]&page=$page"></a>
+			</div>
+			<input type="button" value="{lang reply}" class="deanvt_huifubM y" name="replysubmit" id="fastpostsubmit" />
+			<!--{hook/viewthread_fastpost_button_mobile}-->
+		</li>
+        <div class="clear"></div>
+	</ul>
+    </form>
+</div>
+<div class="clear"></div>
+<div class="deanfr_fixbtm">
+	<a class="dean_c_t_r_btn Click_to_reply" href="javascript:void(0);">ÎÒÒªÆÀÂÛ...</a>
+	
+    <div class="dean_btm_items deanvt_replies">
+        <span><!--{if $thread[replies]>0}--><em><i>{$thread[replies]}</i></em><!--{/if}--></span>
+    </div>
+			
+    <a href="home.php?mod=spacecp&ac=favorite&type=thread&id=$_G[tid]" class="dean_btm_items deanvt_fav">
+        <span><!--{if $_G['forum_thread']['favtimes']>0}--><em><i>{$_G['forum_thread']['favtimes']}</i></em><!--{/if}--></span>
+    </a>
+			
+    <!--{if ($_G['group']['allowrecommend'] || !$_G['uid']) && $_G['setting']['recommendthread']['status']}-->
+    <!--{if !empty($_G['setting']['recommendthread']['addtext'])}-->
+    
+        <a class="dean_btm_items deanvt_like" id="recommend_add" href="forum.php?mod=misc&action=recommend&do=add&tid=$_G[tid]&hash={FORMHASH}" {if $_G['uid']}onclick="ajaxmenu(this, 3000, 1, 0, '43', 'recommendupdate({$_G['group']['allowrecommend']})');return false;"{else} onclick="showWindow('login', this.href)"{/if} onmouseover="this.title = $('recommendv_add').innerHTML + ' {lang activity_member_unit}$_G[setting][recommendthread][addtext]'">
+        <span><!--{if $_G[forum_thread][recommend_add]>0}--><em><i>$_G[forum_thread][recommend_add]</i></em><!--{/if}--></span>
+        </a>					
+    
+    <!--{/if}-->
+    <!--{/if}-->
+		
+</div>
+
+<script type="text/javascript">
+	(function() {
+		var form = $('#fastpostform');
+		<!--{if !$_G[uid] || $_G[uid] && !$allowpostreply}-->
+		$('#fastpostmessage').on('focus', function() {
+			<!--{if !$_G[uid]}-->
+				popup.open('{lang nologin_tip}', 'confirm', 'member.php?mod=logging&action=login');
+			<!--{else}-->
+				popup.open('{lang nopostreply}', 'alert');
+			<!--{/if}-->
+			this.blur();
+		});
+		<!--{else}-->
+		$('#fastpostmessage').on('focus', function() {
+			var obj = $(this);
+			if(obj.attr('color') == 'gray') {
+				obj.attr('value', '');
+				obj.removeClass('grey');
+				obj.attr('color', 'black');
+				$('#fastpostsubmitline').css('display', 'block');
+			}
+		})
+		.on('blur', function() {
+			var obj = $(this);
+			if(obj.attr('value') == '') {
+				obj.addClass('grey');
+				obj.attr('value', '{lang send_reply_fast_tip}');
+				obj.attr('color', 'gray');
+			}
+		});
+		<!--{/if}-->
+		$('#fastpostsubmit').on('click', function() {
+			var msgobj = $('#fastpostmessage');
+			if(msgobj.val() == '{lang send_reply_fast_tip}') {
+				msgobj.attr('value', '');
+			}
+			$.ajax({
+				type:'POST',
+				url:form.attr('action') + '&handlekey=fastpost&loc=1&inajax=1',
+				data:form.serialize(),
+				dataType:'xml'
+			})
+			.success(function(s) {
+				evalscript(s.lastChild.firstChild.nodeValue);
+				window.location.reload();
+			})
+			.error(function() {
+				window.location.href = obj.attr('href');
+				popup.close();
+			});
+			return false;
+		});
+
+		$('#replyid').on('click', function() {
+			$(document).scrollTop($(document).height());
+			$('#fastpostmessage')[0].focus();
+		});
+
+	})();
+
+	function succeedhandle_fastpost(locationhref, message, param) {
+		var pid = param['pid'];
+		var tid = param['tid'];
+		if(pid) {
+			$.ajax({
+				type:'POST',
+				url:'forum.php?mod=viewthread&tid=' + tid + '&viewpid=' + pid + '&mobile=2',
+				dataType:'xml'
+			})
+			.success(function(s) {
+				$('#post_new').append(s.lastChild.firstChild.nodeValue);
+			})
+			.error(function() {
+				window.location.href = 'forum.php?mod=viewthread&tid=' + tid;
+				popup.close();
+			});
+		} else {
+			if(!message) {
+				message = '{lang postreplyneedmod}';
+			}
+			popup.open(message, 'alert');
+		}
+		$('#fastpostmessage').attr('value', '');
+		if(param['sechash']) {
+			$('.seccodeimg').click();
+		}
+	}
+
+	function errorhandle_fastpost(message, param) {
+		popup.open(message, 'alert');
+	}
+</script>
+<script type="text/javascript">
+$(".deanvt_replies").toggle(function(){
+		$("html,body").animate({scrollTop:$("#deanquickreplies").offset().top},500);},
+	function(){
+		$("html,body").animate({scrollTop:0},500);}
+);
+$(".Click_to_reply").click(function(){
+	$(".dean_fr_reply").slideDown("fast");
+	//$(".textarea")[0].focus();
+	return false;
+});
+$(".dean_fr_reply form").bind("click",function(){
+	$(".dean_fr_reply").css("display","block");
+	event.stopPropagation();
+});
+$(".dean_fr_reply").bind("click",function(){
+	$(this).slideUp("fast");
+});
+</script>

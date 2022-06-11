@@ -1,0 +1,179 @@
+<!--{template common/header}-->
+<!--[name][迪恩momkid活动频道页][/name]-->
+<style type="text/css">
+.wp,#wp{ width:100%;}
+body{ background:#fff;}
+.deandas_hd{ margin-bottom:20px; width:100%; min-width:1180px; height:450px; background:url(./template/dean_momkid_161107/deancss/01.jpg) center no-repeat;}
+.deanluxian{ margin-top:20px;}
+.deanluxianleft{ width:900px; float:left;}
+.deanlxc{}
+.deanlxc ul li{ padding-bottom:20px; margin-bottom:20px; border-bottom:1px solid #ededed;}
+.deanhdlistpics{width:247px; height:150px; float:left;}
+.deanhdlistpics a{ display:block;width:247px; height:150px; position:relative; overflow:hidden;}
+.deanhdlistpics img{ width:247px; height:150px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanhdlistpics a span{ padding:0 10px; height:18px; line-height:18px; font-size:12px; color:#fff; text-align:center; position:absolute; bottom:11px; right:11px; background:#ff4444; border-radius:5px;}
+.deanhdlistpics a:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2);}
+.deanhdlinfos{ float:right; width:640px; }
+.deanhdlil{ float:left; width:440px;}
+.deanhdlil h5{ height:22px; line-height:22px; margin-bottom:5px; overflow:hidden;}
+.deanhdlil h5 a{ font-size: 18px; color:#666; font-weight: normal;}
+.deanhdlil h5 a:hover{ color:#ff4444}
+.deanluxianxq{ font-size:12px; color:#aaa; font-family:Georgia, "Times New Roman", Times, serif; border-bottom:1px solid #ededed; padding-bottom:10px; margin-bottom:10px;}
+.deanchufa{ font-size:12px; color:#999; margin-bottom:5px;}
+.deanchufa span{ color:#666; margin-right:10px;}
+.deanchufa em{ color:#ff4444; font-size:14px;}
+.deanhdlir{ float:right; max-width:200px; text-align:right; }
+.deanhdpricves{font-size: 32px;color:#ff4444;}
+.deanhdpricves em{ font-size:14px;}
+.deanhdpricves span{display: inline-block;border: 1px solid #ff4444;font-size: 12px;color: #ff4444;margin-left: 5px;width: 15px;height: 15px;
+line-height: 15px;text-align: center;position: relative;top: -3px;}
+.deanhdlir a{ display:inline-block;background: #FABE12; border-radius: 5px;width: 110px; height: 33px; line-height: 33px; text-align: center; font-size: 14px; margin-bottom:10px;  font-weight: normal; color:#fff; float:right;}
+.deanfaqiren{ font-size:12px; color:#999; text-align:center;width:112px; float:right; }
+.deanfaqiren span{ color:#666;}
+.deanfaqiren em{ display:block; overflow:hidden; width:112px;text-align:center; overflow:hidden;}
+/*分页*/
+.deanholder {margin: 20px 0;text-align:center;}
+.deanholder a {font-size: 12px;cursor: pointer;color: #666;text-decoration: none;margin-left: 5px; display:inline-block; width:35px; height:35px; text-align:center; background:#fff; line-height:35px; border:1px solid #ededed;}
+.deanholder a.jp-next,.deanholder a.jp-previous{ width:55px;}
+.deanholder a:hover,.deanholder a.jp-current {background:#ff4444;color: #FFF;border:1px solid #ff4444;}
+.deanholder a.jp-previous { margin-right: 10px;}
+.deanholder a.jp-next { margin-left: 10px;  }
+.deanholder a.jp-current, a.jp-current:hover {color:#FFF;}
+.deanholder a.jp-current, a.jp-current:hover,.deanholder a.jp-disabled, a.jp-disabled:hover {cursor: default; }
+.deanholder a.jp-disabled, a.jp-disabled:hover { background:#ff4444;color: #666;}
+.deanholder a.jp-disabled {background: #f5f5f5;border: 1px solid #f5f5f5;color: #666;}
+.deanholder span { margin: 0 5px; }
+/*右侧*/
+.deanluxianright{ float:right; width:250px; }
+.deancbtop{ margin-bottom:12px;}
+.deancbtop span{margin: 0 0 5px 0;font-size: 18px;line-height: 34px;color: #333;font-weight: 400; float:left;  display:block;}
+.deancbtop a{ float: right; font-size: 14px; height:34px; line-height: 34px; color: #ff4444; display:block; background:url(./template/dean_momkid_161107/deancss/more.png) right center no-repeat; padding-right:23px;}
+
+.deanboxdp{ padding:20px; border:2px solid #ededed; margin-bottom:20px; height:345px;position:relative; overflow:hidden; width:210px;}
+.deanboxdp ul.pic{ }
+.tempWrap{ width:210px!important;}
+.deanboxdp ul li{}
+.deanbdptop{}
+.deanbdpnum{ float:left; padding: 0 12px;height:45px; overflow:hidden;  margin-right: 15px; border-right: 1px solid #dedede; text-align: center;}
+.deanbdpnum p{ font-size:26px; height:22px; line-height:22px; overflow:hidden; margin-bottom:3px; color:#ff4444;}
+.deanbdpnum span{font-size: 16px; color:#666; display: block;}
+.deanbdptitles{ height:45px; overflow:hidden;}
+.deanbdptitles a{ font-size:16px; color:#666;width: 125px;display: inline-block;}
+.deanbdptitles a:hover{color:#ff4444;}
+.deanbdpmiddle{ margin:20px 0;width:210px;}
+.deanbdpmiddle a{ display:block;}
+.deanbdpmiddle a img{ width:45px; height:45px; border-radius:100%; float:left;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanbdpmiddle a span{ float:left; margin-left:15px; display:block; height:45px; line-height:45px; font-size:16px ;color:#333;}
+.deanbdpmiddle a:hover img{ transform:rotate(360deg); -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -ms-transform:rotate(360deg);}
+.deanbdpmiddle a:hover span{color:#ff4444;}
+.deanbdpmiddle p{ font-size:14px; color:#999; width:188px; line-height:22px; height:45px; overflow:hidden; margin:10px 0; background:url(./template/dean_momkid_161107/deancss/index/quote-129.png) left top no-repeat; padding-left:22px;}
+.deanbdpbottom{width:236px; height:166px;}
+.deanbdpbottom a img{ width:210px; height:146px;}
+.deanboxdp .prev,
+.deanboxdp .next { width:12px; height:46px; position:absolute; bottom:-5px; z-index:3;  font-size:30px; color:#333;filter:alpha(opacity=20); -moz-opacity:.2; opacity:.2; -webkit-transition:All .5s ease;-moz-transition:All .5s ease;-o-transition:All .5s ease}
+.deanboxdp .prev { left:30% }
+.deanboxdp .next {  right:30% }
+.deanboxdp .prev:hover,
+.deanboxdp .next:hover { color:#ff4444; filter:alpha(opacity=60); -moz-opacity:.6; opacity:.6 }
+.deanboxdp .hd { overflow:hidden; zoom:1; position:absolute; bottom:13px; right:90px; z-index:3}
+.deanboxdp .hd li{float:left;  width:8px; height:8px; border-radius:100%; cursor:pointer; overflow:hidden; background:#aaa; margin-left:4px; filter:alpha(opacity=80); opacity:.8; -webkit-transition:All .5s ease;-moz-transition:All .5s ease;-o-transition:All .5s ease }
+.deanboxdp .hd .on{ background:#ff4444; filter:alpha(opacity=100);opacity:1;   }
+
+.deanlxph{}
+.deanlxph ul li{ margin-bottom:20px;}
+.deanlxph ul li h5{ margin-bottom:10px;}
+.deanlxph ul li h5 a{ display:block; float:right; font-weight:normal; width:220px; height:20px; line-height:20px; overflow:hidden; font-size:14px; color:#666;}
+.deanlxph ul li h5 a:hover{color:#ff4444; }
+.deanlxph ul li h5 span{ display:inline-block; float:left; width:20px; height:20px; border-radius:5px; background:#ff4444; line-height:20px; text-align:center; font-size:12px; color:#fff;}
+.deanlxph ul li h5 span.deannums{ background:#dfdfdf;}
+.deanghyt{}
+.deanghytpics{width:80px; height:60px; float:left;}
+.deanghytpics img{ width:80px; height:60px; border-radius:5px;}
+.deanghytprices{ float:right; width:155px;height:60px; overflow:hidden; }
+.deanghytprices p{font-size:12px; margin-top:2px; color:#999; font-style:italic; line-height:19px; height:38px;overflow:hidden;}
+.deanghytprices span{ display:block; font-size:14px; color:#ff4444;}
+.deanghytprices em{font-size:12px;padding-right:3px;}
+.deanghytprices i{ font-size:12px; color:#999; padding-left:3px;}
+.deannewshd{}
+.deannewshd a{ display:block; width:250px; margin-bottom:20px;}
+.deannewshd a img{ width:250px; height:111px;}
+</style>
+
+
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+<div class="deandas_hd"><!--[diy=deandas_hd]--><div id="deandas_hd" class="area"></div><!--[/diy]--></div>	
+	<div class="deanluxian w1180">
+    	
+    	<div class="deanluxianleft">
+        	<div class="deancbtop">
+                <span>$cat[catname]专区</span>
+                <a href="#" target="_blank">更多</a>
+                <div class="clear"></div>
+            </div>
+        	
+            
+            <div class="deanlxc">
+            	<!--[diy=deanlxc]--><div id="deanlxc" class="area"></div><!--[/diy]-->
+            	
+            </div>
+            <script type="text/javascript">
+			jQuery(function() {jQuery("div.deanholder").jPages({containerID: "deanList",perPage:8,previous: "上一页",next: "下一页"});});
+			</script> 
+        </div>
+        <div class="deanluxianright">
+        	<div class="deancommonbox">
+                <div class="deancbtop">
+                    <span>活动点评</span>
+                    <a href="#" target="_blank">更多</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="deanboxdp">
+                	<!--[diy=deanboxdp]--><div id="deanboxdp" class="area"></div><!--[/diy]-->
+                        	
+                            <a class="prev" href="javascript:void(0)">&lt;</a>
+							<a class="next" href="javascript:void(0)">&gt;</a>
+                            <ul class="hd">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li><li></li>
+                            </ul>
+                        </div>
+                <script type="text/javascript">
+jQuery(".deanboxdp").slide({ mainCell:".pic",effect:"left", autoPlay:true, delayTime:300});
+</script>
+            </div>
+            
+            <div class="deancommonbox">
+                <div class="deancbtop">
+                    <span>活动排行</span>
+                    <a href="#" target="_blank">更多</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="deanlxph">
+                	<ul>
+                    	<!--[diy=deanlxph]--><div id="deanlxph" class="area"></div><!--[/diy]-->
+                    	
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="deancommonbox">
+                <div class="deancbtop">
+                    <span>最新活动</span>
+                    <a href="#" target="_blank">更多</a>
+                    <div class="clear"></div>
+                </div>
+                <div class="deannewshd">
+                	<!--[diy=deannewshd]--><div id="deannewshd" class="area"></div><!--[/diy]-->
+                    <!--[diy=deannewshd2]--><div id="deannewshd2" class="area"></div><!--[/diy]-->
+                    <!--[diy=deannewshd1]--><div id="deannewshd1" class="area"></div><!--[/diy]-->
+                	
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        
+    </div>
+
+<!--{template common/footer}-->

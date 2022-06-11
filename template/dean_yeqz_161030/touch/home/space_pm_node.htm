@@ -1,0 +1,23 @@
+<!--{if $value[msgfromid] != $_G['uid']}-->
+<div class="deanltdate"><!--{date($value[dateline], 'u')}--></div>
+<div class="friend_msg cl deandialogx">
+	<div class="deandialog_avatorx z"><img style="height:32px;width:32px;" src="<!--{avatar($value[msgfromid], small, true)}-->" /></div>
+	<div class="dean_dialog_green z">
+		<i></i>
+		$value[message]
+	</div>
+    <div class="clear"></div>
+    
+</div>
+<!--{else}-->
+<div class="deanltdate"><!--{date($value[dateline], 'u')}--></div>
+<div class="self_msg cl deandialog">
+	<div class="deandialog_avator y"><img style="height:32px;width:32px;" src="<!--{avatar($value[msgfromid], small, true)}-->" /></div>
+	<div class="dean_dialog_white y">
+    	<i></i>		
+		$value[message]
+	</div>
+    <div class="clear"></div>
+    
+</div>
+<!--{/if}-->

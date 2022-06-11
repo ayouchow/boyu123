@@ -1,0 +1,113 @@
+<!--{template common/header}-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+<div id="pt" class="bm cl">
+<!--{ad/text/wp a_t}-->
+	<div class="nav deanbbstopnav" style="border-bottom:0; width:100%; position:fixed; top:0;left:0; z-index:11111;">
+    	<a href="javascript:history.back()" class="z deanback"></a>
+        <span class="category">$cat[catname]</span>
+        <!--{if $cat[subs]}-->
+        <div class="y deanshares deanpd_sub_lists deanpd_sub_listsed"><a class="z" onclick="toolShare()"></a></div>
+        <!--{/if}-->
+        <div class="clear"></div>
+	</div>
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+			<div class="deanartice">
+                <ul>
+                    <!--{loop $list['list'] $value}-->
+                    <!--{eval $highlight = article_title_style($value);}-->
+                    <!--{eval $article_url = fetch_article_url($value);}-->
+                    <li>
+                    	<a href="$article_url">
+                             <!--{if $value[pic]}-->
+                            <div class="deanarticel">
+                               
+                                   <img src="$value[pic]" alt="$value[title]" />
+                                   <!--{if $value[catname] && $cat[subs]}-->
+                                   <span class="deanarticerforum">$value[catname]</span>
+                                    <!--{/if}-->
+                            </div>
+                            <div class="deanarticer">
+                                <div class="deanarticername">$value[title]<!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></div>
+                                <div class="deanarticersummary">$value[summary]&hellip;&hellip;</div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="deanarticerinfo">
+                                <span class="deanzhuozhenm">作者：$value[username]</span>
+                                <span class="deanfabushijian">$value[dateline]</span>
+                                <span class="deanyuedushu">阅读：{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['viewnum'];}</span>
+                                <span class="deanhuifushu">回复：{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}</span>
+                            </div>
+                        </a>
+                        <!--{else}-->
+                        <a href="$article_url">
+                            <div class="deanarticer_tl">
+                                <div class="deanarticername">$value[title]<!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></div>
+                                <div class="deanarticersummary">$value[summary]&hellip;&hellip;</div>
+                                <div class="deanarticerinfo">
+                                    <span class="deanarticerforum_tl">
+                                        <!--{if $value[catname] && $cat[subs]}-->$value[catname]<!--{/if}-->
+                                    </span>
+                                    <span class="deanzhuozhenm">作者：$value[username]</span>
+                                    <span class="deanfabushijian">$value[dateline]</span>
+                                    <span class="deanyuedushu">阅读：{eval $query = DB::query("SELECT t1.viewnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['viewnum'];}</span>
+                                    <span class="deanhuifushu">回复：{eval $query = DB::query("SELECT t1.commentnum from ".DB::table('portal_article_count')." t1 inner join ".DB::table('portal_article_title')." t2 on t1.aid=t2.aid WHERE t2.aid=$value[aid]"); $dean = DB::fetch($query);echo $dean['commentnum'];}</span>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </a>
+                        <!--{/if}-->
+                        <div class="clear"></div>
+                        <!--<div class="deanarticecomment"><a href="{url}">$value[view]</a></div>-->
+                    </li>	
+                    <!--{/loop}-->
+                </ul>
+        	</div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="pgs cl">{$list['multi']}</div><!--{/if}-->
+		<!--{template common/bottomnav}-->
+
+
+	<!-- JiaThis Button BEGIN -->
+<div class="toolShare tsharearea">
+	<h5>下级分类</h5>
+    <div class="deansharebtns">
+       <!--{if $cat[subs]}-->
+        <div class="deannextnav">
+            <ul>
+            <!--{eval $i = 1;}-->
+            <!--{loop $cat[subs] $value}-->
+            <!--{if $i != 1}--><!--{/if}--><li><a href="{$portalcategory[$value['catid']]['caturl']}" >$value[catname]</a></li><!--{eval $i--;}-->
+            <!--{/loop}-->
+            <div class="clear"></div>
+            </ul>
+        </div>
+        <!--{/if}-->
+    </div>
+
+</div>
+<div class="sharebg"></div>
+<!-- JiaThis Button END -->
+<script type="text/javascript">
+function toolShare(){
+$(".toolShare").addClass("dean_shareactive");	
+if($(".sharebg").length>0){
+$(".sharebg").addClass("sharebg-active");
+}else{
+$("body").append('<div class="sharebg"></div>');
+$(".sharebg").addClass("sharebg-active");
+}
+$(".sharebg-active,.share_btn_cancel").click(function(){
+$(".tsharearea").removeClass("dean_shareactive");	
+setTimeout(function(){
+$(".sharebg-active").removeClass("sharebg-active");	
+$(".sharebg").remove();	
+},300);
+})
+}	
+</script>
+</div>
+
+<!--{template common/footer}-->

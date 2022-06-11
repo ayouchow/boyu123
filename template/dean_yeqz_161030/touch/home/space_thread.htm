@@ -1,0 +1,48 @@
+<!--{template common/header}-->
+
+<!-- header start -->
+<div class="nav deanbbstopnav" style="border-bottom:0;">
+        <a href="javascript:history.back()" class="z deanback"></a>
+		<span class="category">
+			{lang mythread}
+		</span>
+    </div>
+<!-- header end -->
+<!-- main threadlist start -->
+<div class="dean_MY_threadlist">
+	<ul>
+	<!--{if $list}-->
+		<!--{loop $list $thread}-->
+			<li>
+            <h5>
+                <!--{if $viewtype == 'reply' || $viewtype == 'postcomment'}-->
+                <a href="forum.php?mod=redirect&goto=findpost&ptid=$thread[tid]&pid=$thread[pid]">$thread[subject]</a>
+                <!--{else}-->
+                <a href="forum.php?mod=viewthread&tid=$thread[tid]" {if $thread['displayorder'] == -1}class="grey"{/if}>$thread[subject]</a>
+                <!--{/if}-->
+            </h5>
+			<div class="threadListTit">
+                <div class="deanbbs_avatar"><!--{avatar($thread[authorid],small)}--></div>
+                <h4>
+                    <div class="deancount y">
+                        <span class="views icon"><!--{if $thread['isgroup'] != 1}-->$thread[views]<!--{else}-->{$groupnames[$thread[tid]][views]}<!--{/if}--></span>
+                        <span class="replies icon">{$thread[replies]}</span>
+                    </div>
+                    $thread[author]
+                </h4>
+                <p>·¢²¼ÓÚ $thread[dateline]</p>
+            </div>
+            
+            
+			</li>
+		<!--{/loop}-->
+	<!--{else}-->
+		<li>{lang no_related_posts}</li>
+	<!--{/if}-->
+	</ul>
+	$multi
+</div>
+<!-- main threadlist end -->
+<!--{eval $nofooter = true;}-->
+<!--{template common/bottomnav}-->
+<!--{template common/footer}-->

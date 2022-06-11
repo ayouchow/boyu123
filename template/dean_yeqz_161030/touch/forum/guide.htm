@@ -1,0 +1,29 @@
+<!--{template common/header}-->
+<!-- header start -->
+<!--{template common/headernav}-->
+<!-- header end -->
+	
+<!-- main threadlist start -->
+<div class="deanguidelist" style="margin-top:90px;">
+	<div class="deanbbs_top_select deanbbs_top_selected">
+		<ul>
+			<li $currentview['newthread']><a href="forum.php?mod=guide&view=newthread">{lang guide_newthread}</a></li>
+			<li $currentview['hot']><a href="forum.php?mod=guide&view=hot">{lang guide_hot}</a></li>
+			<li $currentview['digest']><a href="forum.php?mod=guide&view=digest">{lang guide_digest}</a></li>
+			<li $currentview['new']><a href="forum.php?mod=guide&view=new">{lang guide_new}</a></li>
+            <div class="clear"></div>
+		</ul>
+	</div>
+
+	<!--{loop $data $key $list}-->
+		<!--{subtemplate forum/guide_list_row}-->
+	<!--{/loop}-->
+
+</div>
+<!-- main threadlist end -->
+
+$multipage
+
+<div class="pullrefresh" style="display:none;"></div>
+<!--{template common/bottomnav}-->
+<!--{template common/footer}-->

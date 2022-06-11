@@ -1,0 +1,2028 @@
+﻿@charset "utf-8";
+/*加田小店*/
+
+/**portal::index**/
+
+/*spin动画*/
+@-webkit-keyframes spin {
+  0% {
+    transform: rotateY(0deg) skewY(0deg);
+  }
+  40% {
+    transform: rotateY(-20deg) skewY(-10deg);
+  }
+  80% {
+    transform: rotateY(20deg) skewY(10deg);
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    transform: rotateY(0deg) skewY(0deg);
+  }
+  40% {
+    transform: rotateY(-20deg) skewY(-10deg);
+  }
+  80% {
+    transform: rotateY(20deg) skewY(10deg);
+  }
+}
+@-o-keyframes spin {
+  0% {
+    transform: rotateY(0deg) skewY(0deg);
+  }
+  40% {
+    transform: rotateY(-20deg) skewY(-10deg);
+  }
+  80% {
+    transform: rotateY(20deg) skewY(10deg);
+  }
+}
+@-ms-keyframes spin {
+  0% {
+    transform: rotateY(0deg) skewY(0deg);
+  }
+  40% {
+    transform: rotateY(-20deg) skewY(-10deg);
+  }
+  80% {
+    transform: rotateY(20deg) skewY(10deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg) skewY(0deg);
+  }
+  40% {
+    transform: rotateY(-20deg) skewY(-10deg);
+  }
+  80% {
+    transform: rotateY(20deg) skewY(10deg);
+  }
+}
+/*fadeup动画*/
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+   }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-moz-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+   }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-o-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+   }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@-ms-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+   }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+   }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+/*侧边广告开启*/
+.deansideJmm{ position: fixed;  top: 210px;  left: 50%;    margin-left: 600px;  width: 102px; z-index:211;    -webkit-animation: fadeUp .5s ease 1s both; -moz-animation: fadeUp 1.5s ease 1s both;   -o-animation: fadeUp 1.5s ease 1s both; -ms-animation: fadeUp 1.5s ease 1s both;  animation: fadeUp 1.5s ease 1s both;}
+.deansideJmm .deansjbigTop{width: 102px; height: 104px; background: url({STYLEIMGDIR}/balloon/sideBigball.png) no-repeat center 0; position: relative; margin: 0 auto; transition: all 1s; display: block;}
+.deansideJmm .deansjbigTop i{ width: 124px; height: 34px; position: absolute; bottom: 20px; left: 50%; margin-left: -62px; background: url({STYLEIMGDIR}/balloon/sideBigtit.png) no-repeat 0 0; text-indent: -9999px; overflow: hidden; transition: all .3s;}
+.deansideJmm .deansJmm-big-cont{height: 357px;  margin-top: -11px; background: url({STYLEIMGDIR}/balloon/sideBig-new.png) no-repeat 0 0; transition: all .5s;position: relative;  zoom: 1; transform-style: preserve-3d; -webkit-animation: spin 10s infinite linear .5s; -moz-animation: spin 10s infinite linear .5s; -o-animation: spin 10s infinite linear .5s; -ms-animation: spin 10s infinite linear .5s;  animation: spin 10s infinite linear .5s;}
+.deansideJmm .deansJmm-link-btn{height: 111px; display: block;}
+.deansideJmm .deansJmm-gift-pic{ width: 85px; margin: 0 auto; text-align: center; transition: all 1s 2s; display: block;}
+.deansideJmm .deansJmm-gift-pic img{ width:85px; height:75px;}
+.deansideJmm .deansJmm-gift-name{width: 85px; margin: 0 auto; text-align: center; transition: all 1s 2s; display: block;line-height: 20px;  padding-top: 10px; transition: all 1s;}
+.deansideJmm .deansJmm-gift-name span{ line-height: 20px; text-align:center; font-size:12px; color:#333;}
+.deansideJmm .deansJmm-gift-name:hover span{ color:#ff4444;}
+.deansideJmm .deansJmm-link-go{ display: block; width: 55px; height: 22px; line-height: 22px; color: #fff;text-align: center; font-size: 14px; margin: 6px auto 20px; background-color: #ff4444; border-radius: 2px; transition: all 1s;}
+.deansideJmm .deansJmm-btn-box{display:block;margin: 0 auto; width: 51px; height: 51px; background: url({STYLEIMGDIR}/balloon/bigBtn.png) no-repeat; cursor: pointer; opacity: 1; transition: all .2s;cursor:pointer;}
+/*侧边广告关闭*/
+.deansideJmmClose{ margin-left: 590px; transition: all 1s 1s;}
+.deansideJmmClose .deansjbigTop{ width: 88px; height: 76px; background: url({STYLEIMGDIR}/balloon/sideSmallball.png) no-repeat center 0; position: relative; margin: 0 auto; transition: all 1s;  display: block;}
+.deansideJmmClose .deansjbigTop i{width: 82px; height: 43px; position: absolute; bottom: -10px; left: 50%; margin-left: -41px; background: url({STYLEIMGDIR}/balloon/clude.png) no-repeat;  background-position: center 0; text-indent: -9999px; overflow: hidden; z-index: 10; transition: all .3s;}
+.deansideJmmClose .deansJmm-big-cont{ position: relative; zoom: 1; background: url({STYLEIMGDIR}/balloon/sideSmall-new.png) no-repeat center 0; height: 217px; margin-top: -8px;
+transition: all .5s; transform-style: preserve-3d; -webkit-animation: spin 10s infinite linear .5s; -moz-animation: spin 10s infinite linear .5s; -o-animation: spin 10s infinite linear .5s; -ms-animation: spin 10s infinite linear .5s;animation: spin 10s infinite linear .5s;}
+.deansideJmmClose .deansJmm-link-btn{height: 217px; display: block;}
+.deansideJmmClose .deansJmm-gift-pic{ display:none;}
+.deansideJmmClose .deansJmm-gift-name{display:none;}
+.deansideJmmClose .deansJmm-link-go{ display: none;}
+.deansideJmmClose .deansJmm-btn-box{ display:block;margin: 0 auto; height: 51px;  cursor: pointer; opacity: 1;cursor:pointer; background: url({STYLEIMGDIR}/balloon/smallBtn.png) no-repeat;  width: 45px; margin: 0 0 0 29px; transition: all .5s;}
+
+/*二维码*/
+.deanad-left{ width: 164px; height: 198px; overflow: hidden; zoom: 1; margin: -99px 0 0 -765px; position: fixed; z-index: 200; left: 50%; top: 50%;transform-style: preserve-3d; -webkit-animation: spin 10s infinite linear .5s; -moz-animation: spin 10s infinite linear .5s; -o-animation: spin 10s infinite linear .5s; -ms-animation: spin 10s infinite linear .5s;  animation: spin 10s infinite linear .5s;}
+.deanad-left a.ad-leftbg{ width: 100%; height: 100%; display: block; background: url({STYLEIMGDIR}/balloon/cd.png) 0 0 no-repeat;}
+.deanad-left a.close-ad{ position: absolute; right: 0; top: 0; overflow: hidden;  cursor: pointer; width: 15px;  height: 15px; background:url({STYLEIMGDIR}/balloon/close.png) center no-repeat; background-size:15px;}
+
+/*分类*/
+.deanfenlei{ border:1px solid #ededed; padding:10px 20px; background:#fefefe; height:50px; margin:15px 0; position:relative;}
+.deanfenlei em{display:block; width:20px; height:2px; background:#ff4444; position:absolute;}
+.deanfenlei em.deanline1{ top:0; left:0px;}
+.deanfenlei em.deanline2{ top:0; left:0px;width:2px; height:20px; }
+.deanfenlei em.deanline3{bottom:0; right:0px;}
+.deanfenlei em.deanline4{bottom:0; right:0px;width:2px; height:20px; }
+.deanfenlei ul{ width:1180px;}
+.deanfenlei ul li{ float:left; width:290px;}
+.deanflicon{ text-align:center; float:left; margin-top:3px; width:30px;}
+.deanflicon img{ margin-bottom:3px;}
+.deanflicon p{ font-size:13px; color:#ff4444;}
+.deanflitems{ float:right; width:260px;}
+.deanflitems a{ font-size:14px; color:#666; display:block; height:25px; width:22%; line-height:25px; overflow:hidden; float:left; margin-left:20px;}
+.deanflitems a:hover{ color:#ff4444;}
+/*ads*/
+.deanads{ width:1180px; height:89px; margin-bottom:15px; position:relative;}
+.deanads img{ width:1180px;}
+.deanads i{ display:block; padding:0 10px; background:rgba(0,0,0,0.5); font-size:12px; color:#fff; height:20px; line-height:20px; position:absolute; right:0; bottom:0; border-radius:10px 0 0 0;}
+.deanads_box{ margin-bottom:15px;}
+.deanads_bl{ width:690px; float:left;height:69px; position:relative;}
+.deanads_bl img{width:690px;height:69px;}
+.deanads_bl i{display:block; padding:0 10px; background:rgba(0,0,0,0.5); font-size:12px; color:#fff; height:20px; line-height:20px; position:absolute; right:0; bottom:0; border-radius:10px 0 0 0;}
+.deanads_br{ width:475px; float:right;height:69px; position:relative;}
+.deanads_br img{width:475px;height:69px;}
+.deanads_br i{display:block; padding:0 10px; background:rgba(0,0,0,0.5); font-size:12px; color:#fff; height:20px; line-height:20px; position:absolute; right:0; bottom:0; border-radius:10px 0 0 0;}
+/*第一部分*/
+.deanpartone{}
+.deanpol{ width:360px; float:left;}
+/*焦点图*/
+.deanfocusbox{width:360px; height:320px; overflow:hidden; position:relative; margin-bottom:15px;}
+.deanfocusbox ul li{}
+.deanfocusbox ul li a{ display:block; width:360px; height:320px; position:relative;}
+.deanfocusbox ul li a img{ width:360px; height:280px;}
+.deanfocustxt{ background:#F5F5F5; height:40px; line-height:40px; font-size:16px; color:#333; padding-left:15px;}
+.deanfocusbox .hd { overflow:hidden; zoom:1; position:absolute; bottom:15px; right:10px; z-index:3}
+.deanfocusbox .hd li{float:left; width:10px; height:10px; border-radius:100%; background:#D0D0D0; margin-left:4px; filter:alpha(opacity=80); opacity:.8; -webkit-transition:All .5s ease;-moz-transition:All .5s ease;-o-transition:All .5s ease }
+.deanfocusbox .hd .on{ background:#ff4444; filter:alpha(opacity=100);opacity:1;   }
+.deanfocusbox .prev,
+.deanfocusbox .next { width:30px; height:65px; position:absolute; top:130px; z-index:3; filter:alpha(opacity=0); -moz-opacity:0; opacity:0; -webkit-transition:All .5s ease;-moz-transition:All .5s ease;-o-transition:All .5s ease}
+.deanfocusbox .prev { background:rgba(0,0,0,0.5) url({STYLEIMGDIR}/arrow_l.png) center no-repeat;  left:10px }
+.deanfocusbox .next { background:rgba(0,0,0,0.5) url({STYLEIMGDIR}/arrow_r.png) center no-repeat;  right:10px; }
+.deanfocusbox .prev:hover{background:rgba(0,0,0,0.9) url({STYLEIMGDIR}/arrow_l.png) center no-repeat;}
+.deanfocusbox .next:hover {background:rgba(0,0,0,0.9) url({STYLEIMGDIR}/arrow_r.png) center no-repeat; }
+.deanfocusbox:hover .prev{ opacity:0.6}
+.deanfocusbox:hover .next{ opacity:0.6}
+.deansideads{width:360px; height:80px; margin-bottom:15px; position:relative;}
+.deansideads i{display:block; padding:0 10px; background:rgba(0,0,0,0.5); font-size:12px; color:#fff; height:20px; line-height:20px; position:absolute; right:0; bottom:0; border-radius:10px 0 0 0;}
+.deansideads img{ width:360px; height:80px;}
+/*切换*/
+.deanqiehuanbox{}
+.deanqhtop{  position: relative;}
+.deanqhtop ul li{ float:left; cursor: pointer; display: block;width: 178px; height: 40px; line-height: 40px; text-align: center;  overflow: hidden; border: 1px solid #e2e2e2; font-size: 18px;}
+.deanqhtop ul li.cur{ width: 180px; border: none; border-top: 1px solid #ff4444; color: #ff4444;}
+.deanqhbottom{}
+.deanqhbottom ul li{ display:none;}
+.deanjiaoliu{ height:300px; overflow:hidden;}
+.deanjiaoliu dl dd{padding: 0 10px; border-bottom: 1px dashed #ededed; height: 38px; overflow: hidden;}
+.deanjiaoliu dl dd:last-child{ border-bottom:0;}
+.deanjiaoliu dl dd.onftsd{ height: 70px; background: #FEFEFE;}
+.deanjiaoliu dl dd a{ display:block;}
+.deanjiaoliu dl dd a h5{ height: 38px; line-height: 38px; overflow: hidden; font-size:14px; color:#666; font-weight:normal;}
+.deanjiaoliu dl dd a h5 em{ display:inline-block; float:right; font-size:12px; color:#999;}
+.deandfrt{ font-size:12px;}
+.deandfrt span{ display:block; float:left;width: 72px; height: 18px; line-height: 18px; background-color: #fff; overflow: hidden; text-align: center; border: 1px solid #ff4444; color: #ff4444; border-radius: 2px;}
+.deandfrt i{ float: right;display: block; height: 18px;line-height: 18px; padding-left:20px;  color: #666; background:url({STYLEIMGDIR}/member.png) left center no-repeat; background-size:15px;}
+.dean48lists{height:300px; overflow:hidden;}
+.dean48lists dl dd{border-bottom: 1px dashed #ededed; height: 38px; overflow: hidden;}
+.dean48lists dl dd:last-child{ border-bottom:0;}
+.dean48lists dl dd em{display:block; float:left; width:15px; height:15px; line-height:15px; text-align:center; font-size:12px; color:#fff; background:#ddd; border-radius:4px; margin-top:13px;}
+.dean48lists dl dd em.deannumcolor{ background:#ff4444;}
+.dean48lists dl dd a{ display:block; float:left; height:38px; line-height:38px; margin-left:10px; font-size:14px; color:#666; width:270px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.dean48lists dl dd a:hover {color:#ff4444;}
+.dean48lists dl dd span{ float:right; font-size:12px; color:#999; height:38px; line-height:38px; display:block;}
+
+.deanpom{ float:left; width:475px;  margin-left:25px;}
+/*头条*/
+.deanponewsbox{ border-bottom:1px dashed #e7e7e7; padding-bottom:15px; margin-bottom:15px;}
+.deanponewstt{}
+.deanponewstt h5{ height: 38px; line-height: 38px;  overflow: hidden; font-size: 20px; margin-bottom: 7px;  text-align: center;}
+.deanponewstt h5 a{ font-size:20px; color:#333; font-weight:normal;}
+.deanponewstt h5 a:hover{ color:#ff4444;}
+.deanponewstt p{ line-height: 22px; color: #999;  height: 44px; overflow: hidden;  margin-bottom: 4px; font-size:14px;}
+.deanttlists{}
+.deanttlists ul{ width:500px;}
+.deanttlists ul li{ float:left; padding-left:12px;width:218px; line-height: 28px; margin-right:13px;  height: 28px; overflow:hidden; background:url({STYLEIMGDIR}/dot.png) left center no-repeat;}
+.deanttlists ul li a{ display:block; float:left; width:160px; height:28px; line-height:28px; overflow:hidden; font-size:14px; color:#333;}
+.deanttlists ul li a:hover{ color:#ff4444;}
+.deanttlists ul li em{ font-size:12px; color:#999; float:right; display:block; height:28px; line-height:28px;}
+.deanmamaquan{}
+.deanmamaquan h5{ border-bottom:1px solid #ededed;}
+.deanmamaquan h5 span{ display:block; float:left; font-size:18px; height:35px; line-height:30px; color:#ff4444; border-bottom:1px solid #ff4444;}
+.deanmamaquan h5 a{ display:block; float:right; padding:0 10px; height:20px; line-height:20px; color:#fff; font-size:12px; background:#ff4444; border-radius:4px; margin-top:5px;}
+.deanmmqbox{ margin-top:15px;}
+.deanmmqbox ul{ width:500px;}
+.deanmmqbox ul li{ float:left; width:148.33px; height:90px; margin:0 15px 0 0;}
+.deanmmqbox ul li a{ display:block; width:100%; height:100%; position:relative;}
+.deanmmqbox ul li a img{ width:100%; height:100%;}
+.deanmmqbox ul li a p{ width:128.33px; padding:0 10px; height:30px; line-height:30px; background:rgba(0,0,0,0.5); font-size:14px; color:#fff; position:absolute; overflow:hidden; left:0; bottom:0;}
+.deanquantalk{ margin-top:5px;}
+.deanquantalk ul li{height:30px; line-height:30px;}
+.deanquantalk ul li span{ display:block; float:left; padding:0 5px; background:#ff4444; font-size:12px; color:#fff; border-radius:4px; height:18px; line-height:18px; margin-top:6px;}
+.deanquantalk ul li a{ display:block; float:left; margin-left:10px; width:280px; height:30px; line-height:30px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; font-size:14px; color:#333; }
+.deanquantalk ul li a:hover{ color:#ff4444;}
+.deanquantalk ul li em{ font-size:12px; color:#999; height:30px; line-height:30px;  display:block; float:right;}
+
+.deanpor{ float:right; width:295px; }
+.deanhotst{ border:1px solid #ededed; margin-bottom:15px;}
+.deanhotst h5{ background:#f5f5f5; font-size:16px; color:#333; padding:0 10px; font-weight:normal; height:35px; line-height:35px;}
+.deanhotst h5 em{ font-size:16px; color:#999; font-family:Georgia, "Times New Roman", Times, serif; padding-left:10px;}
+.deanhotsboxs{ padding:10px;}
+.deanhotsbtop{ padding-bottom:10px; border-bottom:1px dashed #ededed;}
+.deanhospics{ width:80px; height:63px; float:left;}
+.deanhospics img{ width:80px; height:63px;}
+.deanhosinfos{ width:180px; float:right;}
+.deanhosinfos h4{ height:22px; line-height:22px; margin-bottom:2px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+.deanhosinfos h4 a{ font-size:16px; color:#333; font-weight:normal;}
+.deanhosinfos h4 a:hover{ color:#ff4444;}
+.deanhosinfos p{ font-size:12px; color:#999; height:40px; line-height:22px; overflow:hidden;}
+.deanhotsbbom{}
+.deanhotsbbom ul li{ height:30px; line-height:30px; background:url({STYLEIMGDIR}/dot.png) left center no-repeat; padding-left:12px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+.deanhotsbbom ul li a{ font-size:14px; color:#333;}
+.deanhotsbbom ul li a:hover{ color:#ff4444;}
+
+.deantools{ width:293px; margin-bottom:15px; height:190px; border-left:1px solid #ededed;border-right:1px solid #ededed; position:relative;}
+.deantools em{ display:block; width:20px; height:1px; background:#ededed; position:absolute;}
+.deantools em.deanline1{ top:0; left:1px;}
+.deantools em.deanline2{ bottom:0; left:1px;}
+.deantools em.deanline3{ top:0; right:1px;}
+.deantools em.deanline4{ bottom:0; right:1px;}
+.deantttit{ float: left; width: 60px; text-align: center; margin-top: 26px; border-right:1px solid #ededed; line-height: 45px; font-size: 16px;}
+.deanttrtisd{ float:right; width:220px; overflow:hidden; padding: 15px 0;}
+.deanttrtisd ul{ width:245px;}
+.deanttrtisd ul li{ float:left; width:59.66px; padding:0 5px; margin-bottom:10px;}
+.deanttrtisd ul li a{ display:block; text-align: center; font-size: 12px; color:#333;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanttrtisd ul li a img{ display: block;  width: 50px; height: 50px; margin: 0 auto 6px;  border-radius: 5px; border: 1px solid #f0f0f0;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanttrtisd ul li a:hover{ color:#ff4444;}
+.deanttrtisd ul li a:hover img{ border:1px solid #ff4444; transform:rotateX(360deg); -webkit-transform:rotateX(360deg); -moz-transform:rotateX(360deg); -o-transform:rotateX(360deg); -ms-transform:rotateX(360deg);}
+/*百科*/
+.deanpubboxes{}
+.deanpubtitles_tt{height:65px; line-height:70px; border-bottom:1px solid #dfdfdf; margin-bottom:15px;}
+.deanpubtitles_tt span{ display:block; float:left; font-size:32px; color:#ff4444; font-weight:normal; height:70px; line-height:70px;}
+.deanpubtitles_tt i.deansubtitle1{ display:block; float:left; margin-left: 10px; width: 300px; height: 64px; background:url({STYLEIMGDIR}/subtitle9.png) 0 0 no-repeat;}
+.deanpublinks{ float: right;}
+.deanpublinks a{ float: left; display: inline; height: 15px; line-height: 15px; color: #999; margin: 38px 6px 0;}
+.deanpublinks em{ float: left; width: 15px; height: 15px;  background:url({STYLEIMGDIR}/dash.png) center no-repeat; margin-top: 38px;}
+.deanpublinks a:hover{ color:#ff4444;}
+/*百科*/
+.deanhotsbtopx{ margin-bottom:5px;}
+.deanhdhd{  width:273px; height:170px;border:1px solid #ededed;}
+.deanhdhd img{ width:273px; height:170px; }
+.deanhdb{ height:35px; line-height:35px; background:#F8F8F8; padding:0 10px;}
+.deanhdb span{ font-size: 16px; color:#333; display: inline-block;  width: 158px;  height: 30px;  overflow: hidden;}
+.deanhdb a{ display:block; font-size: 12px; background: #ff4444; color: #fff; height: 25px; line-height: 25px;  width: 70px; border-radius: 2px; text-align: center; margin: 5px 0 0 16px; float:right;}
+.deanhdb a:hover{ background:#EF1818}
+.deanbaike{}
+.deanbkl{ width:575px; height:351px; float:left; margin-bottom:20px;}
+.deanbktop{ height:35px; line-height:35px; border-bottom:1px solid #ededed; margin-bottom:10px;}
+.deanbktop span{ display:block; float:left;  font-size:18px; color:#ff4444;border-bottom:1px solid #ff4444; font-weight:normal;}
+.deanbktop span.deanbkf1{ padding-left:35px; background:url({STYLEIMGDIR}/f2.png) left center no-repeat; background-size:29px;}
+.deanbktop span.deanbkf2{padding-left:35px; background:url({STYLEIMGDIR}/f3.png) left center no-repeat; background-size:29px;}
+.deanbktop span.deanbkf3{padding-left:35px; background:url({STYLEIMGDIR}/f1.png) left center no-repeat; background-size:29px;}
+.deanbktop span.deanbkf4{padding-left:35px; background:url({STYLEIMGDIR}/f4.png) left center no-repeat; background-size:29px;}
+.deanmorelists{ float:right; width:410px; height:35px; line-height:35px; color:#666;}
+.deanmorelists ul{ float:left; width:350px; height:35px; overflow:hidden;}
+.deanmorelists ul em{float: left; width: 15px; height: 15px;  background:url({STYLEIMGDIR}/dash.png) center no-repeat; margin-top: 11px;margin:10px;}
+.deanmorelists ul li{ float:left; }
+.deanmorelists ul li a{ font-size:12px; color:#999;}
+.deanmorelists ul li a:hover{ color:#ff4444;}
+.deanmorelists a.deanmorebtns{ float:right; font-size:12px; color:#ff4444; display:block; font-weight:normal;}
+.deanjctt{ padding-bottom:10px; margin-bottom:10px; border-bottom:1px dashed #ededed;}
+.deanjctt h5{ height:30px; line-height:30px; overflow:hidden; font-weight:normal;}
+.deanjctt h5 span{ display:inline-block; height:20px; line-height:20px; padding:0 8px; background:#ff4444; border-radius:4px; font-size:12px; color:#fff; margin-right:10px; float:left; margin-top:5px;}
+.deanjctt h5 a{ display:inline-block; font-size:20px; color:#333; font-weight:normal; float:left;}
+.deanjctt h5 a:Hover{ color:#ff4444;}
+.deanjctt p{ line-height: 22px; color: #999; height: 44px; overflow: hidden;  margin-top: 5px;}
+.deanbklistre{}
+.deanbklistre ul{ width:585px;}
+.deanbklistre ul li{ float:left; width:265px; padding-left:15px; height:30px; line-height:30px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; background:url({STYLEIMGDIR}/dot.png) left center no-repeat;}
+.deanbklistre ul li a{ font-size:16px; color:#333;}
+.deanbklistre ul li a:hover{ color:#ff4444;}
+.deanbklistrex{ margin-top:15px;}
+.deanbklistrex ul{ width:595px;}
+.deanbklistrex ul li{ float:left;}
+.deanbklistrex ul li a{ display:block; position:relative; width:183px; height:130px; float:left; margin:0 13px 0 0; overflow:hidden;}
+.deanbklistrex ul li a img{ width:183px; height:130px;}
+.deanbklistrex ul li a p{ width:120px; padding:0 10px; height:30px; background:rgba(255,255,255,.8); color:#333; font-size:14px; height:30px; line-height:30px; text-align:center; overflow:hidden; position:absolute; left:21.5px; top:130px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanbklistrex ul li a:hover p{ top:80px;} 
+.deanbkr{ float:right; width:575px; height:351px; margin-bottom:20px;}
+/*育儿百科*/
+.deanpubtitles_tt i.deansubtitle2{ display:block; float:left; margin-left: 10px; width: 300px; height: 64px; background:url({STYLEIMGDIR}/subtitle1.png) 0 0 no-repeat;}
+.deanqhtopx{  position: relative;}
+.deanqhtopx ul{ border-right:1px solid #ededed;}
+.deanqhtopx ul li{ float:left; cursor: pointer; display: block;width: 70px; height: 40px; line-height: 40px; text-align: center;  overflow: hidden; border: 1px solid #e2e2e2; font-size: 18px; border-right: 1px solid #fff;}
+.deanqhtopx ul li.cur{ border: none; border-top: 1px solid #ff4444; color: #ff4444; border-left: 1px solid #ededed;}
+.deanqhbottomx{width: 380px;  height: 284px; overflow: hidden;}
+.deanqhbottomx ul li{ display:none;}
+.deanzsbox{ margin-top:15px; }
+.deanzsbox dl{ width:380px;}
+.deanzsbox dl dd{}
+.deanzsbox dl dd a{ display:block; position:relative; width:173px; height:120px; position:relative; float:left; margin:0 14px 14px 0; overflow:hidden;}
+.deanzsbox dl dd a img{ width:173px; height:120px;}
+.deanzsbox dl dd a h5{ width:130px; height:30px; line-height:30px; padding:0 10px; overflow:hidden; font-weight:normal; font-size:14px ;color:#333; background:rgba(255,255,255,.8); position:absolute; left:11px; top:80px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanzsbox dl dd a:hover h5{ top:120px;}
+.deanhiddeninfos{ padding:15px; line-height:22px; font-size:12px; color:#fff; background:#ff4444; width:143px; height:90px; position:absolute; top:-120px; left:0;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanzsbox dl dd a:hover .deanhiddeninfos{ top:0;}
+.deanjhyud{ width:358px; margin-bottom:15px; height:205px; border-left:1px solid #ededed;border-right:1px solid #ededed; position:relative; margin-top:10px;}
+.deanjhyud i{ display:block; width:20px; height:1px; background:#ededed; position:absolute;}
+.deanjhyud em{ width:200px;position:absolute; left:20px; top:-10px; height:22px; background:url({STYLEIMGDIR}/bgtxt.jpg) center no-repeat; }
+.deanjhyud i.deanline1{ top:0; left:1px;}
+.deanjhyud i.deanline2{ bottom:0; left:1px;}
+.deanjhyud i.deanline3{ width:130px; top:0; right:1px;}
+.deanjhyud i.deanline4{ bottom:0; right:1px;}
+.deantjydbox{ padding:25px 15px 15px; width:330px;}
+.deantjydtop{padding-bottom: 10px;border-bottom: 1px dashed #ededed;}
+.deantjydpics{ width:100px; height:68px; float:left;}
+.deantjydpics img{ width:100px; height:68px;}
+.deantjydrinfos{ float:right; width:215px;}
+.deantjydrinfos h5{height: 22px; line-height: 22px; margin-bottom: 2px;  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.deantjydrinfos h5 a{ font-size: 16px; color: #333; font-weight: normal;}
+.deantjydrinfos h5 a:hover{ color:#ff4444;}
+.deantjydrinfos p{ font-size: 12px; color: #999; height: 40px; line-height: 22px; overflow: hidden;}
+.deanhotsbbomx{}
+.deanhotsbbomx ul li{ height:30px; line-height:30px; background:url({STYLEIMGDIR}/dot.png) left center no-repeat; padding-left:12px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+.deanhotsbbomx ul li a{ font-size:14px; color:#333; display:block; float:left; width:200px; overflow:hidden; height:30px;text-overflow:ellipsis; white-space:nowrap;}
+.deanhotsbbomx ul li a:hover{ color:#ff4444;}
+.deanhotsbbomx ul li span{ float:right; font-size:12px; color:#999; display:block; height:30px;}
+.deanbktops{}
+.deanbktl{ float:left; width:260px;}
+.deanbktl ul li{ padding-left:15px;width:238px; line-height: 28px; margin-right:13px;  height: 28px; overflow:hidden; background:url({STYLEIMGDIR}/dotx.png) left center no-repeat; background-size:7px;}
+.deanbktl ul li a{display: block; float: left; width: 160px; height: 28px; line-height: 28px;  overflow: hidden;  font-size: 14px;  color: #333;}
+.deanbktl ul li a:hover{ color:#ff4444;}
+.deanbktl ul li span{ font-size:12px; color:#999; float:right; display:block; height: 28px; line-height: 28px; }
+.deanbktr{ width:200px; float:right;}
+.deanbktr a{ display:block; position:relative; width:200px; height:130px; overflow:hidden;}
+.deanbktr a img{ width:200px; height:130px;}
+.deanbktr a p{ width:160px; padding:0 10px; height:30px; background:rgba(255,255,255,.8); color:#333; font-size:14px; height:30px; line-height:30px; text-align:center; overflow:hidden; position:absolute; left:10px; top:90px;}
+.deantodaysd{ border:1px solid #FFD567; margin:15px 0; padding:15px; background:#FFF6DD}
+.deantodayl{ width:70px; height:70px; float:left; background:url({STYLEIMGDIR}/bubble.png) center no-repeat;}
+.deantodayr{ float:right; width:355px;}
+.deantodayr h5{ height:30px; line-height:30px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+.deantodayr h5 a{ font-size:16px; color:#A68121;}
+.deantodayr h5 a:hover{ color:#ff4444;}
+.deantodayr p{ font-size:14px ;color:#999; line-height:25px; height:44px; overflow:hidden;}
+.deanhotzs{}
+.deanhzsl{ width:40px; height:80px; background:#ff4444; text-align:center; padding-top:5px; position:relative; font-size:13px ;color:#fff; float:left;border-radius: 4px 15px 4px 15px;}
+.deanhzsl i{ display:block;width: 0; height: 0;  border-top: 15px solid transparent;  border-left: 15px solid #ff4444; border-bottom: 15px solid transparent; position:absolute; top:25px; right:-7px;}
+.deanhzsr{ float:right; width:385px; position:relative; height:55px; border-left:1px solid #ededed; border-right:1px solid #ededed; padding:15px;}
+.deanhzsr em{ width:200px;position:absolute; left:20px; top:-10px; height:22px; background:url({STYLEIMGDIR}/bgtxt1.jpg) center no-repeat; }
+.deanhzsr b{ display:block; width:20px; height:1px; background:#ededed; position:absolute;}
+.deanhzsr b.deanline1{ top:0; left:1px;}
+.deanhzsr b.deanline2{ bottom:0; left:1px;}
+.deanhzsr b.deanline3{ width:230px; top:0; right:1px;}
+.deanhzsr b.deanline4{ bottom:0; right:1px;}
+.deanhzsrbox{}
+.deanhzsrbox ul{ width:400px;}
+.deanhzsrbox ul li{ height:30px; line-height:30px; overflow:hidden; float:left; width:185px; margin-right:15px;}
+.deanhzsrbox ul li i{ margin-top:9px; width:15px; height:15px; border-radius:5px; line-height:15px; text-align:center; font-size:12px; color:#fff; background:#ff4444; margin-right:8px; display:block; float:left;}
+.deanhzsrbox ul li a{ font-size:14px; color:#333; font-weight:normal;display:block; float:right; width:160px; overflow:hidden;}
+.deanhzsrbox ul li i.deandarki{ background:#ddd;}
+.deanhzsrbox ul li a:hover{ color:#ff4444;}
+.deanspye{}
+.deanspye{width:263px; position:relative; height:317px; border-left:1px solid #ededed; border-right:1px solid #ededed; padding:15px;}
+.deanspye em{ width:200px;position:absolute; left:20px; top:-10px; height:22px; background:url({STYLEIMGDIR}/bgtxt2.jpg) center no-repeat; }
+.deanspye b{ display:block; width:20px; height:1px; background:#ededed; position:absolute;}
+.deanspye b.deanline1{ top:0; left:1px;}
+.deanspye b.deanline2{ bottom:0; left:1px;}
+.deanspye b.deanline3{ width:60px; top:0; right:1px;}
+.deanspye b.deanline4{ bottom:0; right:1px;}
+.deanspye ul{ margin-top:10px;}
+.deanspye ul li{ padding-bottom:15px; margin-bottom:15px; border-bottom:1px dashed #ededed;}
+.deanspye ul li:last-child{ border-bottom:0;}
+.deanspl{ width:120px; height:80px; float:left;}
+.deanspl a{ width:100%; height:100%; display:block; position:relative;}
+.deanspl a img{ width:100%; height:100%;}
+@-webkit-keyframes rotateInFiniteOne {
+    0% { -webkit-transform: rotateZ(0deg); opacity: 1;}
+    100% {-webkit-transform:  rotateZ(360deg); opacity: 1; }
+}
+
+@keyframes rotateInFiniteOne {
+    0%{ -webkit-transform: rotateZ(0deg);  transform:rotateZ(0deg);  opacity:1; }
+    100%{-webkit-transform:  rotateZ(360deg);  transform: rotateZ(360deg);  opacity: 1;}
+}
+.deanspl a i{display:block; width:30px; height:30px; position:absolute; top:27px; left:45px; background:url({STYLEIMGDIR}/play.png) center no-repeat; background-size:30px;}
+.deanspl a i.rotateInFiniteOne{ -webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webkit-animation: rotateInFiniteOne 3s linear infinite;  animation: rotateInFiniteOne 3s linear infinite;background:url({STYLEIMGDIR}/play1.png) center no-repeat; background-size:30px;}
+.deanspr{ float:right; width:130px;}
+.deanspr h5{}
+.deanspr h5 a{ font-size:16px; color:#333; font-weight:normal;}
+.deanspr h5 a:hover{ color:#ff4444;}
+.deanspr p{ font-size:14px; color:#ff4444; margin-top:5px;}
+.deansideads_sides{ margin:15px 0; width:295px; position:relative;}
+.deansideads_sides i{display: block;  padding: 0 10px; background: rgba(0,0,0,0.5); font-size: 12px; color: #fff;  height: 20px; line-height: 20px; position: absolute; right: 0;  bottom: 0;  border-radius: 10px 0 0 0;}
+.deansideads_sides img{ width:295px;}
+/*问答*/
+.deanpubtitles_tt i.deansubtitle3{ display:block; float:left; margin-left: 10px; width: 300px; height: 64px; background:url({STYLEIMGDIR}/subtitle4.png) 0 0 no-repeat;}
+.deanpublinked{ float:right; margin-top:28px;}
+.deanpublinked ul li{ height:22px; line-height:22px;}
+.deanqatopl{ float:left; width:200px;height:22px; line-height:22px;}
+.deanqatopl em{ display:block; width:18px; height:18px; line-height:18px; font-size:12px; color:#fff; background:#21C471; text-align:center; border-radius:3px; float:left; margin-top:3.5px;}
+.deanqatopl a{ display:block; float:right; width:170px; height:22px; line-height:22px; font-size:14px ;color:#666; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+.deanqatopl a:hover{ color:#ff4444;}
+.deanqatopr{ float:left; margin-left:15px;width:300px;height:22px; line-height:22px;}
+.deanqatopr em{ display:block; width:18px; height:18px; line-height:18px; font-size:12px; color:#fff; background:#5998FE; text-align:center; border-radius:3px; float:left; margin-top:3.5px;}
+.deanqatopr span{ display:block; float:right; width:270px; height:22px; line-height:22px; font-size:14px ;color:#666; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; }
+
+.deanwdl{ width:429px; float:left;}
+.deanqnalistsx{}
+.deanqnalistsx ul li{ overflow: hidden; width: 429px; height: 35px; line-height: 35px; border:1px dashed #fff; padding-left: 10px;}
+.deanqnalistsx ul li.current{ background:#FEFEFE; border:1px dashed #ededed;}
+.deanqnatops{}
+.deanqnatops a{color: #666; font-size: 14px; padding: 0 10px; display: inline-block; line-height: 20px; width: 280px; overflow: hidden; white-space: nowrap; vertical-align: middle; text-overflow: ellipsis;}
+.deanqnatops a:hover{ color:#ff4444;}
+.deanqnatops a i{background-color: #ffd567;font-size: 12px; color: #FFF; width: 14px; height: 14px; display: inline-block; text-align: center; line-height: 14px; border-radius: 50%; margin-right: 10px;}
+.deanfromdata{color: #999; font-size: 14px; display: inline-block; line-height: 20px; vertical-align: middle; width: 110px; text-align: right; white-space: nowrap;}
+.deanas{}
+.deanas a{color: #999; font-size: 14px; padding: 0 10px; display: inline-block; line-height: 20px; width: 280px; overflow: hidden; white-space: nowrap; vertical-align: middle; text-overflow: ellipsis;}
+.deanas i{background-color: #a5eae5;font-size: 12px; color: #FFF; width: 14px; height: 14px; display: inline-block; text-align: center; line-height: 14px; border-radius: 50%; margin-right: 10px;}
+.deanexpertAnswer { width: 326px; height: 248px; position: relative; float:left; margin-left:30px; margin-bottom:20px; background: url({STYLEIMGDIR}/biasLineBg.png); border: 1px solid #f4f4f4;}
+.deanexpertAnswerleftCorner { width: 30px; height: 30px; position: absolute; top:0; left:0;}
+.deanexpertAnswerleftCorner i { display: inline-block; border: 20px solid #52dcd3; border-right-color: transparent; border-bottom-color: transparent; position: absolute; left: 0; top: 0;border: 15px solid #ffd567; border-right-color: transparent; border-bottom-color: transparent;}
+.deanexpertAnswerleftCorner span { display: inline-block;font-size: 13px; color: #fff; line-height: 20px; width: 20px; height: 20px;position: absolute; left: 0; top: 0; text-align: center;}
+.deanexpertAnswertitle { line-height: 25px; margin: 16px 20px 12px;  max-height: 50px; overflow: hidden;}
+.deanexpertAnswertitle a{font-size: 16px;color: #666; }
+.deanexpertAnswertitle a:hover{ color:#A68AFF;}
+.deanexpertAnswerexpert { margin: 0 20px;}
+.deanexpertAnswerimg { float:left; width: 44px; height: 44px; margin-right: 15px;}
+.deanexpertAnswerimg img{width: 100%; height: 100%; border: 2px solid #ededed; border-radius: 24px;}
+.deanexpertAnsweruserInfo { font-size: 14px;}
+.deanexpertAnswername {  float:left; color: #666; height: 44px;line-height: 44px; white-space: nowrap; overflow: hidden;}
+.deanexpertAnswerorigin{width: 80px; float:right;height: 44px;line-height: 44px; text-align: right; overflow: hidden; white-space: nowrap;font-size: 13px; color: #999;}
+.deanexpertAnsweris_truncated{line-height: 30px; font-size: 14px; margin: 20px 20px 10px; height: 90px; overflow: hidden; color:#999;}
+.deanwendahuigu{ width:370px; float:right;}
+.deanlabelFlag { display: inline-block; padding: 0 15px; background: #01CBBB; color: #fff; font-size: 14px; line-height: 25px; position: relative;}
+.deanlabelFlag i { display: inline-block; width: 0; height: 0; border: 13px solid #01CBBB; border-left: 0; border-right-color: transparent; border-bottom-width: 12px; position: absolute;  right: 0; z-index: 2; margin-right: -12.5px;}
+
+.deanlabelFlagp{background: #A68AFF;}
+.deanlabelFlagp i{ display: inline-block; width: 0; height: 0; border: 13px solid #A68AFF; border-left: 0; border-right-color: transparent; border-bottom-width: 12px; position: absolute;  right: 0; z-index: 2; margin-right: -12.5px;}
+.deanhuigu{ margin-top:10px;}
+.deanhuigu ul li{ height:35px; line-height:35px;}
+.deanhuigu ul li a{ font-size:14px; color:#666; font-weight:normal; display:inline-block; float:left; width:280px; height:35px; line-height:35px;overflow:hidden;}
+.deanhuigu ul li a:hover{ color:#A68AFF;}
+.deanhuigu ul li span{ font-size:12px; color:#999; display:inline-block; float:right;height:35px; line-height:35px;}
+.deanqnapics{ margin-top:5px;}
+.deanqnapics img{ width:370px; height:140px;}
+/*生活*/
+.deanpubtitles_tt i.deansubtitle4{ display:block; float:left; margin-left: 10px; width: 300px; height: 64px; background:url({STYLEIMGDIR}/subtitle3.png) 0 0 no-repeat;}
+.deanlifebox{ position:relative; width:1180px; height:500px; margin-bottom:15px;}
+.deanlifebox a{ display:block; position: relative; overflow:hidden;}
+.deanlifebox a img{ width:100%; height:100%;}
+.deanlifebox a p{ position:absolute; width:86%;top:255px; left:5%; padding:0 2%; overflow:hidden; background:rgba(255,255,255,.8); font-size:14px ;color:#333; text-align:center; height:30px; line-height:30px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanlifebox a:hover p{ top:200px;}
+.deanlb1{ position:absolute; top:0; left:0;}
+.deanlb1 a{ width:400px; height:245px;}
+.deanlb2{ position:absolute; top:0; left:410px;}
+.deanlb2 a{ width:185px; height:245px;}
+.deanlb3{position:absolute; top:0; left:605px;width:185px; height:245px; box-shadow:0 2px 3px #ededed;}
+.deanlb3 img{margin: 83px auto 0; display: block;}
+.deanlb3 span{ font-size: 20px; line-height: 40px; display: block; color: #ff4444;  font-weight: normal; text-align:center;}
+.deanlb4{ position:absolute; top:0; right:195px;}
+.deanlb4 a{ width:185px; height:245px;}
+.deanlb5{ position:absolute; top:0; right:0px;}
+.deanlb5 a{ width:185px; height:245px;}
+.deanlb6{ position:absolute; top:255px; left:0px;}
+.deanlb6 a{ width:185px; height:245px;}
+.deanlb7{ position:absolute; top:255px; left:195px;}
+.deanlb7 a{ width:400px; height:245px;}
+.deanlb8{ position:absolute; top:255px; left:605px;}
+.deanlb8 a{ width:185px; height:245px;}
+.deanlb9{ position:absolute; top:255px; right:195px;}
+.deanlb9 a{ width:185px; height:245px;}
+.deanlb10{ position:absolute; top:255px; right:0px;}
+.deanlb10 a{ width:185px; height:245px;}
+/*生活*/
+.deanpubtitles_tt i.deansubtitle5{ display:block; float:left; margin-left: 10px; width: 300px; height: 64px; background:url({STYLEIMGDIR}/subtitle3.png) 0 0 no-repeat;}
+.deanfocusboxer{width:360px; height:450px; overflow:hidden; position:relative; margin-bottom:25px;}
+.deanfocusboxer ul li{}
+.deanfocusboxer ul li a{ display:block; width:360px; position:relative;}
+.deanfocusboxer ul li a img{ width:360px; height:450px;}
+.deankuangjia{ width:300px; border:2px solid #fff;  height:340px; position:absolute; left:29px; top:20px;}
+.deanfocusboxer .hd { overflow:hidden; padding:5px; background:rgba(0,0,0,0.4); border-radius:5px; position:absolute; bottom:15px; right:142px; z-index:3}
+.deanfocusboxer .hd li{float:left; width:10px; height:10px; border-radius:100%; background:#fff; margin-left:4px; filter:alpha(opacity=80); opacity:.8; -webkit-transition:All .5s ease;-moz-transition:All .5s ease;-o-transition:All .5s ease }
+.deanfocusboxer .hd .on{ background:#ff4444; filter:alpha(opacity=100);opacity:1;   }
+.deankuangjia{ width:300px; border:2px solid rgba(255,255,255,0.8);  height:340px; position:absolute; left:29px; top:20px;}
+.deanfocustxter{ width:180px; height:60px; padding:10px; position:absolute; left:83px; bottom:50px; background:rgba(255,255,255,1); text-align:center; z-index:2; }
+.deanfocustxter h5{ font-size:16px; color:#333; font-weight:normal; height:30px; line-height:30px; overflow:hidden;}
+.deanfocustxter p{ font-size:14px; color:#ff4444;}
+
+.deanponewsttx{ border:5px dashed #efefef; padding:10px; position:relative;}
+.deanponewsttx i{background:#ff4444; display:block; position:absolute;}
+.deanponewsttx i.deaniit{ top:0; left:0; width:25px; height:5px; }
+.deanponewsttx i.deaniid{ top:0; left:0; width:5px; height:25px; }
+.deanponewsttx i.deaniie{ bottom:0; right:0; width:25px; height:5px; }
+.deanponewsttx i.deaniif{ bottom:0; right:0; width:5px; height:25px; }
+.deanlabelFlagp1{background: #ff4444; margin:15px 0 10px 0;}
+.deanlabelFlagp1 i{ display: inline-block; width: 0; height: 0; border: 13px solid #ff4444; border-left: 0; border-right-color: transparent; border-bottom-width: 12px; position: absolute;  right: 0; z-index: 2; margin-right: -12.5px;}
+
+
+.deanqhtop_bbs{  position: relative;}
+.deanqhtop_bbs ul{ width:297px;}
+.deanqhtop_bbs ul li{ float:left; cursor: pointer; display: block;width: 147px; height: 40px; line-height: 40px; text-align: center;  overflow: hidden; border: 1px solid #e2e2e2; font-size: 18px;}
+.deanqhtop_bbs ul li.cur{ width: 148px; border: none; border-top: 1px solid #ff4444; color: #ff4444;}
+.deanbbsb{}
+.deanbbsb ul li{ display:none;}
+.deanranklists{ margin-top:10px;}
+.deanranklists dl dd{ margin-bottom:10px; padding-bottom:10px; border-bottom:1px dashed #ededed;}
+.deanranklists dl dd:last-child{ border-bottom:0;}
+.deanrkl{ float: left; width: 50px; height: 50px; overflow: hidden; margin: 12px 10px 10px 10px;}
+.deanrkl img{width: 50px; height: 50px; border-radius:100%; display:none;}
+.deanrkl span{ display:block;width: 50px; height: 50px;  border-radius:100%;}
+.deanrkl span.deanclornum{background:url({STYLEIMGDIR}/num1.png) center no-repeat; background-size:40px;}
+.deanranklists dl dd.per img{ display:block;}
+.deanranklists dl dd.per span{ display:none;}
+.deanrkr{ float:right; width:215px; margin-top:12px;}
+.deanrkr h5{ height:25px; line-height:25px; overflow:hidden; font-weight:normal; margin-bottom:5px;}
+.deanrkr h5 a{ font-size:14px; color:#333;}
+.deanrkr h5 a:hover{ color:#ff4444;}
+.deanrkrb{}
+.deanrkrb i{ display:block; float:left; font-size:12px; color:#999; background:url({STYLEIMGDIR}/edit.png) left center no-repeat; background-size:15px; padding-left:20px;}
+.deanrkrb em{ display:block; float:left; font-size:12px; color:#999; margin-left:15px;background:url({STYLEIMGDIR}/read.png) left center no-repeat; background-size:15px; padding-left:20px;}
+.deanranklists dl dd:hover img{ display:block;}
+.deanranklists dl dd:hover span{ display:none;}
+.deanrkl span.deanclornum2{ background:url({STYLEIMGDIR}/num2.png) center no-repeat; background-size:40px;}
+.deanrkl span.deanclornum3{ background:url({STYLEIMGDIR}/num3.png) center no-repeat; background-size:40px;}
+.deanrkl span.deanclornum4{ background:url({STYLEIMGDIR}/num4.png) center no-repeat; background-size:40px;}
+.deanrkl span.deanclornum5{ background:url({STYLEIMGDIR}/num5.png) center no-repeat; background-size:40px;}
+.deanrkl span.deanclornum6{ background:url({STYLEIMGDIR}/num6.png) center no-repeat; background-size:40px;}
+.deanrkl span.deanclornum7{ background:url({STYLEIMGDIR}/num7.png) center no-repeat; background-size:40px;}
+.deanrkl span.deanclornum8{ background:url({STYLEIMGDIR}/num8.png) center no-repeat; background-size:40px;}
+.deanrkl span.deanclornum9{ background:url({STYLEIMGDIR}/num9.png) center no-repeat; background-size:40px;}
+.deanrkr_bk{}
+.deanrkr_bk{ float:right; width:215px; margin-top:12px;}
+.deanrkr_bk h5{ height:25px; line-height:25px; overflow:hidden; font-weight:normal; margin-bottom:5px;}
+.deanrkr_bk h5 a{ display:inline-block;font-size:16px; color:#333;}
+.deanrkr_bk h5 a:hover{ color:#ff4444;}
+.deanrkr_bk h5 i{ display:inline-block; padding-left:20px; font-size:12px; color:#999; margin-left:10px; background:url({STYLEIMGDIR}/forum.png) left center no-repeat; background-size:15px;}
+.deanrkr_bk h5 b{ display:inline-block; padding-left:20px; font-size:12px; font-weight:normal; color:#999; margin-left:10px; background:url({STYLEIMGDIR}/up.png) left center no-repeat; background-size:15px;}
+.deanrkrbx{ font-size:12px; color:#999; height:20px; line-height:20px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; background:url({STYLEIMGDIR}/edit.png) left center no-repeat;background-size:15px;padding-left:20px; }
+/*商家*/
+.deanpubtitles_tt i.deansubtitle6{ display:block; float:left; margin-left: 10px; width: 300px; height: 64px; background:url({STYLEIMGDIR}/subtitle5.png) 0 0 no-repeat;}
+.deanshopers{}
+.deanshopers ul{ width:1208px;}
+.deanshopers ul li{ float:left; width:285.5px; margin:0 10px 10px 0; border:1px solid #ededed;}
+.deanshopers ul li:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2); }
+.deanspics{}
+.deanspics a{ position:relative; display:block; width:285.5px; height:175px; overflow:hidden;}
+.deanlocations{ width:220px; height:25px; line-height:25px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; position:absolute; right:0; bottom:0; padding-right:14px; font-size:12px; color:#fff; background:url({STYLEIMGDIR}/pin.png) left center no-repeat; padding-left:18px;}
+.deanspics a img{ width:285.5px; height:175px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deantages{ position:absolute; left:0;top:0; width:200px; height:50px;}
+.deantages span{display: inline-block;padding: 0 10px;background: #ff4444;color: #fff;font-size: 14px;line-height: 25px;position: relative;}
+.deantages span i{display: inline-block;width: 0;height: 0;border: 13px solid #ff4444;border-left: 0;border-right-color: transparent;border-bottom-width: 12px;position: absolute;right: 0;z-index: 2;margin-right: -12.5px;}
+.deanspinner{ padding:0 15px 10px 15px;}
+.deanspinner h5{ height:32px; line-height:40px; overflow:hidden; margin-bottom:5px;}
+.deanspinner h5 span{ width:20px; height:15px; display:inline-block; line-height:15px; margin-right:7px; text-align:center; font-size:12px; color:#ff4444; border:1px solid #ff4444}
+.deanspinner h5 a{ font-size:16px; color:#333; font-weight:normal;}
+.deanspinner h5 a:hover{ text-decoration:underline; color:#ff4444;}
+.deanspinner p{ font-size:12px; color:#999; height:22px; line-height:22px; overflow:hidden;}
+.deanshopers ul li:hover{box-shadow: 0 2px 3px #ededed;}
+.deanprices{ font-size:14px; color:#999;}
+.deanprices span{ font-size:22px; padding:0 5px; color:#FECD11}
+.deanprices i{font-size:14px; color:#999; font-family:Georgia, "Times New Roman", Times, serif;}
+/*索引*/
+.deanpubtitles_tt i.deansubtitle7{ display:block; float:left; margin-left: 10px; width: 300px; height: 64px; background:url({STYLEIMGDIR}/subtitle8.png) 0 0 no-repeat;}
+.deanpublinks dl dd{float: left; cursor:pointer; display: inline; height: 15px; line-height: 15px; color: #999;  margin: 38px 6px 0;}
+.deanpublinks dl dd.ued{ color:#ff4444;}
+
+.deantabnrsd{margin-top: 24px; padding-bottom: 30px; margin-bottom:20px; overflow: hidden; border-bottom: 1px solid #ededed;}
+.deantabnrsd ul{}
+.deantabnrsd ul li{ display:none;}
+.deanfghbox{}
+.deanfghbox dl{ width:1209px}
+.deanfghbox dl dd{float: left; width: 364px; height: 225px; border-right: 1px dashed #ededed; padding-right: 20px; margin-right: 23px; overflow: hidden;}
+.deancenterbox{ margin-bottom: 26px;}
+.deancenterbox h5{ font-size: 18px; line-height: 32px; margin-bottom: 10px; font-weight:normal;color:#65DAD1;}
+.deanitemslists{overflow: hidden; height: 50px;}
+.deanitemslists a{ display:block; float: left; color:#999; font-size:14px;  width: 25%;  line-height: 25px;  height: 25px;  white-space: nowrap;  overflow: hidden; text-overflow: ellipsis;}
+.deanitemslists a:hover{ color:#ff4444;}
+
+.deanbigTitle1{ height: 1px;  background-color: #ff4444;  text-align: center; margin: 46px 0 34px; position: relative;}
+.deanbigTitle1 h2{ position: absolute; left: 50%; margin-left: -100px; top: -22px; height: 46px; width: 200px; background:#fff;}
+.deanbigTitle1 h2 p{ font-size:22px; color:#ff4444; font-weight:normal;}
+.deanbigTitle1 h2 span{ font-size:12px; color:#999; font-weight:normal;}
+
+/*友情链接*/
+.deanyouqinglianjie{ width:1176px; height:94px; position:relative; border-left:2px solid #FF9898; border-right:2px solid #FF9898; margin:30px 0 0 0; padding-top:25px;}
+.deanyouqinglianjie i{ display:block; width:20px; height:2px; background:#FF9898; position:absolute;}
+.deanyouqinglianjie em{ width:300px;position:absolute; left:20px; top:-10px; height:25px; background:url({STYLEIMGDIR}/bgtxt3.jpg) center no-repeat; }
+.deanyouqinglianjie i.deanline1{ top:0; left:0px;}
+.deanyouqinglianjie i.deanline2{ bottom:0; left:0px;}
+.deanyouqinglianjie i.deanline3{ width:860px; top:0; right:0px;}
+.deanyouqinglianjie i.deanline4{ bottom:0; right:0px;width: 1157px;}
+.deanlinksroll{width:1130px; margin:0 auto 15px auto; height:80px; overflow:hidden;}
+.deanlinksroll a{ display:inline-block; font-size:12px; height:25px; line-height:25px; color: #999; margin-right: 44px; float: left;}
+.deanlinksroll a:hover{ color:#ff4444;}
+
+
+/**end**/
+
+/**forum::index**/
+.wp,#wp{ width:1180px!important;}
+.mn{ width:1180px; float:left;}
+.bm{ border:none;}
+.ct2 .mn{ width:890px!important;}
+#category_lk{ border:1px solid #ededed;}
+.fl .bm_h, .bm_h, .bmw .bm_h{ background:#fff;border: none;margin-bottom: 10px;height: 40px;line-height: 40px; padding:0; border-bottom:1px solid #f3f3f3;}
+.bmw .bm_h h2 {font-size: 16px; padding-left:16px; color:#666; font-weight:normal; margin:10px 0 0 0; height:20px; line-height:20px;}
+.bmw .bm_h h2 a{ color:#343536;}
+.bmw .bm_h h4 {font-size: 16px; padding-left:16px; color:#666; font-weight:normal; margin:10px 0 0 0; height:20px; line-height:20px;}
+.bmw .bm_h h4 a{ color:#343536;}
+.fl_tb td{}
+.fl_tb td.fl_i .f_threads, .fl_tb td.fl_i .f_posts {font-weight: bold;font-size: 16px;font-family: Arial;line-height: 1.1em;margin: 0 -25px 0 0;vertical-align: middle;position: relative;top: -20px;display: inline-block;}
+.fl_tb td .line {color: #D1D1D1;font-size: 90px;font-family: Arial;line-height: 1.1em;vertical-align: middle;font-family: Courier New;display: inline-block;height: 93px;}
+.fl_tb td.fl_i .f_posts {color: #333;margin: 0 0 0 -25px;top: auto;bottom: -20px;}
+.fl_tb td.fl_by p, .fl_tb td.fl_by p a {color: #16A1E2;}
+.fl_tb td.fl_by p a {padding: 0 3px;}
+.fl_tb td.fl_by cite {color: #555;font-size: 10px;}
+.fl_tb td.fl_by cite {color: #555;font-size: 10px;}
+.fl_tb h2, fl_g dt{}
+.fl_tb h2 a, .fl_g dt a {font-size: 18px;font-weight: bold; color:#ff4444;}
+.fl_tb h2 a:hover, .fl_g dt a:hover{ color:#ff4444 ;}
+.fl_tb p.xg2, .fl_g dd p.xg2 { overflow: hidden;line-height: 18px;}
+.fl_g dd.xg2{ max-width:135px; margin-top:2px;height: 20px; line-height: 20px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.fl_g dt{max-width: 190px; height: 25px; line-height: 25px; overflow: hidden; margin-bottom: 2px;}
+.fl_g dt em{ font-size:12px; color:#999; font-weight:normal;}
+.fl_g dd em{ font-size:12px; color:#999; font-weight:normal;}
+.mn,.bm{ background:none;}
+.fl .bm {margin-bottom: 15px;border: 1px solid #ededed;background: #fff;}
+.chart{ padding:0; background:none;}
+#chart{ background: #fff; margin-bottom:15px; width:1148px;padding: 15px; border: 1px solid #ededed!important;}
+#chart .y em .xi2{ color:#666;}
+#chart .y{ color:#919090; margin-top:10px;}
+#chart .y a:hover{ }
+.chart span{display: inline-block;padding-left: 40px;margin-right: 20px;text-align: center;}
+.deanjinri{ background:url({STYLEIMGDIR}/forumindex/today.png) left center no-repeat;}
+.deanzuori{background:url({STYLEIMGDIR}/forumindex/yesterday.png) left center no-repeat;}
+.deantiezishu{background:url({STYLEIMGDIR}/forumindex/post.png) left center no-repeat;}
+.deanshuzi{background:url({STYLEIMGDIR}/forumindex/huiyuan.png) left center no-repeat;}
+#online .bm_h h3 strong a{ padding-left:20px;}
+.fl_row td{ border-top:0;}
+.lk{ background:#fff; padding-bottom:15px;}
+.oll{ background:#fff; border:1px solid #ededed!important;}
+.bmw .bm_h a{ color:#333;}
+.xg2{ color:#999;}
+/*论坛版块微调*/
+.deanbbs_icon{ position:relative;}
+.deantodayposts_bbs{ position:absolute; top:0; right:0; height:20px; line-height:20px; padding:0 5px; background:#ff4444; text-align:center; font-size:12px; color:#fff; border-radius:4px;}
+/*关注*/
+.deangzhuyas{}
+.deangzhuyas ul li{ float:left; width:295px; height:115px;}
+.deangzhuyas ul li a{ display:block; width:295px; height:115px; line-height:115px; color:#fff; font-size:25px; text-align:center; position:relative;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deangzhuyas ul li a:hover{ opacity:0.8;transform: translate(0,-5px);-webkit-transform: translate(0,-5px);-moz-transform: translate(0,-5px);-o-transform: translate(0,-5px);-ms-transform: translate(0,-5px);}
+.deangzhuyas ul li.deanwechat a{ background:#A5DA43 url({STYLEIMGDIR}/discuz/cssi_wechat-128.png) 47px center no-repeat;}
+.deangzhuyas ul li.deanweibo a{ background:#FE6649 url({STYLEIMGDIR}/discuz/cssi_sina-128.png) 45px center no-repeat;}
+.deangzhuyas ul li.deanbaidu a{ background:#6FB7FA url({STYLEIMGDIR}/discuz/cssi_baidu-128.png) 55px center no-repeat;}
+.deangzhuyas ul li.deanqqqun a{ background:#FFCA3B url({STYLEIMGDIR}/discuz/cssi_tencent_weibo-128.png) 40px center no-repeat;}
+/*论坛首页N格*/
+
+.deannge{ margin:20px 0; width:1180px; overflow:hidden; height:320px; position:relative; z-index:1;}
+
+.deanltflash { position: relative;  width:460px; height:320px; float:left; overflow: hidden; }
+.deanltflash ul li{position: relative;  width:460px; height:320px;}
+.deanpic{ height:320px;}
+.deanflashpic{ width:460px; height:320px; position:absolute; top:0; left:0; z-index:1;}
+.deanflashpic img{ width:460px; height:320px;} 
+.deanf_iiner{ width:440px; height:60px; position:absolute; bottom:0; left:0; background:rgba(255,255,255,0.9); padding:5px 10px 20px 10px;z-index:2;}
+.deantzzz{ float:left; width:60px;margin-top: -22px; margin-left:20px; }
+.deantzzz img{ width:60px; height:60px; border-radius:100%;}
+.deantzzz p{ text-align:center; color:#ff4444 ; font-size:12px; height:36px; line-height:36px; width:60px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.deantzr{ float:right; width:335px;}
+.deantzr h5{ height:25px; line-height:25px; overflow:hidden; margin-bottom:3px;}
+.deantzr h5 a{ font-size:16px; color:#666; font-weight:normal;}
+.deantzr h5 a:hover{ color:#ff4444 ;}
+.deantzr p{ font-size:12px; color:#999; line-height:20px; height:37px; overflow:hidden; background:url({STYLEIMGDIR}/discuz/quote_small.png) left 0 no-repeat; text-indent:20px;}
+
+
+.deanltflash .hd { overflow:hidden; zoom:1; position:absolute; bottom:5px; right:160px; z-index:3}
+.deanltflash .hd li{float:left;  text-align:center;  width:20px; height:2px; cursor:pointer; overflow:hidden; background:#919191; margin-left:4px; filter:alpha(opacity=80); opacity:.8; -webkit-transition:All .5s ease;-moz-transition:All .5s ease;-o-transition:All .5s ease }
+.deanltflash .hd .on{ background:#ff4444 ; filter:alpha(opacity=100);opacity:1;   }
+
+.deanltflash .prev,
+.deanltflash .next { width:18px; height:28px; position:absolute; top:135px; -webkit-transition:All .5s linear;-moz-transition:All .5s linear;-o-transition:All .5s linear;transition:All .5s linear; z-index:22; }
+.deanltflash .prev { background:url({STYLEIMGDIR}/discuz/arrowsleft.png) center no-repeat;left:12px;  }
+.deanltflash .next { background:url({STYLEIMGDIR}/discuz/arrowsright.png) center no-repeat; right:12px; }
+
+.deanltranklist{ width:700px; height:320px;  float:right;}
+.deanltranklist_top{ margin-bottom:10px;}
+.deanltranklist_top ul li{ width:60xp; height:30px; line-height:30px; float:left; margin-right:10px; padding:0 15px;  text-align:center; background:#f1f1f1;color:#666; font-size:12px; cursor:pointer;}
+.deanltranklist_top ul li.cur{ background:#ff4444 ; color:#fff;}
+.deanbottom_box{}
+.deanbottom_box dl dd{ display:none;}
+
+.deannr_box{width:700px;}
+.deannr_box ul li{}
+.deantt_top{ padding-bottom:7px; border-bottom:1px dashed #e0e0e0; margin-bottom:7px;}
+.deantt_top h5{ margin-bottom:5px;}
+.deantt_top h5 a{ font-size:16px; color:#666; font-weight:normal;}
+.deantt_top h5 a em{ display:inline-block;float: left; width:10px; padding:0 5px; height:21px; line-height:21px; font-size:12px;color:#fff; background:#ff4444 ; text-align:center; margin-right:10px; border-radius:100%;}
+.deantt_top p{ font-size:12px; color:#999; line-height:24px;}
+.deantt_top h5 a:hover{ color:#ff4444 ;}
+.deantt_top h5 span{ color:#ff4444 ;}
+.deannr_box ul li.deandot{ width:700px;  height:32px; line-height:32px;}
+.deannr_box ul li.deandot em{display:inline-block;float: left; width:10px; padding:0 5px; height:21px; line-height:21px; font-size:12px;color:#fff; text-align:center; margin-right:10px; margin-top:6px;background:#cdcdcd;border-radius:100%;}
+.deannr_box ul li.deandot em.deanemone{background:#A5DA43; }
+.deannr_box ul li.deandot em.deanemtwo{background:#0D93FB; }
+.deannr_box ul li.deandot a{ font-size:16px; color:#666;display:inline-block; float:left; width:330px; height:32px; overflow:hidden;}
+.deannr_box ul li.deandot span{ float:right; font-size:12px; color:#999;}
+.deannr_box ul li.deandot a:hover{ color:#ff4444 ;}
+.deanreds{ color:#A5DA43!important;}
+.deanblues{ color:#0D93FB!important;}
+
+/*论坛首页右侧*/
+.ct2 .sd{ width:270px;}
+.deansideboxs{ margin-bottom:15px;}
+.deansidetitle{ color:#343536; height: 40px; line-height: 40px; border-bottom:1px solid #ededed; margin-bottom:15px; font-size:18px; font-weight:normal; }
+.deansidetitle a{ float:right; font-size:12px; color:#999; display:inline-block; height:40px; line-height:40px;}
+.deansidetitle a:hover{ color:#ff4444 ;}
+.deantjdypics{}
+.deantjdypics a{ display:block; width:270px; height:165px; position:relative; overflow:hidden;}
+.deantjdypics a img{ width:270px; height:165px;transition: all 1.2s; -moz-transition: all 1.2s; -webkit-transition: all 1.2s; -o-transition: all 1.2s;}
+.deantjdypics a:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2); }
+.deantjdypics a p{ width:270px; height:30px; line-height:30px; position:absolute; top:10px; left:15px; background:url({STYLEIMGDIR}/discuz/comment-128.png) left center no-repeat; padding-left:30px; font-size:16px; color:#fff;}
+.deantjdypics a h5{ width:250px; padding:0 10px; position:absolute; left:0; bottom:0; height:40px; line-height:40px; text-indent:25px; font-weight:normal; overflow:hidden; background:rgba(0,0,0,0.4) url({STYLEIMGDIR}/discuz/left_quote_alt-16.png) 10px center no-repeat; font-size:16px; color:#fff;}
+
+.deantjlists{}
+.deantjlists ul li{ height:45px; line-height:45px; border-bottom:1px dashed #ededed;}
+.deantjlists ul li:last-child{ border-bottom:0;}
+.deantjlists ul li a{ font-size:16px; color:#666;height:45px; line-height:45px; float:left; width:180px; display:block; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; position:relative; padding-left:10px;}
+.deantjlists ul li a:before{ content:'';display: inline;  width: 5px;  height: 5px; border-radius: 50% 50%; background: #d5d5d5;position: absolute; left: 0px;  top: 20px;}
+.deantjlists ul li a:hover:before{ background: #ff4444;}
+.deantjlists ul li a:hover{ color:#ff4444 ;}
+.deantjlists ul li span{ font-size:12px; color:#999;height:45px; line-height:45px; float:right; display:inline-block;}
+/**end**/
+
+
+/** forum::index,forum::forumdisplay,forum::viewthread**/
+
+body {background:#fff!important;}
+.ct2 .sd{ margin-right:0!important;}
+.deansideboxs{ margin-bottom:15px;}
+.deanbbsads{ width:1180px; height:89px; margin:20px 0; position:relative;}
+.deanbbsads img{ width:1180px;}
+.deanbbsads i{ display:block; padding:0 10px; background:rgba(0,0,0,0.5); font-size:12px; color:#fff; height:20px; line-height:20px; position:absolute; right:0; bottom:0; border-radius:10px 0 0 0;}
+.deanadsside{ margin-bottom:10px; width:270px; position:relative;}
+.deanadsside img{ width:270px;}
+.deanadsside i{ display:block; padding:0 10px; background:rgba(0,0,0,0.5); font-size:12px; color:#fff; height:20px; line-height:20px; position:absolute; right:0; bottom:0; border-radius:10px 0 0 0;}
+
+/* 快速发帖图标美化 */
+.fpd a.fbld{background:url({STYLEIMGDIR}/viewthread/font_bold.png) center no-repeat;}
+.fpd a.fclr{background:url({STYLEIMGDIR}/viewthread/font_underline.png) center no-repeat;}
+.fpd a.fmg{background:url({STYLEIMGDIR}/viewthread/photo.png) center no-repeat;}
+.fpd a.flnk{background:url({STYLEIMGDIR}/viewthread/ic_link.png) center no-repeat;}
+.fpd a.fqt{background:url({STYLEIMGDIR}/viewthread/quote.png) center no-repeat;}
+.fpd a.fcd{background:url({STYLEIMGDIR}/viewthread/code.png) center no-repeat;}
+.fpd a.fsml{background:url({STYLEIMGDIR}/viewthread/smile.png) center no-repeat;}
+.fpd a.fat{background:url({STYLEIMGDIR}/viewthread/icon-at.png) center no-repeat;}
+.deanfatie{ display: block; position:absolute; right:15px;width: 110px; text-align:center;height: 35px;line-height: 35px;color: #fff;font-size: 16px;background:#FFAB00; margin-top:5px; border-radius:3px;}
+
+
+.bm_c{ padding:20px;}
+.bm_h .o img{ margin-top: 11px;margin-right: 10px;}
+.deanluntan_left{ width:885px; float:left; margin-bottom:25px;}
+.deanluntan_right{ float:right; width:278px; }
+/*发帖按钮*/
+.pn{ background:none; box-shadow:none!important; border:0!important;}
+.pnc{border-color: #ff4444 ;background-color: #ff4444 ; padding:0 10px; font-family:Microsoft Yahei; font-size:12px;}
+.ftid a{ border-color:#eaeaea;background: #FFF url({STYLEIMGDIR}/forumlist/newarow.gif) no-repeat 100% -1px; color:#999!important;}
+.ftid a:hover{background: #FFF url({STYLEIMGDIR}/forumlist/newarow.gif) no-repeat 100% -24px;}
+/*分页*/
+.pg a, .pg strong, .pgb a, .pg label {float: left;height: 28px;line-height: 28px;margin-right: 2px;padding: 0 10px;border: 1px solid #E8E8E8; overflow: hidden; border-radius: 0;background-repeat: no-repeat; background: #FFFFFF;}
+.pg strong { background: #ff4444 ; border-color: #ff4444 ;color: #FFFFFF;}
+.pg a.nxt { padding-right: 10px; background: #FFFFFF;}
+.pg a.nxt:hover{background: #ff4444 ; color: #FFFFFF;}
+.pg a.prev{ background:url({STYLEIMGDIR}/forumlist/arrowleft.png) center no-repeat;}
+.pg a.prev:hover{background:#ff4444  url({STYLEIMGDIR}/forumlist/arrowleft1.png) center no-repeat;}
+
+
+/*点评*/
+.cm .psth{background-color: #bdf58f; color:#37B389;}
+.icon_ring{border: 2px solid #37B389;}
+.icon_ring:hover{background: #37B389;}
+.bm,.bmw{ border:0;}
+#p_btn a{ padding-left:0;}
+#p_btn i{ background:#fff;}
+.tns th, .tns td{ color:#ff4444 ;}
+#g_up126,.pil,.pbg2,.pls p em,#fastsmiliesdiv{ display:none;}
+.tedt .bar{ border:0; background:none; padding:0;}
+.tedt .area {border: none;background: #fff;}
+.tedt{ border:0;}
+.hasfsl{ margin-right:0;}
+.bar .y a,.pnpost a,.pnpost{ font-size:14px; color:#999;}
+.px{ background:none; border:1px solid #ddd; border-radius:2px;}
+.px span{ font-size:12px; color:#555;}
+.bm_c strong#checklen{ color:#ff4444 ;}
+.bm_c .pbt{ padding-top:10px;}
+.bm_c .pbt span{ color:#999;}
+
+/*列表页右侧*/
+
+.deanhuifu{display: block;width: 101px;padding-left: 55px;height: 36px;line-height: 36px;color: #fff;font-size: 16px;background: url({STYLEIMGDIR}/forumlist/huifu_btn.png) no-repeat 22px 60% #ffba00;}
+#newspecial_menu {width: 228px;border: 1px solid #ff4444 ;}
+#newspecial_menu a:hover{ color:#ff4444 ;}
+#f_pst .tedt{ border:0;}
+#f_pst .bm_c{ padding:0;}
+
+/*版块介绍*/
+.deanbkjs{z-index: 11; margin-bottom:15px;padding:15px; width:1148px; background:#FEFEFE; border: 1px solid #ededed;position:relative;}
+.deanjstop{}
+.deanjstopl{ float:left;}
+.deanjstopl img{ width:65px; height:65px; overflow:hidden;margin-right:20px;}
+.deanjstopr{ float:left; width:940px;  line-height:45px;}
+.deanjstopr h3{ float:left; margin-right:20px;}
+.deanjstopr h3 a.deanbkname{ font-size: 24px; font-weight:normal;color: ;display: inline-block; float:left;max-width:150px;height:45px; line-height:30px;overflow: hidden;}
+.deanjstopr span.deanbanzhu a{ }
+.deanbanzhu a{font-size:12px; color:#898787!important;}
+.deanjstopr .deansc{  height:45px; line-height:45px; color:#ff4444 ; margin-left:10px; font-size:12px;  float:left;}
+.deanbanzhu{ float: left;font-size: 12px;height:45px; line-height:45px; padding-left:15px;max-width:300px; overflow:hidden;color:#898787;}
+#number_favorite{ color:#ff4444 !important; font-weight:normal;margin-left:4px;}
+.deanjstopr .deansc:hover{ text-decoration:none; opacity:0.9;}
+.deanjscenter{ height:20px; line-height:20px; overflow:hidden;}
+.deani{ width:60px; height:20px; background:#ff4444 ; border-radius:3px; float:left; text-align:center; font-size:12px; color:#fff;}
+.deanguize{ font-size:12px; color:#999;height:20px; line-height:20px; overflow:hidden;float:left; margin-left:10px; height:20px; line-height:20px; width:855px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}	
+.deanjsbottom{ height:40px; float:left;overflow:hidden;}
+.deanjsbottom ul{ }
+.deanjsbottom span{ height:16px; line-height:16px; font-size:12px; color:#898787;}
+.deanjsbottom em{ display:inline-block; padding:0 3px 0 10px;font-size:12px; color:#898787;}
+/*分类信息*/
+.deankcbiox{}
+.deankcbiox dl{ }
+.deankcbiox dl dd{background: #fff; cursor: pointer; margin: 0px 0px 15px 0px; border:1px solid #e0e0e0; height: 279px; position: relative; overflow: hidden;}
+.deanimgbox{ width:248px; height:175px; overflow:hidden; position:relative;}
+.deanimgbox img{ width:248px; height:175px;}
+.deanimgbox span{ width: 62px; height: 62px; background: url({STYLEIMGDIR}/tjbg.png) no-repeat; position: absolute; top: 0; left: 0; z-index: 99;}
+.deanc_intro{width: 249px; height: 175px; position: absolute; top: 0; right: 0px; filter: alpha(opacity=0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0; background: url({STYLEIMGDIR}/bg01.png); -webkit-transition: .3s; transition: .3s;}
+.deanc_intro span{margin: 30px 40px; font-size: 16px; line-height: 24px; height: 96px; overflow: hidden; display: block; color: #fff;}
+.deankcbiox dl dd:hover{box-shadow: 0px 0px 10px #d0dae2;}
+.deankcbiox dl dd:hover .deanc_intro{ opacity:1;}
+.libox{ width: 249px; height: 75px; position: absolute; top: 170px; left: 0; -webkit-transition: .3s; transition: .3s;}
+.deanlitit{ font-size: 16px; font-weight: bold; color: #5b6269; height: 30px; line-height: 30px; margin-top: 10px; padding-left: 10px; overflow: hidden;}
+.deanliinfo{ padding: 0px 10px;  margin-bottom: 30px; color: #919ca5; font-size: 16px;}
+.deanfree1{ color: #F78926; font-size: 20px; float: left;}
+.deantname{ padding-left: 40px; height:30px; line-height:30px;background: url({STYLEIMGDIR}/talkicon.png) no-repeat 20px 50%; float: left;}
+.deanlibtn{ width: 249px; height: 75px; position: absolute; top: 175px; right: -285px; -webkit-transition: .3s; transition: .3s;}
+.deanlibtn a{ width: 188px; height: 38px; line-height: 38px; border: 1px solid #ff4444 ; font-size: 18px; color: #ff4444 ; text-align: center; display: block; margin: 0 auto; margin-top: 20px;}
+.deanlibtn a:hover{ background:#ff4444 ; color:#fff;}
+.deanlibox{width: 249px; height: 75px; position: absolute; top: 175px; left: 0; -webkit-transition: .3s; transition: .3s;}
+.deanlibtn span{ display: block; color: #919ca5; text-align: center; height: 40px; line-height: 40px; font-size: 16px;}
+.deankcbiox dl dd:hover .deanlibtn { right: 0px;}
+.deankcbiox dl dd:hover .deanlibox { left: -285px;}
+.deankcnd{ float:left; display:block; padding:2px 12px; background:#f5f8f9; color:#999; font-size:12px; margin-top:5px;}
+.deanksshu{ float:right; display:block; font-size:12px; color:#ff4444 ; margin-top:5px; }
+.deansideboxs{margin-bottom:15px;}
+.deansidetitle{ color:#343536; height: 40px; line-height: 40px; border-bottom:1px solid #ededed; margin-bottom:15px; font-size:18px; font-weight:normal; }
+.deansidetitle a{ float:right; font-size:12px; color:#999; display:inline-block; height:40px; line-height:40px;}
+.deansidetitle a:hover{ color:#ff4444 ;}
+.deantjdypics{}
+.deantjdypics a{ display:block; width:270px; height:165px; position:relative; overflow:hidden;}
+.deantjdypics a img{ width:270px; height:165px;transition: all 1.2s; -moz-transition: all 1.2s; -webkit-transition: all 1.2s; -o-transition: all 1.2s;}
+.deantjdypics a:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2); }
+.deantjdypics a p{ width:270px; height:30px; line-height:30px; position:absolute; top:10px; left:15px; background:url({STYLEIMGDIR}/discuz/comment-128.png) left center no-repeat; padding-left:30px; font-size:16px; color:#fff;}
+.deantjdypics a h5{ width:250px; padding:0 10px; position:absolute; left:0; bottom:0; height:40px; line-height:40px; text-indent:25px; font-weight:normal; overflow:hidden; background:rgba(0,0,0,0.4) url({STYLEIMGDIR}/discuz/left_quote_alt-16.png) 10px center no-repeat; font-size:16px; color:#fff;}
+
+.deantjlists{}
+.deantjlists ul li{ height:45px; line-height:45px; border-bottom:1px dashed #ededed;}
+.deantjlists ul li:last-child{ border-bottom:0;}
+.deantjlists ul li a{ font-size:16px; color:#666;height:45px; line-height:45px; float:left; width:180px; display:block; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; position:relative; padding-left:10px;}
+.deantjlists ul li a:before{ content:'';display: inline;  width: 5px;  height: 5px; border-radius: 50% 50%; background: #d5d5d5;position: absolute; left: 0px;  top: 20px;}
+.deantjlists ul li a:hover:before{ background: #ff4444;}
+.deantjlists ul li a:hover{ color:#ff4444 ;}
+.deantjlists ul li span{ font-size:12px; color:#999;height:45px; line-height:45px; float:right; display:inline-block;}
+
+/**end**/
+
+
+/**forum::forumdisplay**/
+.wp,#wp{ width:1180px!important;}
+.mn { padding:0px 15px; background:#fff;}
+.ct2 .sd{ width:270px;}
+#fontsearch tr{ padding:5px 0; border-bottom:0; line-height:30px; border-bottom:1px solid #ededed;}
+#fontsearch tr:last-child{ border-bottom:0;}
+#fontsearch tr th{ font-size:12px; color:#999; font-weight:normal;text-align: center;background: #fff!important;padding:5px;
+width: 10%;}
+.cttp .unfold, .cttp .fold{ display:none;}
+.tsm td {padding: 5px 10px 5px 0;border: none;vertical-align:middle;}
+#fontsearch a{ color:#787878; font-size:12px;padding: 3px 5px; }
+#fontsearch a:hover{background:#ff4444 ; color:#fff; padding:3px 5px;} 
+#fontsearch .tsm th{ font-size:12px; color:#333;}
+.tsm .a a{ background: #ff4444 ;color: #fff!important;padding:0px 5px;}
+#ct{ margin-left:0!important;}
+#visitedforumstmp{ display:none;}
+.tsm { margin-bottom:-13px;}
+.subtsm {margin: 10px 10px 5px 10px;padding: 5px;border: 0;background: #f3f3f3;}
+.ct2 .mn{ width:858px!important; border:1px solid #ededed; padding:0 15px;}
+.mn{ width:1148px; border:1px solid #ededed; padding:0 15px;}
+.bmw .bm_h{ border:0; background:#fff;}
+.bbs{ border:1px solid #ededed!important; padding:0!important; background:#fff; margin-bottom:20px!important;}
+.bbs a{}
+.bbs a:hover{  color:#ff4444 ;}
+.bm{ border:0; background:none;}
+.bm_h .xs2 a{font-size: 18px;font-weight: bold;position: relative;margin-right: 20px;color: #474747;}
+.bm_h .i{ color: #898787; font-size:16px!important;}
+.bm_c .xi2 a{ color: #898787!important;; font-size:16px!important;}
+.bm_c .y div{color: #898787!important;; font-size:16px!important;}
+.xg2 {color: #898787;}
+.mn .bm_c,.mn .bm_h{ padding:0;}
+.pgs #newspecialtmp{ display:none;}
+#fastpostform{ margin-top:15px; padding:15px; background:#fff;}
+.fastpreview{ padding:0 15px;}
+.tl tbody:last-child .threadpre .threadpretd { border: 1px solid #e0e0e0;}
+.tl .threadpre .threadpretd { border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0;}
+.avt img{ border-radius:100%; border:0;}
+.icon_preview {top:-11px!important;}
+.ttp li span.pipe{ display:none;}
+.ttp li{ margin-right:15px;}
+.tedt .pt{ border:1px solid #ededed;}
+/*论坛列表页左侧*/
+/*公告样式*/
+.deanancmtlist{ height:60px; line-height:60px;border-bottom: 1px dashed #eaeaea; position:relative;}
+.deanannouncement{ float:left; width:70px; font-size:16px;  color:#666; font-weight:bold; padding-left:30px; background:url({STYLEIMGDIR}/forumlist/speaker.png) left center no-repeat; }
+.deanamtcontent{ width:480px;float:left;overflow: hidden;height: 60px; }
+.deanamtcontent a{ font-size:16px; color:#666; font-weight:normal;}
+.deanamtcontent a:hover{ color:#ff4444 ;}
+.deananmtauthor{ width:100px; float:left;height: 60px;overflow: hidden; position:absolute; right:120px;}
+.deananmtauthor a{font-size:16px; color:#666; font-weight:normal;}
+.deananmtauthor a:hover{color:#ff4444 ;}
+.deananmtdate{font-size:12px; color:#999; font-weight:normal; float:right;}
+/*列表页样式*/
+#livethread{background: #fff;border:1px solid #ededed;border-top: 2px solid #ff4444 ;}
+.livethreadtitle a{ font-size:16px;}
+.tf a{ color:#999;}
+.deanmsg{ color:#ff4444 ;}
+.forumava img{ border-radius:100%; width:45px; height:45px;}
+.tl th, .tl td {padding:4px 0;}
+.tl th .tdpre, .tl td.fn .tdpre{ margin-right:20px;}
+.showhide{margin: 5px 0;}
+.list2 {background: #F7F7F7;}
+.tl .icon{ width:50px;}
+#threadlisttableid .by, #threadlisttableid .num{ width:0;}
+.tl .o {width: 13px;}
+.tl .by{ text-align:right;}
+.tl .icon img{ width:38px; height:38px; border-radius:3px;}
+.tl td.num .line {color: #D1D1D1;font-size: 30px;font-family: Arial;line-height: 1em;vertical-align: middle;font-family: Courier New;}
+.tl td.num em {color: #333;font-size: 12px;line-height: 1.1em;font-family: Arial;position: relative;margin-left: -5px;vertical-align: middle;display: inline-block;bottom: -5px;}
+#separatorline .ts th, #separatorline .ts td{background:#FCFCFC; border-bottom:1px solid #F3F3F3}
+.tf a{ line-height:15px;}
+.tl .th{ background:#fff;border-bottom:1px solid #eaeaea; padding:0 0 10px 0;}
+.tl tr:hover th, .tl tr:hover td{ background:#fff;}
+.deanzhuti{display: inline-block;width: 110px;height: 22px; line-height:22px;float: left; margin-right:13px;background:url({STYLEIMGDIR}/forumlist/all1.png) no-repeat left center; }
+.deanpaixu{display: inline-block;width: 110px;height: 22px; line-height:22px;float: left;margin-right:13px;background:url({STYLEIMGDIR}/forumlist/column.png) no-repeat left center; }
+.deanzhuti:hover{background:url({STYLEIMGDIR}/forumlist/all.png) no-repeat left center;}
+.deangengduo{display: inline-block;width: 70px;height: 22px; line-height:22px;float: left;margin-right:13px;background:url({STYLEIMGDIR}/forumlist/clock1.png) no-repeat left center;}
+.deanzhuti:hover a,.deanpaixu:hover a,.deangengduo:hover a{ color:#ff4444 ;}
+.deangengduo:hover {background:url({STYLEIMGDIR}/forumlist/clock.png) no-repeat left center}
+.deanpaixu:hover{background:url({STYLEIMGDIR}/forumlist/column1.png) no-repeat left center;}
+.tf a#filter_special:hover,.tf .showmenu:hover{ color:#ff4444 !important;}
+.pop_moremenu a.xw1{ background:#fff;}
+.p_pop a:hover{  background:#fff;}
+.p_pop a,.pop_moremenu li{ border-bottom:0;}
+#filter_special_menu{ padding:2px!important; box-shadow:none!important;}
+.tf a{ font-size:16px; float:left;}
+#filter_special_menu{padding: 4px;border: 1px solid #ff4444 ;min-width: 84px;border-color: #DDD;background: #FEFEFE;box-shadow: 1px 2px 2px rgba(0,0,0,0.3);}
+#filter_special_menu a:hover{ color:#ff4444 ;}
+.showmenu{ background-position:100% 47%; color:#777; font-size:16px; padding-left:25px;}
+#threadlist .icn {width: 48px;padding: 13px 10px 13px 0;vertical-align: top;}
+.tl th, .tl td{ border-bottom:1px dashed #eaeaea;}
+#moderate .forumtit {padding: 20px 0 12px 10px;}
+.forumtit a{  color:#666;}
+.forumtit .z,.forumtit .z a{ font-size:12px;}
+.forumtit a:hover{ color:#ff4444 !important; }
+.tl #forumnewshow,.newthread{ display:none;}
+.xst{ font-family:Microsoft Yahei; font-size:18px;}
+.tl .forumtit .foruminfo {margin-top: 5px;height: 20px;overflow: hidden;}
+.tl .forumtit .foruminfo, .tl .forumtit .foruminfo a {color: #989da2 !important;}
+.y .dean_view{ font-size:12px;color: #aaa;margin: 0 10px 0 0; display:block; float:left; background:url({STYLEIMGDIR}/forumlist/postcheck.png) left center no-repeat; padding-left:25px;}
+.y .dean_reply{font-size:12px;color: #aaa;margin: 0 10px 0 2px;  display:block; float:left;background:url({STYLEIMGDIR}/forumlist/postcomment.png) left center no-repeat; padding-left:25px;}
+.y .dean_ftdate{font-size:12px;color: #aaa;margin: 0 4px 0 2px;  display:block; float:left;background:url({STYLEIMGDIR}/forumlist/postdate.png) left center no-repeat; padding-left:25px;}
+/*列表页循环图片和文字*/
+.deanforumlist_pics{ margin:14px 0;}
+.deanforumlist_pics a{ display:block; float:left; margin-right:10px; width:120px; height:80px;}
+.deanforumlist_pics a img{ width:120px; height:80px;}
+.deanforumlist_pics a img:hover{ opacity:0.8;}
+.deanthreads_summary{ height:45px; line-height:25px; font-size:14px; color:#999; overflow:hidden; margin-top:6px;}
+.deanthreads_author{ display:block; height:30px; line-height:30px; font-size:14px; color:#666; text-align:center; width:48px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.deanatsign{ font-size:14px; color:#ff4444; padding:0 3px; margin-right:0!important;}
+/*列表页分类*/
+
+.tl th em, .tl th em a{ color:#ff4444 !important;}
+.ttp a{ color:#919090; font-size:16px; font-weight:400;background:none; padding:0; border:0!important;}
+.ttp .a a{ color:#ff4444 ; background:none;font-weight:400; padding-left:0;}
+.ttp .num{line-height: 16px;font-size: 12px;color: #fff;background: #D8D8D8;padding: 0 8px;margin-left: 6px;-webkit-border-radius: 2px;
+-moz-border-radius: 2px;border-radius: 2px;}
+.ttp a:hover{ color:#ff4444 ;}
+.ttp .a .num{ background:#ff4444 ;}
+.ttp .a a:hover{ background:none;}
+
+/*侧边栏导航*/
+.bdl_h{ font-size:16px; font-weight:normal;color:#ff4444 ; }
+.bdl { background:#fff; border:0; position:absolute;}
+.tbn { background:#fff;}
+#forumleftside h2.mbn a{ font-size:16px; color:#ff4444 ; font-weight:normal;}
+.bdl dd a { font-size:12px; color:#999; font-weight:normal;}
+.bdl dt { border:0; background:#fff; }
+.bdl dt a { color:#ff4444; font-weight:bold; font-size:16px;}
+.bdl dd.bdl_a a{ background:#fff; color:#ff4444 ; font-weight:bold;margin:0;}
+/*推荐*/
+.zmb_tuij {background: #fff;border: 0;padding:15px;}
+.dean_bbtj {width: 20px;padding: 30px 10px;font-size: 18px;background: #eee;border-radius: 2px;}
+.dean_fdtp {width: 240px;height: 240px;margin-left: 15px;overflow: hidden;position: relative;}
+.dean_fdtp .bd {height: 240px;border-radius: 2px;overflow: hidden;}
+.dean_fdtp .bd a {position: relative;display: block;width: 240px;height: 240px;overflow: hidden;}
+.dean_fdtp .hd {position: absolute;right: 10px;bottom: 10px;}
+.dean_tir li {float: left;display: inline-block;margin: 0 3px;width: 10px;height: 10px;background: url({STYLEIMGDIR}/images/static_ico.png) left -31px no-repeat;font-size: 0;cursor: pointer;overflow: hidden;}
+.dean_tir li.on{background-position: left -9px;}
+
+.dean_fdtl.xe1{ width: 560px;}
+.dean_fdtl.xe2{ width: 93.5%;}
+.dean_fdtl{ margin-left: 10px; overflow: hidden;}
+.dean_fdtl li{ float: left; width: 50%; height: 27px; overflow: hidden; font-size: 16px; white-space: normal; background-position: 0px -160px;}
+.dean_fdtl.xe2.k li{ width:33.33%;}
+.dean_fdtl li a{ display: inline-block; margin:0 5px 0 10px; line-height: 28px; overflow: hidden;}
+.dean_fdtl li a:hover{ margin-left: 15px;}
+.dean_fdtl li span{ line-height: 27px; color: #ccc;}
+/*新窗*/
+#atarget{background: url({STYLEIMGDIR}/forumlist/atarget1.png) no-repeat center;padding-left: 50px; line-height:23px; color:#999; font-size:16px;}
+#atarget.atarget_1{background: url({STYLEIMGDIR}/forumlist/atarget.png) no-repeat center; color:#ff4444 ;}
+.deanspace a{ padding:0 10px; color:#777; font-size:16px;}
+.deanspace a:hover{ color:#ff4444 ;}
+
+/*下一页*/
+.pgbtn {background: #FFFFFF;border-top: 1px solid #E5E5E5;margin-top: 0px;}
+#autopbn{-moz-border-bottom-colors: none;-moz-border-left-colors: none;-moz-border-right-colors: none;-moz-border-top-colors: none;background: none repeat scroll 0 0 #FFFFFF;border-color: -moz-use-text-color #E5E5E5 #E5E5E5;border-image: none;border-radius: 0 0 10px 10px;
+border-right: 1px solid #E5E5E5;border-style: none solid solid;border-width: medium 1px 1px;color: #AAB2BD;font-size: 12px;height: 20px;
+letter-spacing: 0;line-height: 20px;margin: -1px auto 0;padding: 0;width: 128px; border:1px solid #e5e5e5; border-top:0;}
+#f_pst .bm_h{ display:none;}
+.pgb a{ display:none;}
+/*瀑布流*/
+.waterfall{width: 100%!important;}
+.waterfall li{ padding:0;border: 1px solid #ededed; background:none;  }
+.waterfall li:hover{ box-shadow: 0 0 6px #bfbfbf;}
+.waterfall li:hover .waterfallpics img{transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -o-transform: scale(1.05); -ms-transform: scale(1.05);}
+.waterfallpics{width: 280px;height: 200px; overflow:hidden; }
+.waterfallpics a{ display:block; width:100%; height:100%; overflow:hidden; position:relative; }
+.waterfallpics a:hover .deanwaterfallcover{ bottom:0;}
+.deanftsj{ padding:0 5px; height:30px; line-height:30px;  font-size:12px; color:#999; float: right; }
+.deanftsj span{font-size:12px; color:#999;}
+.waterfallpics img{display: block;width: 280px;height: 200px;    transition: All 0.3s ease-in-out; -webkit-transition: All 0.3s ease-in-out;
+-moz-transition: All 0.3s ease-in-out; -o-transition: All 0.3s ease-in-out;}
+.deanwaterfalltitle{ padding:10px; background:#fff;height: 18px;line-height: 18px;overflow: hidden;}
+.deanfenleilabel{ display:inline-block!important; position:absolute; top:0px ;    padding: 0 10px; right:-10px; overflow:hidden; height:30px;}
+.deanfenleilabel em{ }
+.deanfenleilabel em a{display:inline-block;  height:20px; line-height:20px; padding:0 5px; text-align:center;  background:#ff4444;font-size:12px; color:#fff;position: relative; top:-30px;right: 10px;}
+.deanwft{display: inline-block;font-weight: normal;font-size: 16px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;padding: 0; color:#666;width: 100%;}
+.deanwaterfalltitle a.deanwft:hover{ color:#ff4444;}
+.waterfallbottom{background: #FEFEFE;padding:5px 10px;height: 30px;border-top: 1px solid #ededed;overflow: hidden;}
+
+.deanlistavator{ display:block; width:100px; min-width:40px; height:30px; overflow:hidden; float:left;overflow: hidden;
+text-overflow: ellipsis;white-space: nowrap;}
+.deanlistavator:hover span{ color:#ff4444;}
+.deanlistavator:hover img{ transform:rotate(360deg); -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -ms-transform:rotate(360deg);}
+.deanlistavator span{ display:block; height:30px; line-height:30px; font-size:12px; color:#666; float:left; width:60px; overflow: hidden;
+text-overflow: ellipsis;white-space: nowrap;}
+.deanlistavator img{ width:30px; height:30px; border-radius:100%; float:left; margin-right:7px!important;transition:All 0.4s ease-in-out; -webkit-transition:All 0.4s ease-in-out; -moz-transition:All 0.4s ease-in-out; -o-transition:All 0.4s ease-in-out;}
+.deanwaterfallinfo{ padding-left:12px; height:35px; line-height:30px;}
+.deanwaterfallinfo em{ display:inline-block; font-size: 14px;color: #6a5a50;font-weight: normal;padding-left: 27px;overflow: hidden;text-align: center; margin-right:10px;}
+.deanwaterfallinfo em.deanviews{ background:url({STYLEIMGDIR}/forumlist/view.png) left center no-repeat;}
+.deanwaterfallinfo em.deancomments{background:url({STYLEIMGDIR}/forumlist/reply.png) left center no-repeat;}
+.deanwaterfallinfo em.deanrecommends{background:url({STYLEIMGDIR}/forumlist/heat.png) left center no-repeat;}
+.deanforum_list_intro{ font-size:12px; color:#999; height:20px; line-height:20px;}
+
+/*刷新*/
+.forumrefresh{ background:url({STYLEIMGDIR}/forumlist/refresh.png) 100% 50% no-repeat;padding-right: 32px;line-height: 30px;font-size: 12px;
+color: #999!important;}
+.forumrefresh:hover{background:url({STYLEIMGDIR}/forumlist/refresh1.png) 100% 50% no-repeat; color:#ff4444 !important;}
+/*论坛列表页顶部*/
+.deanbbsjj{ border:3px solid #FFEEEE; width:1144px; height:330px; margin-bottom:15px; position:relative; overflow:hidden; padding:15px;}
+.deanbbsjj i{display: block; position: absolute; width: 120px; height: 50px; background: #FFEEEE; text-indent: 57px; font-size: 14px;color: #ff4444 ; line-height: 57px; -webkit-transform: rotate(312deg); -o-transform: rotate(312deg); -moz-transform: rotate(312deg); -ms-transform: rotate(312deg); transform: rotate(311deg); top: 4px; left: -51px;}
+.deanbbsjjl{ width:390px; padding-right:30px; border-right:1px solid #ededed; float:left;}
+.deanbbstop{ padding-bottom:10px; margin-bottom:5px; border-bottom:1px dashed #ededed;}
+.deanbbstop h5{ text-align:center; height:30px; line-height:30px; overflow:hidden;}
+.deanbbstop h5 a{ font-size:16px; color:#666; font-weight:normal;}
+.deanbbstop h5 a:hover{color:#ff4444 ;}
+.deanbbstop p{ font-size:12px; color:#999; text-indent:15px; line-height:22px;}
+.deanbbstop p a{ font-size:12px; color:#ff4444 ; padding-left:5px;}
+.deanbbsbottom{}
+.deanbbsbottom ul li{ height:29px; line-height:29px;}
+.deanbbsbottom ul li span{ display:inline-block;height:29px; line-height:29px; float:left; font-size:14px; max-width:76px; overflow:hidden; color:#ff4444 ;}
+.deanbbsbottom ul li a{ font-size:14px; color:#666; height:29px; line-height:29px;display:inline-block; max-width:245px; overflow:hidden; float:left; margin-left:7px;text-overflow:ellipsis; white-space:nowrap; }
+.deanbbsbottom ul li a:hover{color:#ff4444 ;}
+.deanbbsbottom ul li em{ font-size:12px; color:#999;height:29px; line-height:29px; float:right; display:inline-block;}
+.deanbbsjjr{ width:700px; float:right;}
+.deanbbsjjr ul{ width:725px;}
+.deanbbsjjr ul li{ margin:0 15px 15px 0; float:left; width:161.75px; height:150px; border:1px solid #ededed;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanbbsjjr ul li a{ display:block; width:161.75px; height:150px;}
+.deanbbsjjr ul li a img{ width:161.75px; height:120px; position:absolute; top:0; left:0;transition: all 1.2s; -moz-transition: all 1.2s; -webkit-transition: all 1.2s;-o-transition: all 1.2s;}
+.deanbbsimg{width:161.75px; height:120px; overflow:hidden; position:relative;}
+.deanbbsjjr ul li p{ background:#f4f4f4; height:30px; line-height:30px; width:141.75px; padding:0 10px; font-size:14px; color:#666; overflow:hidden;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear; }
+.deanbbsjjr ul li a:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2);
+-ms-transform: scale(1.2);}
+.deanbbsjjr ul li a:hover p{ background:#fff!important; color:#ff4444 ;}
+.deanbbsjjr ul li:hover{ border:1px solid #ff4444 ;}
+
+/**end**/
+
+
+/** forum::viewthread,group **/
+.ct2 .mn{ width:895px!important;}
+.ct2 .sd{ width:270px; overflow:visible!important;    margin-top: 382px;}
+.wp,#wp{width:1180px!important;}
+.mn{ overflow:visible;}
+.plc { padding: 0 15px; }
+.tit_author a{color: #ff4444 ;}	
+
+.ico-white {display: inline-block;width: 16px;height: 16px;line-height: 16px;vertical-align: -4px;margin-right: 3px;}
+/*活动帖子样式*/
+.spvimg{ width:455px; border:0; }
+.spvimg img{ width:455px; height:344px;}
+.spi{ margin-left: 476px; padding: 15px 10px 10px 20px; margin-bottom:30px;    height: 320px;    border-left: 3px solid #CCCCCC; background: #F6F6F6;}
+.spi dl dt{ font-size:14px; color:#ff4444 ;}
+.pcb strong {  font-weight: normal;}
+.pns .pn{padding: 0 8px; height: 25px; line-height: 25px; box-shadow: none; font-size: 12px; font-weight: bold; background-color: #FFC24B; border: 0; border-radius:3px;}
+.pns .pn span{ color:#fff; font-weight:normal; font-family:Microsoft yahei;}
+.spi dl dd{ font-size:14px; color:#666;}
+/*分页*/	
+#pgt{ margin-bottom:10px;}
+.pgs{ text-align:center;}
+.pgs span{ display:inline-block;}
+.pg{ float:none; display:inline-block;}	
+
+
+.pl.bm{ border:none; background:none;}
+/*大图模式*/
+.pic_h.pl.bm{background:#fff; padding:20px;}
+.pl .ad{border-bottom: 1px solid #ededed;}
+.ad .pls, .ad .plc { height: 0; background: none; border: none;}
+
+
+
+
+/*抢楼,回帖奖励*/
+#pl_top .ad{ border:none;}
+.deanothers #pl_top .plc{ padding:0 15px;}
+#pl_top a.pn{background-color: #ff4444 ; border-color:#ff4444 ; color:#fff!important;}
+#pl_top a.pn:hover{background-color: #4c8fe1; border-color:#4c8fe1; text-decoration:none;}
+
+
+#pl_top .ptn a{background-color: #ff4444 ; padding:2px 5px; display:inline-block;color:#fff!important;}
+#pl_top .ptn a:hover{background-color: #4c8fe1; text-decoration:none;}
+
+
+.pls {width: 180px;    background: #fafafa;border-right: 1px solid #ededed; padding-top:35px;}
+.pls .avatar {margin: 15px 15px 5px; text-align: center;}
+.vuimg { margin-top: -16px!important;}
+.bui {padding: 15px 0 15px 24px;  box-shadow: none; width: 440px !important;}
+.pls .avatar img, .avtm img {background: #fff; padding: 5px;border: 1px solid #e3e3e3; border-radius: 50%;}
+.pls .pi {padding: 0 0 10px 0;text-align: center;border-bottom: none; margin-bottom: 2px;}
+.pls .pi .authi a { color: #777; font-size: 16px;text-decoration: none;}
+.pls .tns { background: #f1f1f1; padding: 8px 0; margin: 0 13px 10px; border-radius: 5px;}
+.tns th, .tns td { text-align: center;font-size: 12px;}
+.tns th { border-right: 1px solid #e3e3e3;}
+.tns th, .tns td, .tns th a, .tns td a,.pls p em a, .pls dt em,.pls p, .pls .pil, .pls .o,.cp_pls a{ color:#888;} 
+.pls .plso { margin: 5px 0px 10px 16px;}
+.pls .plso li {float: left; overflow: hidden; width: 72px; margin-right: 10px;}
+.pls .plso li a { background: #ff4444 ; height: 24px; line-height: 24px; padding: 0 10px;text-indent: 0;text-align: center; display: block; width: 52px; color: #fff;}
+.pls .plso li.addflw a:hover{background:#2858a1; text-decoration:none;}   
+.pls .plso li.pm2 a { background: #6999ee;}
+.pls .plso li.pm2 a:hover { background: #4c8fe1; text-decoration:none;}
+
+/*点评*/
+.psth { margin: 10px 0 5px; padding-left: 0px; padding-bottom: 10px; border-bottom: 1px solid #e5e5e5; width: auto;}
+.cm .psth { background: none; color: #333; font-size: 16px !important; font-weight: 700;}
+.icon_ring {display: none;}
+.psta { width: auto; padding-right: 5px;}
+.psta img { border-radius: 50%; height: 30px; width: 30px;margin-right: 3px;}
+.psta .xw1, .psti .xw1 { font-weight: 400;}
+.psta .xi2, .psta .xi2 a, .psti .xi2, .psti .xi2 a { color: #ff4444 ;}
+.psti { margin-left: 0px; line-height: 28px;}
+
+
+/*评分*/
+.rate { margin: 15px 0 10px;}
+.ratl th, .ratl td, .ratc { height: 30px;line-height: 30px; border-bottom: 1px dashed #e5e5e5;}
+.ratl th { font-weight: 400; font-size: 16px; border-bottom: 1px solid #e5e5e5;}
+.ratl td a{color: orange;}
+.rate .op{ display:none;}
+.ratl .xw1 .xi1{ display:none;}
+.ratl img { width: 30px;  height: 30px; margin-right: 3px;}
+.ratc { border: none;}
+.xi1 {color: #ff4444 ;}
+
+.plc .pi .authi, .plc .pi .authi a{ color:#888;}
+
+	
+/*支持*/
+.thread_like-btn { display:block; height:50px; line-height:50px; background:{NOTICETEXT}; cursor:pointer; color:#FFF; text-align:center; font-size:16px; margin-bottom:20px; }
+.thread_like-btn:hover { background-color:#ff4444 ; color:#FFF; }
+.thread_like-btn .ico-heart {background: url({STYLEIMGDIR}/viewthread/loves.png) no-repeat;}
+
+/*标签*/
+.vwthdaid{padding: 25px 0 0; margin-top: 25px; margin-bottom:25px; border-top: solid 1px #f4f4f4;}
+.deanbiaoqian{float: left;}		  
+
+/*帖子内部功能*/
+#p_btn a{ background:none;}			  
+
+
+/*活动帖子*/	
+.pl .dt{ border: 1px solid #e6e6e6;}	
+.dt th{background: #fafafa; font-size:16px;}  
+.dt td, .dt th{border-bottom: 1px solid #e6e6e6;}
+
+
+
+/*快速回复*/
+#vfastpost{border: 1px solid #e6e6e6; background:#fff;}
+#vfastpost #vf_l,#vfastpost #vf_m,#vfastpost #vf_r,#vfastpost #vf_b button{ background:none;}
+#vfastpost #vf_b button{background-color: #ff4444 ; border: 1px solid #ff4444 ; line-height: 38px; font-size:16px; font-family:microsoft yahei;}
+
+.threadstamp{color: #ff4c4c; margin-right:10px;}
+
+
+/*回帖后生成帖子*/
+.viewthread_table{ background-color:#fff;}
+
+a.btn_s_open,a.btn_s_close{  position:absolute; display:block; width:7px; height:38px;}
+a.btn_s_open{ top:16px;left:0;}
+a.btn_s_close{top:4px; left:-5px;}
+/*内容页右侧*/
+
+/*DIY*/
+/*论坛列表页顶部*/
+.deanbbsjj{ border:3px solid #FFEEEE; width:1144px; height:330px; margin-bottom:15px; position:relative; overflow:hidden; padding:15px;}
+.deanbbsjj i{display: block; position: absolute; width: 120px; height: 50px; background: #FFEEEE; text-indent: 57px; font-size: 16px;color: #ff4444 ; line-height: 57px; -webkit-transform: rotate(312deg); -o-transform: rotate(312deg); -moz-transform: rotate(312deg); -ms-transform: rotate(312deg); transform: rotate(311deg); top: 4px; left: -51px;}
+.deanbbsjjl{ width:390px; padding-right:30px; border-right:1px solid #ededed; float:left;}
+.deanbbstop{ padding-bottom:10px; margin-bottom:5px; border-bottom:1px dashed #ededed;}
+.deanbbstop h5{ text-align:center; height:30px; line-height:30px; overflow:hidden;}
+.deanbbstop h5 a{ font-size:16px; color:#666; font-weight:normal;}
+.deanbbstop h5 a:hover{color:#ff4444 ;}
+.deanbbstop p{ font-size:12px; color:#999; text-indent:15px; line-height:22px;}
+.deanbbstop p a{ font-size:12px; color:#ff4444 ; padding-left:5px;}
+.deanbbsbottom{}
+.deanbbsbottom ul li{ height:29px; line-height:29px;}
+.deanbbsbottom ul li span{ display:inline-block;height:29px; line-height:29px; float:left; font-size:14px; max-width:76px; overflow:hidden; color:#ff4444 ;}
+.deanbbsbottom ul li a{ font-size:14px; color:#666; height:29px; line-height:29px;display:inline-block; max-width:245px; overflow:hidden; float:left; margin-left:7px;text-overflow:ellipsis; white-space:nowrap; }
+.deanbbsbottom ul li a:hover{color:#ff4444 ;}
+.deanbbsbottom ul li em{ font-size:12px; color:#999;height:29px; line-height:29px; float:right; display:inline-block;}
+.deanbbsjjr{ width:700px; float:right;}
+.deanbbsjjr ul{ width:725px;}
+.deanbbsjjr ul li{ margin:0 15px 15px 0; float:left; width:161.75px; height:150px; border:1px solid #ededed;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanbbsjjr ul li a{ display:block; width:161.75px; height:150px;}
+.deanbbsjjr ul li a img{ width:161.75px; height:120px; position:absolute; top:0; left:0;transition: all 1.2s; -moz-transition: all 1.2s; -webkit-transition: all 1.2s;-o-transition: all 1.2s;}
+.deanbbsimg{width:161.75px; height:120px; overflow:hidden; position:relative;}
+.deanbbsjjr ul li p{ background:#f4f4f4; height:30px; line-height:30px; width:141.75px; padding:0 10px; font-size:14px; color:#666; overflow:hidden;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear; }
+.deanbbsjjr ul li a:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2);
+-ms-transform: scale(1.2);}
+.deanbbsjjr ul li a:hover p{ background:#fff!important; color:#ff4444 ;}
+.deanbbsjjr ul li:hover{ border:1px solid #ff4444 ;}
+
+
+/*展开模式*/
+
+
+/*vwthdtit*/
+.vwthdtit{background: #fafafa;height: 46px; line-height: 44px;border-bottom: none;padding: 0 55px 0 20px; color: #444;  position: relative;overflow: visible;padding-right: 55px; border-radius:0 0 3px 3px;}
+.vwthduser{color: #4c8fe1; font-size:16px; margin-right:10px;}
+.vwthduser img{ vertical-align:middle; height: 28px;  width: 28px;border-radius: 50%; border: 1px solid #e5e5e5; padding: 2px; background: #fff;}
+.vwthduser a{color: #4c8fe1;}
+.vwthdts,.vwthdts a{ color:#333; font-size:16px; font-weight:400;}
+.vwthdviews,.vwthdreplies{ font-size: 12px; color: #999; text-align:center; line-height: 16px; margin-top: 9px; padding: 0 2px 0 10px;}
+.vwthdviews strong,.vwthdreplies strong{ color: #ff4444 ;}
+.vwthdviews{ padding: 0 10px; border-right: 1px solid #e5e5e5;}
+.vwthdewm{position: absolute; top: 1px; right: 1px;cursor: pointer;}
+.vwthdewmimg{width: 38px; height: 38px;  background: url({STYLEIMGDIR}/viewthread/vwthdewm.png) no-repeat;}
+.vwthdewmsub{ display:none; position:absolute;width: 190px; text-align:center; background: #fafafa; height: 200px; top:1px; right: 1px;border: 1px solid #ededed; padding: 15px 10px;z-index: 99;}
+.vwthdewmsub img{ width:168px; height:168px;}
+.vwthdewmsub p{text-align: center;line-height: 40px; height: 40px; color:#333; font-size:16px;}
+.viewbox{background:#fff;}
+.deanconone .viewbox{margin-bottom:20px;border-radius:0 0 3px 3px;border: 1px solid #ededed;}	
+.deanconone .vwthdtit{border: 1px solid #ededed; border-bottom:none;}		
+/*缩放模式*/	
+.pl.deanothers{ border:none; background:none;border-bottom: 1px solid #ededed;}
+.deanothers .vwthdtit{ background:#fff;height: 24px;line-height: 24px;padding: 20px 55px 0 20px; border: 1px solid #ededed; border-bottom:none;}
+.deanothers .vwthdts{ max-width: 700px; height: 23px; overflow: hidden; line-height: 22px;}
+.deanothers .vwthdts,.deanothers .vwthdts a{font-size: 22px; color: #222; font-weight: 400;}
+.deanothers .viewbox{border: 1px solid #ededed; border-top:0; border-bottom:0;}
+.deanothers .viewbox.firstfloor{ background:none; border:none;}
+.deanothers .viewbox.firstfloor .boxtable{ background:#fff; border-top: none; border-radius:0 0 3px 3px; border: 1px solid #ededed; border-top:0;}
+.deanothers .viewbox.firstfloor .ad{border-bottom: 1px solid #ededed}
+.allrepliestit{ margin-top:20px;border: 1px solid #ededed; border-bottom: none; background: #fff;}			
+.allrepliesw{ height: 48px; line-height: 50px;margin: 0 20px; border-bottom: 1px solid #ededed;}
+.allrepliesw h2{font-size: 16px;font-weight: 400; color:#333; height:48px;}
+.allrepliesw h2 em{color: #fff;font-size: 12px;padding-left: 10px;display: inline-block;padding: 0 5px;background: #ff4444;height: 20px;
+line-height: 20px;margin-left: 10px;}
+.reply_order{ font-size: 12px; height: 24px; line-height: 24px; background: #fafafa; border: 1px solid #e5e5e5; display: inline-block; margin-top: 12px; padding: 0 5px 0 10px;}
+#reply_order_menu{margin: 8px 0 0 -11px;width: 69px;padding: 5px;border: 1px solid; border-color: #ff4444 ; background: #f5f5f5;color: #ff4444 ;}
+#reply_order_menu a {display: block; padding: 3px 5px;}
+#reply_order_menu a:hover { background-color: #fff7f7; color: #ff4444 ;text-decoration: none;}
+.viewavt{float: left;width: 70px;text-align: center;padding-top: 22px;}
+.viewavt img { border-radius: 50%; width: 50px; height: 50px; margin-left: 15px;}
+.viewinfo{ padding-left:70px;}	
+.foldcount{ padding-right: 2px;overflow: hidden;}		
+.foldcount .foldreplies, .foldcount .foldviews {background: url({STYLEIMGDIR}/viewthread/icons.png) no-repeat;background-position: 0 0; width: 18px; height: 16px; display: inline-block; position: relative; left: 0; top: 0;}
+.foldcount .foldviews { background-position:-1px 1px; top: 2px;}
+.foldcount .foldreplies {background-position:0px -29px; top: 2px;}
+.foldcount em{display: inline-block;  margin: 0 2px; margin-right: 4px; font-size: 12px;  color: #999;}
+/*论坛内容页发布与回复*/
+.deanfbhf{ margin-bottom:15px; height:40px;}
+.deanfabuanniu{ width:110px; height:40px; line-height:40px; float:left; margin-right:10px;  background:#ff4444 ; text-align:center; font-size:16px; color:#fff; display:block;}
+.deanpostreply{ width:110px; height:40px; line-height:40px; float:left; background:#FFC24B; text-align:center; font-size:16px; color:#fff; display:block;}	
+
+/*主题操作*/
+.deansdpart{ margin-bottom:15px;}
+#deanguanli{display: block;height: 40px;line-height: 40px;background: #fff ;color: #666;text-align: center; border:1px solid #ededed;font-size: 16px;}
+#deanguanli:hover {background: #FFB773; color:#fff;}
+.kmp_pop, .ie6 .kmp_pop {width:256px;padding:6px;}
+.ie6 .kmp_pop {padding-left:0px;padding-right:10px;}
+.kmp_pop a {width: 41px;float: left; border-bottom:0;background: #FFF;color: #888;font-size: 12px;display: block;height: 20px;line-height: 20px;text-align: center;overflow: hidden;}
+.kmp_pop a:hover { color:#ff4444 ; background:#FFEEEE; }
+.kmp_pop span{display:none;}
+
+
+/*个人信息*/
+
+.lzinfo_img img {width: 120px;height: 120px;border-radius: 50%;}
+.deanuser a {font-size: 16px;}
+.deanuser a.deanlzname{ margin:10px 0;display:block;}
+.deanuser a.deangrtxt {font-size: 16px;color: #848484;}
+.deanmind{ background:#fff; border: 1px solid #ededed; width: 238px;}
+.dean_author {position: relative;text-align:center;padding: 15px;margin-bottom: 15px;}
+.dean_author .r_arrow {position: absolute;left: -23px;height: 25px;width: 25px;background: url({STYLEIMGDIR}/viewthread/jiao.png) no-repeat 0 0;top: 27px;}
+.dean_author p { float:left; width:33%; line-height:24px; } 
+.dean_author p.m { width:34%; border:1px solid #E5E5E5; border-top:0; border-bottom:0; }
+.dean_author p.z { margin-right:-1px; }
+.dean_author p.y { margin-left:-1px; }
+.dean_author strong { display: block;font-size: 16px;color: #ff4444;font-weight: normal;}
+.dean_author span { display:block; font-size:16px; }
+.user_contact{ margin:20px 0 0 0;}
+.user_contact li {float: left;width: 45.8%;font-size: 16px;}
+.user_contact li a {height: 32px;line-height: 32px;text-align: center;display: block;color: #fff;}
+.user_contact li.user_flw a {background-color: #1499F8;}
+.user_contact li.user_flw a:hover{ opacity:0.8;}
+.user_contact li.user_pm {margin-left: 16px;}
+.user_contact li.user_pm a {background-color: #4FC277;}
+.user_contact li.user_pm a:hover{ opacity:0.8;}
+
+
+/*发布分享*/
+.deanfabu{ display:block; width:100%; height:40px; line-height:40px; background:#ff4444 ; text-align:center; font-size:16px ;color:#fff; margin-bottom:15px;}
+.deanaddfns span { width:48%; }
+.deanaddfns span a {background-color: #ff4444 ;margin-top:15px;display:block; height:40px; line-height:40px; color:#FFF; text-align:center; font-size:13px; }
+.deanaddfns span.z a{ background:#1499F8;}
+.deanaddfns span.y a{ background:#4FC277;}
+.deanaddfns span:hover a { opacity:0.8; }
+/* 小图标 */
+.pob em a{padding: 0 0 0 20px;}	
+.pob a {padding: 0 0 0 20px;display: inline-block;margin-right: 15px;color: #999;-webkit-transition: none;-moz-transition: none;-o-transition: none;transition: none;}
+.cmmnt {background: url({STYLEIMGDIR}/viewthread/cmmnt.png) no-repeat 0 50%;}
+.fastre{background: url({STYLEIMGDIR}/viewthread/fastreply.png) no-repeat 0 11.5px;}
+.replyadd {background: url({STYLEIMGDIR}/viewthread/rec_add.png) no-repeat 0 43%;}
+.replysubtract {background: url({STYLEIMGDIR}/viewthread/rec_subtract.png) no-repeat 0 50%;}
+.editp {background: url({STYLEIMGDIR}/viewthread/edit.png) no-repeat 0 50%;}
+.push{background: url({STYLEIMGDIR}/viewthread/push.png) no-repeat 0 50%;}
+
+
+/*快速回复*/
+#f_pst{ padding:0; border-radius:3px;border: 1px solid #ededed;    background: #fff;}
+#f_pst .pls{}
+#f_pst .pls .avatar{}
+#f_pst .plc{border-right:none;padding: 20px;}
+#f_pst .tedt {border: 1px solid #ededed;}
+
+.tedt .bar {background: #fafafa; height: 33px;line-height: 33px; padding: 0 10px;border-bottom: 1px solid #e5e5e5;}
+.fpd a {margin: 8px 5px 0;}
+.fpd .swfupload{margin: 8px 5px 0;}
+
+.foldf_pst .pls{width: 90px;background: none; border-right: none;}
+.foldf_pst .avatar { margin: 25px 0 0 20px;}
+.foldf_pst .avatar img { width: 66px;border: none; padding: 1px; border: 1px solid #e3e3e3;}
+
+/*电梯直达*/
+
+#fj{ margin-left:20px; margin-top:15px;}
+#fj label, #fj input{ color:#666;}
+#fj input{border: 1px solid #dfdfdf; background:none;}
+
+	
+/*下一页*/	
+.pgbtn a{text-align: center;display: block;margin: 0;line-height: 40px;font-size: 16px;color: #333;border-radius: 3px; background-color: #fff;  border: 1px solid #ededed;}
+.pgbtn a:hover{background-color:#fff; color:#ff4444 ;text-decoration:none; border-color:#ededed;}	
+
+
+/*标签*/
+.ptg{ padding-left:0;background:none;}
+.ptg a{display: inline-block;padding: 0 10px;line-height: 28px;border: 1px solid #eee;background-color: #eee;color: #757575;margin-right: 15px; overflow:hidden;font-size:16px; text-align:center;}
+.ptg a:hover{color:#fff;border-color:#ff4444 ; background-color:#ff4444 ; text-decoration:none;}
+
+
+/*相关帖子*/
+.relatethread{}
+.relatethread h3{ font-weight:400; font-size:16px; border-bottom:1px solid #e6e6e6; padding-bottom:10px; margin-bottom:5px;}
+.relatethread .xl2 li{ font-size:16px; line-height:26px;}
+.relatethread .xl2 li a{ color:#5a646c;}
+
+/** end **/
+
+
+/**portal::list,portal::view**/
+/*common*/
+body{ background:#fff!important;}
+.mn{ overflow:visible;}
+.tedt,#uhd .tb .a a{border:0!important;}
+.bm_c,.bm_h{ padding:0;}
+.pn { margin-left:0;}
+/*分页*/
+.pg a, .pg strong, .pgb a, .pg label {float: left;height: 28px;line-height: 28px;margin-right: 2px;padding: 0 10px;border: 1px solid #E8E8E8; overflow: hidden; border-radius: 0;background-repeat: no-repeat; background: #FFFFFF;}
+.pg strong { background: #ff4444 ; border-color:#ff4444  ;color: #FFFFFF;}
+.pg a.nxt { padding-right: 10px; background: #FFFFFF;}
+.pg a.nxt:hover{background: #ff4444 ; color: #FFFFFF;}
+.pg a.prev{ background:#fff url({STYLEIMGDIR}/forumlist/arrowleft.png) center no-repeat;}
+.pg a.prev:hover{background:#ff4444  url({STYLEIMGDIR}/forumlist/arrowleft1.png) center no-repeat;}
+.pg{ margin-right:20px;}
+
+.deanlist_titles{ background:#fff; border-bottom:1px solid #ededed; margin-bottom:20px;}
+.deanlist_titles h5{ float:left; font-size: 18px; color: #333; font-weight: normal;  height: 45px; line-height: 45px; width: 150px; }
+.deantools{ float:right;}
+.deantools a{ display:inline-block;height:45px!important; line-height:45px; text-align:center;font-size:14px;color:#ff4444; }
+.deantools a.deanaddnew{ margin-right:10px; }
+.deantools a.deanrssartice{ color:#f90;}
+.deanportalads{}
+.deanportalads img{ width:1180px;}
+.deantitlea{margin-top:20px;height:30px; line-height:30px; text-indent:20px; background:#ff4444 ;font-family:microsoft yahei; font-size:12px; color:#fff; width:90px; float:left;}
+
+.deantitle{height: 45px;line-height: 45px;height: 45px;line-height: 45px; width:300px; border-bottom:1px solid #ededed;}
+.deantitle h3{ font-size: 18px;color: #333;font-weight: normal;height: 45px;line-height: 45px;width: 150px;float: left;}
+
+.deantitle_list{background: #fff;height: 45px;line-height: 45px;border-bottom: 1px solid #f3f3f3; margin-bottom:20px;}
+.deantitle_list span{display: inline-block;font-size: 16px;padding-left: 10px;color: #666;font-weight: normal;border-left: 4px solid #ff4444  ;
+margin: 12px 0 0 0;height: 20px;line-height: 20px;width: 150px;float: left;}
+.deantitle_list a{margin-top:5px; display:block; float:right;width:24px; height:40px;}
+.deantitle_list h3{ height:45px; line-height:38px; }
+.deantitle_list a.deanrssartice{ width:26px; height:35px; font-size:12px; font-weight:normal; color:#555; padding-left:20px;line-height:35px;background:url({STYLEIMGDIR}/rss.png) left center no-repeat;margin-right:10px;}
+.deantitle_list a.deanaddnew{ width:60px; height:35px; line-height:35px; background:url({STYLEIMGDIR}/add.png) left center  no-repeat; font-size:12px; font-weight:normal; color:#555; padding-left:20px;}	
+
+
+/*左侧精选资讯*/
+.deanhot{}
+.deanartice{  width:100%;}
+.deanartice ul{}
+
+.deanartice ul li{width:100%;  background:#fff; margin-bottom: 25px; padding-bottom:25px; position:relative; border-bottom:1px dotted #ededed;}
+.deanartice ul li:last-child{ border-bottom:0;}
+.deanarticecomment{ width:56px; height:24px; line-height:24px; position:absolute; top:-26px; right:-20px; background:#ff4444 ;}
+.deanarticecomment a{ float:right; font-size:14px; color:#fff; padding-right:5px; font-weight:700;}
+.deanartice ul li .deanarticel{ float:left; width:280px;height:160px;  overflow:hidden; position:relative;}
+.deanartice ul li .deanarticel img{width:280px; height:160px; position:absolute; top:0; left:0;  }
+.deanarticerforum{ padding-left:0px!important;}
+.deanarticerforum a{ display:block; float:left; height:23px; line-height:23px;  font-size:12px; color:#999; }
+.deanarticerforum a:hover{ color:#ff4444;}
+.deanartice ul li .deanarticel em{position: absolute;left: -337px;top: 0;width: 330px;height: 160px;background-image: linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));background-image: -moz-linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));background-image: -webkit-linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));background-image: -o-linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));
+background-image: -ms-linear-gradient(0deg, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));transform: skewx(-25deg);
+-o-transform: skewx(-25deg);-moz-transform: skewx(-25deg);-webkit-transform: skewx(-25deg);-moz-transition: 0s;
+-o-transition: 0s;-webkit-transition: 0s;transition: 0s;cursor: pointer;}
+.deanartice ul li .deanarticel:hover em{left: 287px;transition: .7s;-moz-transition: .7s;-o-transition: .7s;-webkit-transition: .7s;}
+.deanartice ul li .deanarticer{ float:right; width:545px; position:relative;}
+.deanarticec{ }
+.deanarticername{width: 100%;height: 40px;overflow: hidden; line-height:40px; margin-bottom:5px; }
+.deanarticername a{ font-size:18px; color:#333; font-weight:100;}
+.deanarticername a:hover{color:#ff4444 ; }
+.deanarticersummary{ height:50px; overflow:hidden; line-height:26px; color:#888; font-size:12px; margin-bottom:20px; font-family:Microsoft Yahei;}
+.deanarticerinfo{height: 26px;line-height: 26px; }
+.deanarticerinfo span{ font-size:12px; color:#999; line-height:23px;margin-right: 10px; display:inline-block;}
+.deanarticerforum{ float:left;}
+.deanzhuozhenm{ float:left;}
+.deanyuedushu{ float:right;}
+.deanhuifushu{ float:right;}
+.deanfabushijian{ float:right;}
+
+.deanarticermiddle{ margin:5px 0; font-size:12px; color:#999;}
+.deanarticermiddle span{ display:inline-block; padding-left:15px; margin-right:4px; background:url({STYLEIMGDIR}/user.png) left center no-repeat;}
+.deanlistsright{ float:right; width:255px;}
+/*右侧信息块*/	
+.deansubnav ul{}
+.deansubnav ul li{ width:135px; height:135px; overflow:hidden; float:left; margin-right:20px; margin-bottom:20px; position:relative; }
+.deansubnav ul li a{ display:block; width:135px; height:135px; text-align:center;  color:#fff; font-size:18px;  transition:All 0.4s ease-in-out; -webkit-transition:All 0.4s ease-in-out; -moz-transition:All 0.4s ease-in-out;  -o-transition:All 0.4s ease-in-out;}	
+.deansubnav ul li a span{ position:absolute; left:0px; bottom:15px; display:block; height:20px; line-height:20px; width:135px;}
+
+.deansidebox{margin-bottom:15px; background:#fff;}
+/*精选游戏资讯*/		
+.deanpubtitle{ background: #fff;height: 45px;line-height: 45px;}
+.deanpubtitle h3{ font-size: 18px;color: #333;font-weight: normal;height: 45px;line-height: 45px;width: 150px;float: left;}
+.deanpubtitle a{float: right;width: 24px;height: 24px;background: url({STYLEIMGDIR}/forumlist/more_index.png) center no-repeat;margin-top: 10px;margin-right: 10px;}
+.deanpubtitle a:hover{background: url({STYLEIMGDIR}/forumlist/more_index_hover.png) center no-repeat; }	
+.deangltt{ padding-top:15px; border-top:1px dashed #ededed;}
+.deangltt em{display: block;width: 40px;height: 22px; line-height:22px;font-size: 12px;color: #fff;float: left;text-align: center; background:#ff4444;}
+.deangltt i{ display:block;float: left;width: 0;height: 0;border-top: 5px solid transparent;border-bottom: 5px solid transparent;margin-top: 5px; border-left:5px solid #ff4444;}
+.deangltt a{ float:right; width:245px; font-size:16px;height: 22px;line-height: 22px;padding-left: 5px;color: #333;overflow: hidden; display:block; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; font-weight:bold; }
+.deangltt a:hover{ color:#ff4444;}
+.deangllists{ margin-top:10px;}
+.deangllists ul li{line-height: 31px;height: 31px;font-size: 14px;overflow: hidden;position: relative;}
+.deangllists ul li em{display: block;float: left;height: 30px;width: 21px;position: absolute;left: 0;
+background: url({STYLEIMGDIR}/news_icon.jpg) center no-repeat;}
+.deangllists ul li a{color: #444;display: block;float: left;border-left: 1px #eee solid;margin-left: 10px;text-indent: 20px;width: 95%;line-height: 31px;height: 31px; overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}
+.deangllists ul li a:hover{ color:#ff4444}
+.deangllists ul li i{color: #999;display: block;float: right;font-size: 12px;font-style: normal;margin-right: 10px;}
+.deangllists ul li:hover em{background: url({STYLEIMGDIR}/news_icon2.jpg) center no-repeat;}
+
+/*资讯排行*/
+.deanjczxbox { margin-top:15px;}
+.deanonvideos{}
+.deanonvideos ul{width: 319px;}
+.deanonvideos ul li{ float:left;margin-right: 10px;margin-bottom: 10px;width: 145px;height: 80px; overflow:hidden; position:relative;}
+.deanonvideos ul li img{width: 145px;height: 80px; opacity: 1;}
+.deanonvideos ul li a{display: block;width: 145px;height: 80px;position: absolute;top: 0;left: 0;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanonvideos ul li a em{display: block;line-height: 16px;width: 90%;padding: 7px 5%;background:rgba(0,0,0,0.4);color: #fff;position: absolute;bottom: 0;left: 0;font-style: normal;}
+.deanonvideos ul li a:hover{background: url({STYLEIMGDIR}/v_icon.png) center no-repeat;}
+.deanonvideos ul li a:hover em{top: 145px;}
+.deanonvideos ul li:hover img{ opacity:0.4;}
+/*新游推荐*/
+
+.focusBox { position: relative; width:300px;overflow: hidden; }
+.focusBox .pic li{}
+.deanfocuspic{ width:300px; height:188px;}
+.deanfocuspic img{ width:300px; height:188px;}
+.deanfocusbox{}
+.deanfocusbox h5{ margin:5px 0;}
+.deanfocusbox h5 a{ font-size:16px; color:#444; font-weight:normal;}
+.deanfocusbox h5 a:hover{ color:#ff4444 ;}
+.deanfocusbox p{ font-size:12px; color:#999; line-height:22px;}
+.deanfocusbox p a{ padding-left:10px; font-size:12px; color:#ff4444 ;}
+.focusBox .hd { overflow:hidden; zoom:1; position:absolute; bottom:78px; left:0; z-index:3}
+.focusBox .hd li{float:left; line-height:15px; text-align:center; width:73px; height:6px; cursor:pointer; overflow:hidden; background:#f5f5f5; margin-right:2px; filter:alpha(opacity=80); opacity:.8; -webkit-transition:All .5s ease;-moz-transition:All .5s ease;-o-transition:All .5s ease }
+.focusBox .hd .on{ background:#ff4444 ; filter:alpha(opacity=100);opacity:1;   }
+
+.focusBox .prev,
+.focusBox .next { position: absolute; background:rgba(0,0,0,0.7); width: 36px; height: 28px; color: #FFF; text-align: center; top: 90px; line-height: 28px; font-size: 20px; text-decoration: none;}
+.focusBox .prev {  left:0; }
+.focusBox .next {  right:0; }
+.focusBox .prev:hover,
+.focusBox .next:hover { filter:alpha(opacity=60); -moz-opacity:.6; opacity:.6 }
+
+/*专访*/
+.deanimg_news{width: 306px;overflow: hidden; margin-top:10px;}
+.deanimg_news a{display: block;overflow: hidden;float: left;width: 150px;height: 85px;position: relative;font-size: 12px;color: #fff;}
+.deanimg_news a img{width: 150px;height: 85px;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanimg_news a span{width: 100%;height: 36px;padding: 7px 0;position: absolute;top: 21px;left: 0;line-height: 18px;
+background: rgba(0,0,0,0.4); color:#fff;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanimg_news a span em{display: block;height: 36px;font-style: normal;overflow: hidden;padding: 0 15px;}
+.deanimg_news a:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2);}
+.deanimg_news a:hover span{top: 0;padding: 28px 0;background:rgba(255,255,255,0.6); color:#000;}
+
+
+
+
+
+/** end **/
+/**portal::list,portal::view**/
+.ct2 .mn{ width: 845px; float:left; background:#fff; padding-bottom:20px; padding-right: 15px;}
+.ct2 .sd{ width:300px; float:right;}	
+
+
+/*下级分类*/
+.deannextnav{ width:300px;  background:#FFF; margin-bottom:15px; }
+.deannextnav ul{  width:300px;  background:#fff; }
+.deannextnav ul li{}
+.deannextnav ul li a{ display: block;color: #999;line-height: 40px;height: 40px; overflow: hidden; float: left; margin-right: 15px;font-size: 14px;}
+.deannextnav ul li a:hover{  color:#ff4444 ; }
+/*内容页*/
+.bm{ border:0; background:none;}
+.vw .h{ border:0;}
+.vw .o{ border:0;}
+.bm_h{height:40px; line-height:52px;  background:none; font-family:microsoft yahei; font-size:16px; color:#243E52; border-bottom:0;}
+.bm_h h3{ font-weight:normal;}
+.pn{ background:#ff4444 ; color:#fff; font-size:16px; width:80px; height:28px; line-height:28px; text-align:center; border:0; font-family:Microsoft Yahei; }
+.tedt{ width:100%;}
+
+/**end**/
+/**portal::view**/
+.ct2 .mn{  width:845px;}
+.deanjianjie_wz{ float:left; width:55px; height:55px; line-height:55px; text-align:center; font-size:12px; color:#fff; background:#ff4444 ; position:relative;}
+.deanjianjie_wz:after{ content:'';width: 0; height: 0; border-bottom: 20px solid #FFF; border-left: 20px solid transparent; position: absolute; bottom: 0;}
+.deansummary_wz{padding-left: 66px;font-size: 14px;color: #999;}
+#nv_portal .vw .h{ margin:0;}
+#nv_portal .vw .s{ margin:10px 0; height:55px; border-bottom:1px dotted #ededed;}
+.vw .ph{ color:#555; font-size:28px; margin-bottom:10px; padding:0;width: 700px; height: 37px; overflow: hidden; line-height: 37px; }
+.vw .s{  border:0;}
+.tedt{border-color: #eaeaea;margin-bottom: 10px;}
+.pn{margin-left: 5px;}
+
+.vw .hm{ text-align:left;}
+.h .xg1, .h .xg1 a {color: #ACACAC !important;}
+.vw .h{ border:none; padding-bottom:0;}
+.vw .s{ margin:10px auto;}
+.vw .s{color: #555;}
+.vw .d img{max-width: 660px!important;}
+#nv_portal .vw .d{ margin:0;border-bottom: 1px dashed #CDCDCD;}
+#nv_portal .vw .pren{ margin: 10px 0 0 0;}
+#nv_portal .vw .pren em {width: 46%;display: block;height: 24px;line-height: 24px;overflow: hidden; font-size:14px; color:#ff4444 ; background:url({STYLEIMGDIR}/forumlist/rt_ico2.png) left center no-repeat; padding-left:15px;}
+#nv_portal .vw .pren em a {color:#999; font-size:14px; text-overflow:ellipsis;}
+#nv_portal .vw .pren em a:hover{ color:#ff4444 ;}
+#related_article .bm_c{ padding:15px 0;}
+#related_article .xl2 li{ height:26px; line-height:26px; font-size:14px; margin:0;}
+.mls .avt img{width: 46px;height: 46px; padding:0;max-width: 100%;vertical-align: top;border-radius: 50%;_width: 34px; border:none;}
+#click_div h3.xs1,#click_div h3.xs1 a{ font-size:14px!important; color:#555;}
+.quote blockquote{ color:#ff4444 ;}
+/* 评论 */
+
+#comment .portal_tit{ border-bottom:none;}
+#comment .portal_tit h3{ font-size:14px; font-weight:bold; color:#ff4444 ;}
+#comment_ul h3{font-size:16px; font-weight:normal; margin-top:20px; color:#ff4444 ; width:100%; height:40px; line-height:40px; border-bottom:1px solid #eaeaea;}
+#comment .portal_tit em{ margin-left:20px; color:#777; font-size:12px;}
+#comment_ul{ padding-top:5px;}
+#comment_ul ul{padding-left: 25px;}
+#comment_ul ul li dd{ font-size:14px; color:#999;}
+#comment_ul ul li a.username{ font-size:12px; color:#474747;}
+#comment_ul .ptn a{ font-size:14px; color:#ff4444 ;}
+#comment_ul .mbm{ position:relative;}
+#comment_ul .portrait{ position:absolute; left:-50px; top:0;}
+#comment_ul .portrait img{ width:30px;height:30px;max-width: 100%;vertical-align: top;border-radius: 50%;_width: 24px;}
+#comment_ul .username{ margin-right:10px;}
+#comment_ul .xg1, #comment_ul .xg1 a {color: #ccc!important;}
+.tedt .area{ padding:10px 0 0 0;}
+.tedt{ border:none; }
+.tedt .pt{ width:760px; min-height: 100px;padding: 8px 10px!important;line-height: 1.6;border: 1px solid #ededed;background-color: #fefefe;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;overflow: auto;vertical-align: middle;resize: vertical; color:#999;}
+.tedt .pt.bgchange{ background:#FFF;background-color: #FFF;	-webkit-box-shadow: 1px 1px 2px #e6e6e6;-moz-box-shadow: 1px 1px 2px #e6e6e6;box-shadow: 1px 1px 2px #e6e6e6;color:#BBB;}
+.ptn {padding-top: 15px !important;}
+/**end**/
+
+
+/**group**/
+.ct2 .sd{ width:220px!important; margin-top:0; margin-right:0!important;}
+.ct2 .mn{ width:940px!important;}
+.ttp .a a{ background:#fff;}
+.bm{ border:1px solid #ededed;}
+.bm_h{ border-bottom:0; border-top:0;}
+.tl .th,.tl th, .tl td{ border-bottom:0;}
+.tl .th{ margin-top:0;}
+.tb a { background:#fff;}
+.bmw .bm_h{border-top-color:none;  border-right: 0; border-bottom-color: none; border-left: 0; background: #f2f2f2;}
+.tl tr:hover td{ background-color:none!important;}
+#create_group_btn{ display:block; height:38px; background:url({STYLEIMGDIR}/group_creat.png) center no-repeat;}
+#create_group_btn img{ display:none;}
+.groupbtn{ padding:0 20px!important;    background:#FF6356!important;}
+.groupbtn span{ background:none!important; color:#fff;}
+/**end**/
+
+/**group::forumdisplay**/
+.tedt .pt{ border:1px solid #ededed;}
+/**end**/
+/**group::viewthread**/
+.ct2 .sd{ width:263px!important;  margin-right:0!important; float:right; margin-top: 382px;}
+.deansideads{ margin-bottom:10px;}
+.deansideads img{ width:270px;}
+/**end**/
+/**group**/
+.ct2 .sd{ width:263px!important;  margin-right:0!important; float:right;}
+.ct2 .mn{ width:902px!important; float:left;}
+.ttp .a a{ background:#fff;}
+.bm{ border:1px solid #ededed;}
+.bm_h{ border-bottom:0; border-top:0;}
+.tl .th,.tl th, .tl td{ border-bottom:0;}
+.tl .th{ margin-top:0;}
+.tb a { background:#fff;}
+.bmw .bm_h{border-top-color:none;  border-right: 0; border-bottom-color: none; border-left: 0; background: #f2f2f2;}
+.tl tr:hover td{ background-color:none!important;}
+#create_group_btn{ display:block; height:38px; background:url({STYLEIMGDIR}/group_creat.png) center no-repeat;}
+#create_group_btn img{ display:none;}
+.groupbtn{ padding:0 20px!important;    background:#FF6356!important;}
+.groupbtn span{ background:none!important; color:#fff;}
+.ct2 .mn{ width:895px!important;}
+.ct2 .sd{ width:270px!important; overflow:visible!important; }
+.wp,#wp{width:1180px!important;}
+.mn{ overflow:visible;}
+.plc { padding: 0 15px; }
+.tit_author a{color: #ff4444 ;}	
+
+.ico-white {display: inline-block;width: 16px;height: 16px;line-height: 14px;vertical-align: -4px;margin-right: 3px;}
+/*论坛首页右侧*/
+.ct2 .sd{ width:270px!important;}
+.deansideboxs{ margin-bottom:15px;}
+.deansidetitle{ color:#343536; height: 40px; line-height: 40px; border-bottom:1px solid #ededed; margin-bottom:15px; font-size:18px; font-weight:normal; }
+.deansidetitle a{ float:right; font-size:12px; color:#999; display:inline-block; height:40px; line-height:40px;}
+.deansidetitle a:hover{ color:#ff4444 ;}
+.deantjdypics{}
+.deantjdypics a{ display:block; width:270px; height:165px; position:relative; overflow:hidden;}
+.deantjdypics a img{ width:270px; height:165px;transition: all 1.2s; -moz-transition: all 1.2s; -webkit-transition: all 1.2s; -o-transition: all 1.2s;}
+.deantjdypics a:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2); }
+.deantjdypics a p{ width:270px; height:30px; line-height:30px; position:absolute; top:10px; left:15px; background:url({STYLEIMGDIR}/discuz/comment-128.png) left center no-repeat; padding-left:30px; font-size:16px; color:#fff;}
+.deantjdypics a h5{ width:250px; padding:0 10px; position:absolute; left:0; bottom:0; height:40px; line-height:40px; text-indent:25px; font-weight:normal; overflow:hidden; background:rgba(0,0,0,0.4) url({STYLEIMGDIR}/discuz/left_quote_alt-16.png) 10px center no-repeat; font-size:14px; color:#fff;}
+
+.deantjlists{}
+.deantjlists ul li{ height:45px; line-height:45px; border-bottom:1px dashed #ededed;}
+.deantjlists ul li:last-child{ border-bottom:0;}
+.deantjlists ul li a{ font-size:14px; color:#666;height:45px; line-height:45px; float:left; width:180px; display:block; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; position:relative; padding-left:10px;}
+.deantjlists ul li a:before{ content:'';display: inline;  width: 5px;  height: 5px; border-radius: 50% 50%; background: #d5d5d5;position: absolute; left: 0px;  top: 20px;}
+.deantjlists ul li a:hover:before{ background: #ff4444;}
+.deantjlists ul li a:hover{ color:#ff4444 ;}
+.deantjlists ul li span{ font-size:12px; color:#999;height:45px; line-height:45px; float:right; display:inline-block;}
+.deanadsside{ margin-bottom:10px;}
+.deanadsside img{ width:270px;}
+/*活动帖子样式*/
+.spvimg{ width:455px; border:0; }
+.spvimg img{ width:455px; height:344px;}
+.spi{ margin-left: 476px; padding: 15px 10px 10px 20px; margin-bottom:30px;    height: 320px;    border-left: 3px solid #CCCCCC; background: #F6F6F6;}
+.spi dl dt{ font-size:14px; color:#ff4444 ;}
+.pcb strong {  font-weight: normal;}
+.pns .pn{padding: 0 8px; height: 25px; line-height: 25px; box-shadow: none; font-size: 12px; font-weight: bold; background-color: #FFC24B; border: 0; border-radius:3px;}
+.pns .pn span{ color:#fff; font-weight:normal; font-family:Microsoft yahei;}
+.spi dl dd{ font-size:14px; color:#666;}
+/*分页*/	
+#pgt{ margin-bottom:10px;}
+.pgs{ text-align:center;}
+.pgs span{ display:inline-block;}
+.pg{ float:none; display:inline-block;}	
+
+
+.pl.bm{ border:none; background:none;}
+/*大图模式*/
+.pic_h.pl.bm{background:#fff; padding:20px;}
+.pl .ad{border-bottom: 1px solid #ededed;}
+.ad .pls, .ad .plc { height: 0; background: none; border: none;}
+
+
+
+
+/*抢楼,回帖奖励*/
+#pl_top .ad{ border:none;}
+.deanothers #pl_top .plc{ padding:0 15px;}
+#pl_top a.pn{background-color: #ff4444 ; border-color:#ff4444 ; color:#fff!important;}
+#pl_top a.pn:hover{background-color: #4c8fe1; border-color:#4c8fe1; text-decoration:none;}
+
+
+#pl_top .ptn a{background-color: #ff4444 ; padding:2px 5px; display:inline-block;color:#fff!important;}
+#pl_top .ptn a:hover{background-color: #4c8fe1; text-decoration:none;}
+
+
+.pls {width: 180px;    background: #fafafa;border-right: 1px solid #ededed; padding-top:35px;}
+.pls .avatar {margin: 15px 15px 5px; text-align: center;}
+.vuimg { margin-top: -16px!important;}
+.bui {padding: 15px 0 15px 24px;  box-shadow: none; width: 440px !important;}
+.pls .avatar img, .avtm img {background: #fff; padding: 5px;border: 1px solid #e3e3e3; border-radius: 50%;}
+.pls .pi {padding: 0 0 10px 0;text-align: center;border-bottom: none; margin-bottom: 2px;}
+.pls .pi .authi a { color: #777; font-size: 14px;text-decoration: none;}
+.pls .tns { background: #f1f1f1; padding: 8px 0; margin: 0 13px 10px; border-radius: 5px;}
+.tns th, .tns td { text-align: center;font-size: 12px;}
+.tns th { border-right: 1px solid #e3e3e3;}
+.tns th, .tns td, .tns th a, .tns td a,.pls p em a, .pls dt em,.pls p, .pls .pil, .pls .o,.cp_pls a{ color:#888;} 
+.pls .plso { margin: 5px 0px 10px 14px;}
+.pls .plso li {float: left; overflow: hidden; width: 72px; margin-right: 10px;}
+.pls .plso li a { background: #ff4444 ; height: 24px; line-height: 24px; padding: 0 10px;text-indent: 0;text-align: center; display: block; width: 52px; color: #fff;}
+.pls .plso li.addflw a:hover{background:#2858a1; text-decoration:none;}   
+.pls .plso li.pm2 a { background: #6999ee;}
+.pls .plso li.pm2 a:hover { background: #4c8fe1; text-decoration:none;}
+
+/*点评*/
+.psth { margin: 10px 0 5px; padding-left: 0px; padding-bottom: 10px; border-bottom: 1px solid #e5e5e5; width: auto;}
+.cm .psth { background: none; color: #333; font-size: 16px !important; font-weight: 700;}
+.icon_ring {display: none;}
+.psta { width: auto; padding-right: 5px;}
+.psta img { border-radius: 50%; height: 30px; width: 30px;margin-right: 3px;}
+.psta .xw1, .psti .xw1 { font-weight: 400;}
+.psta .xi2, .psta .xi2 a, .psti .xi2, .psti .xi2 a { color: #ff4444 ;}
+.psti { margin-left: 0px; line-height: 28px;}
+
+
+/*评分*/
+.rate { margin: 15px 0 10px;}
+.ratl th, .ratl td, .ratc { height: 30px;line-height: 30px; border-bottom: 1px dashed #e5e5e5;}
+.ratl th { font-weight: 400; font-size: 14px; border-bottom: 1px solid #e5e5e5;}
+.ratl td a{color: orange;}
+.rate .op{ display:none;}
+.ratl .xw1 .xi1{ display:none;}
+.ratl img { width: 30px;  height: 30px; margin-right: 3px;}
+.ratc { border: none;}
+.xi1 {color: #ff4444 ;}
+
+.plc .pi .authi, .plc .pi .authi a{ color:#888;}
+
+	
+/*支持*/
+.thread_like-btn { display:block; height:50px; line-height:50px; background:{NOTICETEXT}; cursor:pointer; color:#FFF; text-align:center; font-size:14px; margin-bottom:20px; }
+.thread_like-btn:hover { background-color:#ff4444 ; color:#FFF; }
+.thread_like-btn .ico-heart {background: url({STYLEIMGDIR}/viewthread/loves.png) no-repeat;}
+
+/*标签*/
+.vwthdaid{padding: 25px 0 0; margin-top: 25px; margin-bottom:25px; border-top: solid 1px #f4f4f4;}
+.deanbiaoqian{float: left;}		  
+
+/*帖子内部功能*/
+#p_btn a{ background:none;}			  
+
+
+/*活动帖子*/	
+.pl .dt{ border: 1px solid #e6e6e6;}	
+.dt th{background: #fafafa; font-size:14px;}  
+.dt td, .dt th{border-bottom: 1px solid #e6e6e6;}
+
+
+
+/*快速回复*/
+#vfastpost{border: 1px solid #e6e6e6; background:#fff;}
+#vfastpost #vf_l,#vfastpost #vf_m,#vfastpost #vf_r,#vfastpost #vf_b button{ background:none;}
+#vfastpost #vf_b button{background-color: #ff4444 ; border: 1px solid #ff4444 ; line-height: 38px; font-size:14px; font-family:microsoft yahei;}
+
+.threadstamp{color: #ff4c4c; margin-right:10px;}
+
+
+/*回帖后生成帖子*/
+.viewthread_table{ background-color:#fff;}
+
+a.btn_s_open,a.btn_s_close{  position:absolute; display:block; width:7px; height:38px;}
+a.btn_s_open{ top:14px;left:0;}
+a.btn_s_close{top:4px; left:-5px;}
+/*内容页右侧*/
+
+/*DIY*/
+/*论坛列表页顶部*/
+.deanbbsjj{ border:3px solid #FFEBD5; width:1144px; height:330px; margin-bottom:15px; position:relative; overflow:hidden; padding:15px;}
+.deanbbsjj i{display: block; position: absolute; width: 120px; height: 50px; background: #FFEBD5; text-indent: 57px; font-size: 14px;color: #ff4444 ; line-height: 57px; -webkit-transform: rotate(312deg); -o-transform: rotate(312deg); -moz-transform: rotate(312deg); -ms-transform: rotate(312deg); transform: rotate(311deg); top: 4px; left: -51px;}
+.deanbbsjjl{ width:390px; padding-right:30px; border-right:1px solid #ededed; float:left;}
+.deanbbstop{ padding-bottom:10px; margin-bottom:5px; border-bottom:1px dashed #ededed;}
+.deanbbstop h5{ text-align:center; height:30px; line-height:30px; overflow:hidden;}
+.deanbbstop h5 a{ font-size:16px; color:#666; font-weight:normal;}
+.deanbbstop h5 a:hover{color:#ff4444 ;}
+.deanbbstop p{ font-size:12px; color:#999; text-indent:15px; line-height:22px;}
+.deanbbstop p a{ font-size:12px; color:#ff4444 ; padding-left:5px;}
+.deanbbsbottom{}
+.deanbbsbottom ul li{ height:29px; line-height:29px;}
+.deanbbsbottom ul li span{ display:inline-block;height:29px; line-height:29px; float:left; font-size:13px; max-width:76px; overflow:hidden; color:#ff4444 ;}
+.deanbbsbottom ul li a{ font-size:13px; color:#666; height:29px; line-height:29px;display:inline-block; max-width:245px; overflow:hidden; float:left; margin-left:7px;text-overflow:ellipsis; white-space:nowrap; }
+.deanbbsbottom ul li a:hover{color:#ff4444 ;}
+.deanbbsbottom ul li em{ font-size:12px; color:#999;height:29px; line-height:29px; float:right; display:inline-block;}
+.deanbbsjjr{ width:700px; float:right;}
+.deanbbsjjr ul{ width:725px;}
+.deanbbsjjr ul li{ margin:0 15px 15px 0; float:left; width:161.75px; height:150px; border:1px solid #ededed;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear;}
+.deanbbsjjr ul li a{ display:block; width:161.75px; height:150px;}
+.deanbbsjjr ul li a img{ width:161.75px; height:120px; position:absolute; top:0; left:0;transition: all 1.2s; -moz-transition: all 1.2s; -webkit-transition: all 1.2s;-o-transition: all 1.2s;}
+.deanbbsimg{width:161.75px; height:120px; overflow:hidden; position:relative;}
+.deanbbsjjr ul li p{ background:#f4f4f4; height:30px; line-height:30px; width:141.75px; padding:0 10px; font-size:14px; color:#666; overflow:hidden;-webkit-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;transition:all 0.3s linear; }
+.deanbbsjjr ul li a:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2);
+-ms-transform: scale(1.2);}
+.deanbbsjjr ul li a:hover p{ background:#FFEBD5; color:#ff4444 ;}
+.deanbbsjjr ul li:hover{ border:1px solid #ff4444 ;}
+
+
+/*展开模式*/
+
+
+/*vwthdtit*/
+.vwthdtit{background: #fafafa;height: 46px; line-height: 44px;border-bottom: none;padding: 0 55px 0 20px; color: #444;  position: relative;overflow: visible;padding-right: 55px; border-radius:0 0 3px 3px;}
+.vwthduser{color: #4c8fe1; font-size:16px; margin-right:10px;}
+.vwthduser img{ vertical-align:middle; height: 28px;  width: 28px;border-radius: 50%; border: 1px solid #e5e5e5; padding: 2px; background: #fff;}
+.vwthduser a{color: #4c8fe1;}
+.vwthdts,.vwthdts a{ color:#333; font-size:16px; font-weight:400;}
+.vwthdviews,.vwthdreplies{ font-size: 12px; color: #999; text-align:center; line-height: 14px; margin-top: 9px; padding: 0 2px 0 10px;}
+.vwthdviews strong,.vwthdreplies strong{ color: #ff4444 ;}
+.vwthdviews{ padding: 0 10px; border-right: 1px solid #e5e5e5;}
+.vwthdewm{position: absolute; top: 1px; right: 1px;cursor: pointer;}
+.vwthdewmimg{width: 38px; height: 38px;  background: url({STYLEIMGDIR}/viewthread/vwthdewm.png) no-repeat;}
+.vwthdewmsub{ display:none; position:absolute;width: 190px; text-align:center; background: #fafafa; height: 200px; top:1px; right: 1px;border: 1px solid #ededed; padding: 15px 10px;z-index: 99;}
+.vwthdewmsub img{ width:168px; height:168px;}
+.vwthdewmsub p{text-align: center;line-height: 40px; height: 40px; color:#333; font-size:14px;}
+.viewbox{background:#fff;}
+.deanconone .viewbox{margin-bottom:20px;border-radius:0 0 3px 3px;border: 1px solid #ededed;}	
+.deanconone .vwthdtit{border: 1px solid #ededed; border-bottom:none;}		
+/*缩放模式*/	
+.pl.deanothers{ border:none; background:none;border-bottom: 1px solid #ededed;}
+.deanothers .vwthdtit{ background:#fff;height: 24px;line-height: 24px;padding: 20px 55px 0 20px; border: 1px solid #ededed; border-bottom:none;}
+.deanothers .vwthdts{ max-width: 700px; height: 23px; overflow: hidden; line-height: 22px;}
+.deanothers .vwthdts,.deanothers .vwthdts a{font-size: 22px; color: #222; font-weight: 400;}
+.deanothers .viewbox{border: 1px solid #ededed; border-top:0; border-bottom:0;}
+.deanothers .viewbox.firstfloor{ background:none; border:none;}
+.deanothers .viewbox.firstfloor .boxtable{ background:#fff; border-top: none; border-radius:0 0 3px 3px; border: 1px solid #ededed; border-top:0;}
+.deanothers .viewbox.firstfloor .ad{border-bottom: 1px solid #ededed}
+.allrepliestit{ margin-top:20px;border: 1px solid #ededed; border-bottom: none; background: #fff;}			
+.allrepliesw{ height: 48px; line-height: 50px;margin: 0 20px; border-bottom: 1px solid #ededed;}
+.allrepliesw h2{font-size: 16px;font-weight: 400; color:#333; height:48px;}
+.allrepliesw h2 em{color: #fff;font-size: 12px;padding-left: 10px;display: inline-block;padding: 0 5px;background: #ff4444;height: 20px;
+line-height: 20px;margin-left: 10px;}
+.reply_order{ font-size: 12px; height: 24px; line-height: 24px; background: #fafafa; border: 1px solid #e5e5e5; display: inline-block; margin-top: 12px; padding: 0 5px 0 10px;}
+#reply_order_menu{margin: 8px 0 0 -11px;width: 69px;padding: 5px;border: 1px solid; border-color: #ff4444 ; background: #f5f5f5;color: #ff4444 ;}
+#reply_order_menu a {display: block; padding: 3px 5px;}
+#reply_order_menu a:hover { background-color: #fff7f7; color: #ff4444 ;text-decoration: none;}
+.viewavt{float: left;width: 70px;text-align: center;padding-top: 22px;}
+.viewavt img { border-radius: 50%; width: 50px; height: 50px; margin-left: 15px;}
+.viewinfo{ padding-left:70px;}	
+.foldcount{ padding-right: 2px;overflow: hidden;}		
+.foldcount .foldreplies, .foldcount .foldviews {background: url({STYLEIMGDIR}/viewthread/icons.png) no-repeat;background-position: 0 0; width: 18px; height: 14px; display: inline-block; position: relative; left: 0; top: 0;}
+.foldcount .foldviews { background-position:-1px 1px; top: 2px;}
+.foldcount .foldreplies {background-position:0px -29px; top: 2px;}
+.foldcount em{display: inline-block;  margin: 0 2px; margin-right: 4px; font-size: 12px;  color: #999;}
+/*论坛内容页发布与回复*/
+.deanfbhf{ margin-bottom:15px; height:40px;}
+.deanfabuanniu{ width:110px; height:40px; line-height:40px; float:left; margin-right:10px;  background:#ff4444 ; text-align:center; font-size:14px; color:#fff; display:block;}
+.deanpostreply{ width:110px; height:40px; line-height:40px; float:left; background:#FFC24B; text-align:center; font-size:14px; color:#fff; display:block;}	
+
+/*主题操作*/
+.deansdpart{ margin-bottom:15px;}
+#deanguanli{display: block;height: 40px;line-height: 40px;background: #fff ;color: #666;text-align: center; border:1px solid #ededed;font-size: 14px;}
+#deanguanli:hover {background: #FFB773; color:#fff;}
+.kmp_pop, .ie6 .kmp_pop {width:256px;padding:6px;}
+.ie6 .kmp_pop {padding-left:0px;padding-right:10px;}
+.kmp_pop a {width: 41px;float: left; border-bottom:0;background: #FFF;color: #888;font-size: 12px;display: block;height: 20px;line-height: 20px;text-align: center;overflow: hidden;}
+.kmp_pop a:hover { color:#ff4444 ; background:#FFEBD5; }
+.kmp_pop span{display:none;}
+
+
+/*个人信息*/
+
+.lzinfo_img img {width: 120px;height: 120px;border-radius: 50%;}
+.deanuser a {font-size: 16px;}
+.deanuser a.deanlzname{ margin:10px 0;display:block;}
+.deanuser a.deangrtxt {font-size: 14px;color: #848484;}
+.deanmind{ background:#fff; border: 1px solid #ededed; width: 238px;}
+.dean_author {position: relative;text-align:center;padding: 15px;margin-bottom: 15px;}
+.dean_author .r_arrow {position: absolute;left: -23px;height: 25px;width: 25px;background: url({STYLEIMGDIR}/viewthread/jiao.png) no-repeat 0 0;top: 27px;}
+.dean_author p { float:left; width:33%; line-height:24px; } 
+.dean_author p.m { width:34%; border:1px solid #E5E5E5; border-top:0; border-bottom:0; }
+.dean_author p.z { margin-right:-1px; }
+.dean_author p.y { margin-left:-1px; }
+.dean_author strong { display: block;font-size: 16px;color: #ff4444;font-weight: normal;}
+.dean_author span { display:block; font-size:14px; }
+.user_contact{ margin:20px 0 0 0;}
+.user_contact li {float: left;width: 45.8%;font-size: 14px;}
+.user_contact li a {height: 32px;line-height: 32px;text-align: center;display: block;color: #fff;}
+.user_contact li.user_flw a {background-color: #FBAE5C;}
+.user_contact li.user_flw a:hover{ opacity:0.8;}
+.user_contact li.user_pm {margin-left: 16px;}
+.user_contact li.user_pm a {background-color: #4FC277;}
+.user_contact li.user_pm a:hover{ opacity:0.8;}
+
+
+/*发布分享*/
+.deanfabu{ display:block; width:100%; height:40px; line-height:40px; background:#ff4444 ; text-align:center; font-size:14px ;color:#fff; margin-bottom:15px;}
+.deanaddfns span { width:48%; }
+.deanaddfns span a {background-color: #ff4444 ;margin-top:15px;display:block; height:40px; line-height:40px; color:#FFF; text-align:center; font-size:13px; }
+.deanaddfns span.z a{ background:#1499F8;}
+.deanaddfns span.y a{ background:#4FC277;}
+.deanaddfns span:hover a { opacity:0.8; }
+/* 小图标 */
+.pob em a{padding: 0 0 0 20px;}	
+.pob a {padding: 0 0 0 20px;display: inline-block;margin-right: 15px;color: #999;-webkit-transition: none;-moz-transition: none;-o-transition: none;transition: none;}
+.cmmnt {background: url({STYLEIMGDIR}/viewthread/cmmnt.png) no-repeat 0 50%;}
+.fastre{background: url({STYLEIMGDIR}/viewthread/fastreply.png) no-repeat 0 11.5px;}
+.replyadd {background: url({STYLEIMGDIR}/viewthread/rec_add.png) no-repeat 0 43%;}
+.replysubtract {background: url({STYLEIMGDIR}/viewthread/rec_subtract.png) no-repeat 0 50%;}
+.editp {background: url({STYLEIMGDIR}/viewthread/edit.png) no-repeat 0 50%;}
+.push{background: url({STYLEIMGDIR}/viewthread/push.png) no-repeat 0 50%;}
+
+
+/*快速回复*/
+#f_pst{ padding:0; border-radius:3px;border: 1px solid #ededed;    background: #fff;}
+#f_pst .pls{}
+#f_pst .pls .avatar{}
+#f_pst .plc{border-right:none;padding: 20px;}
+#f_pst .tedt {border: 1px solid #ededed;}
+
+.tedt .bar {background: #fafafa; height: 33px;line-height: 33px; padding: 0 10px;border-bottom: 1px solid #e5e5e5;}
+.fpd a {margin: 8px 5px 0;}
+.fpd .swfupload{margin: 8px 5px 0;}
+
+.foldf_pst .pls{width: 90px;background: none; border-right: none;}
+.foldf_pst .avatar { margin: 25px 0 0 20px;}
+.foldf_pst .avatar img { width: 66px;border: none; padding: 1px; border: 1px solid #e3e3e3;}
+
+/*电梯直达*/
+
+#fj{ margin-left:20px; margin-top:15px;}
+#fj label, #fj input{ color:#666;}
+#fj input{border: 1px solid #dfdfdf; background:none;}
+
+	
+/*下一页*/	
+.pgbtn a{text-align: center;display: block;margin: 0;line-height: 40px;font-size: 14px;color: #333;border-radius: 3px; background-color: #fff;  border: 1px solid #ededed;}
+.pgbtn a:hover{background-color:#fff; color:#ff4444 ;text-decoration:none; border-color:#ededed;}	
+
+
+/*标签*/
+.ptg{ padding-left:0;background:none;}
+.ptg a{display: inline-block;padding: 0 10px;line-height: 28px;border: 1px solid #eee;background-color: #eee;color: #757575;margin-right: 15px; overflow:hidden;font-size:14px; text-align:center;}
+.ptg a:hover{color:#fff;border-color:#ff4444 ; background-color:#ff4444 ; text-decoration:none;}
+
+
+/*相关帖子*/
+.relatethread{}
+.relatethread h3{ font-weight:400; font-size:16px; border-bottom:1px solid #e6e6e6; padding-bottom:10px; margin-bottom:5px;}
+.relatethread .xl2 li{ font-size:14px; line-height:26px;}
+.relatethread .xl2 li a{ color:#5a646c;}
+/**end**/

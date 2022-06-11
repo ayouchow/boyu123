@@ -1,0 +1,88 @@
+<!--{if $_GET['mycenter'] && !$_G['uid']}-->
+	<!--{eval dheader('Location:member.php?mod=logging&action=login');exit;}-->
+<!--{/if}-->
+<!--{template common/header}-->
+<!--{if !$_GET['mycenter']}-->
+
+<!-- header start -->
+<div class="deanu_center_Top">
+    <div class="nav deanbbstopnav" style="border-bottom:0; background:none;">
+        <a href="javascript:history.back()" class="z deanback"></a>
+        <span class="category">
+            个人资料
+        </span>
+    </div>
+    <div class="dean_user_Avatar">
+        <div class="dean_user_Avatarcenter"><img src="<!--{avatar($space[uid], middle, true)}-->" /></div>
+        <h5>$space[username]</h5>
+        <span>$_G[group][grouptitle]</span>
+    </div>
+</div>
+<!-- header end -->
+<!-- userinfo start -->
+<div class="deanuser_profile_details">
+		<div class="deanmyinfo_list">
+			<ul>
+				<li><a href="javascript:;"><span>$space[credits]</span>{lang credits}</a></li>
+				<!--{loop $_G[setting][extcredits] $key $value}-->
+				<!--{if $value[title]}-->
+				<li><a href="javascript:;"><span>{$space["extcredits$key"]} $value[unit]</span>$value[title]</a></li>
+				<!--{/if}-->
+				<!--{/loop}-->
+			</ul>
+		</div>
+		<!--{if $space['uid'] == $_G['uid']}-->
+		<p><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}" class="deanquitesys" style="margin:0;color:#fff!important; background:#ff4444;height: .4rem; line-height: .4rem; width:auto; padding: .3rem .4rem;">{lang logout_mobile}</a></p>
+		<!--{/if}-->
+	</div>
+<!-- userinfo end -->
+
+<!--{else}-->
+
+<!-- header start -->
+<div class="nav deanbbstopnav" style="border-bottom:0;">
+    <a href="javascript:history.back()" class="z deanback"></a>
+    <span class="category">
+        个人中心
+    </span>
+</div>
+<!-- header end -->
+<!-- userinfo start -->
+<div class="deanuser_profile">
+    <ul class="deanu_p_one">
+        <li class="deanu_p_content">
+            <a href="home.php?mod=space&uid={$_G[uid]}&do=profile">
+                <div class="deanuseravator">
+                    <!--{avatar($_G[uid],middle)}-->
+                </div>
+                <div class="deanu_p_rght">
+                    <h4>{$_G[member][username]}</h4>
+                    <p>{lang usergroup}: $_G[group][grouptitle]</p>
+                </div>
+            </a>
+            
+        </li>
+    </ul>
+    
+    <ul class="deanu_p_two">
+        <li>
+            <a href="home.php?mod=space&uid={$_G[uid]}&do=profile">{lang myprofile}</a>
+        </li>
+    </ul>
+    
+    <ul class="deanu_p_three">
+        <li><a class="deanshoucang" href="home.php?mod=space&uid={$_G[uid]}&do=favorite&view=me&type=thread">{lang myfavorite}</a></li>
+        <li><a class="deanzhuti" href="home.php?mod=space&uid={$_G[uid]}&do=thread&view=me">{lang mythread}</a></li>
+        <li><a class="deanxiaoxi" href="home.php?mod=space&do=pm">{lang mypm}</a></li>
+    </ul>
+
+
+    <a href="member.php?mod=logging&action=logout&formhash={FORMHASH}" class="deanquitesys">退出登录</a>
+</div>
+<!-- userinfo end -->
+
+<!--{/if}-->
+<!--{eval $nofooter = true;}-->
+<!--{template common/bottomnav}-->
+
+<!--{template touch/common/footer}-->

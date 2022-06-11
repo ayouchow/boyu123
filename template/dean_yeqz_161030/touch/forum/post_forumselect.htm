@@ -1,0 +1,19 @@
+<!--{template common/header}-->
+<!-- header start -->
+<div class="fastnavheader">
+	<a href="forum.php?forumlist=1">返回</a>
+	<h1>选择您要发帖的板块</h1>
+    <div class="clear"></div>
+</div>
+<!-- header end -->
+<div class="deanfastnav">
+<ul>
+	 {loop $_G['cache'][forums] $forum}
+      {if $forum[type]!='group' && $forum['status']=='1'}
+      <li><a href="forum.php?mod=post&action=newthread&fid=$forum['fid']">$forum['name']</a></li>
+      {/if}
+      {/loop}
+      <div class="clear"></div>
+	  </ul>
+</div>
+<!--{template common/footer}-->

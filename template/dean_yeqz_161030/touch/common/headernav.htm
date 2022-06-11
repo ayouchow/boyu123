@@ -1,0 +1,102 @@
+<div class="deannavbar">
+        <div class="deannavbar-inner">
+            <div class="deannavleft">
+            	<i><a onclick="toolShare()"></a></i>
+        	</div>
+            <div class="deanuser_cpanel">
+                        <!--{if $_G['uid']}-->
+                        <div class="deanuserinfos">
+                        	<div class="deanyonghu_tx"><a class="deanvwmy" href="home.php?mod=space&uid={$_G[uid]}&do=profile&mycenter=1"><!--{avatar($_G[uid],big)}--></a></div>
+                            <div class="deanyonghu_nm">
+                            	<h5>欢迎您回来！</h5>
+                                <a class="deanadmin" href="home.php?mod=space&uid={$_G[uid]}&do=profile&mycenter=1">$_G[group][grouptitle]:　{$_G[member][username]}</a></div>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- userinfo start -->
+                        <div class="deanuserinfox">
+                            <div class="deanuserinfobox">
+                                <ul>
+                                    <li><a href="home.php?mod=space&uid={$_G[uid]}&do=favorite&view=me&type=thread">收藏</a></li>
+                                    <li><a href="home.php?mod=space&uid={$_G[uid]}&do=thread&view=me">主题</a></li>
+                                    <li class="tit_msg"><a href="home.php?mod=space&do=pm">消息<!--{if $_G[member][newpm]}--><img src="{STATICURL}image/mobile/images/icon_msg.png" /><!--{/if}--></a></li>
+                                    <li><a href="home.php?mod=space&uid={$_G[uid]}">资料</a></li>
+                                    <li><a href="member.php?mod=logging&action=logout&formhash={FORMHASH}">{lang logout}</a></li>
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- userinfo end -->
+                        <!--{elseif !$_G[connectguest]}-->
+                        
+                        <div class="deanloginlists">
+                            <div class="deanuserinfos">
+                                <div class="deanyonghu_tx"><!--{avatar($_G[uid],big)}--></div>
+                                <div class="deanyonghu_nm">
+                                    <h5>欢迎您游客！请</h5>
+                                    <div class="deanrdlq">
+                                    	<a href="member.php?mod=logging&action=login">登陆</a>
+                                        <a href="member.php?mod=register">注册</a>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>    
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <!--{/if}-->
+                        <div class="deannavs">
+            <!-- 头部左侧导航调用代码 -->
+			<!--{block/179}-->
+			<!-- 头部左侧导航调用代码 -->
+                        </div>
+                </div>
+            <script type="text/javascript">
+				function toolShare(){
+					$(".deanuser_cpanel").addClass("dean_u_menu");	
+						if($(".sharebg_index").length>0){
+						$(".sharebg_index").addClass("sharebg_index-active");
+						}else{
+						$("body").append('<div class="sharebg_index"></div>');
+						$(".sharebg_index").addClass("sharebg_index-active");
+						}
+						$(".sharebg_index-active").click(function(){
+						$(".deanuser_cpanel").removeClass("dean_u_menu");	
+						setTimeout(function(){
+						$(".sharebg_index-active").removeClass("sharebg_index-active");	
+						$(".sharebg_index").remove();	
+						},300);
+					})
+				}	
+			</script>
+
+    		<div class="deannavmiddle">
+    			<!--{if !isset($_G['setting']['navlogos'][$mnid])}--><a href="{if $_G['setting']['domain']['app']['default']}http://{$_G['setting']['domain']['app']['default']}/{else}./{/if}" title="$_G['setting']['bbname']">{$_G['style']['boardlogo']}</a><!--{else}-->$_G['setting']['navlogos'][$mnid]<!--{/if}-->
+    		</div>
+            <div class="deannavright">
+                <a href="search.php?mod=forum&mobile=2"><i></i></a>
+            </div>
+    	</div>
+        <div class="deansubnavbar">
+            <div class="deanswiper-wrapper">
+                <div class="deansubnavbar-list">
+                	<div class="deandownbtn"></div>
+                   <!-- 顶部导航调用代码 -->
+                   <!--{block/180}-->
+				   <!-- 顶部导航调用代码 -->
+                    <script type="text/javascript">
+						$(".deandownbtn").each(function(s){
+						$(this).click(function(){
+							$(".deanhiddensubs").toggle();
+							})
+						})
+					</script>
+                    <script type="text/javascript">
+						$(".deandownbtn").each(function(s){
+						$(this).click(function(){
+							$(".deandownbtn").toggleClass("cur");
+							})
+						})
+					</script>
+                </div>
+            </div>
+        </div>
+	</div>
